@@ -57,6 +57,28 @@ app/src/main/java/br/meigenly/
 - `docs/data_safety_form.md` — respostas do formulário Data Safety
 - `docs/copyright_notice.md` — posicionamento de copyright + procedimento DMCA
 
+## Assinatura de release
+
+O keystore **não é versionado** (está fora do repo, em `AndroidProjects/keystores/`).
+Para compilar releases assinados nesta máquina:
+
+1. `keystore.properties` na raiz do projeto (gitignored) com:
+   ```properties
+   storeFile=C:\caminho\para\meigenly-release.jks
+   storePassword=...
+   keyAlias=meigenly
+   keyPassword=...
+   ```
+2. `.\gradlew.bat :app:assembleRelease :app:bundleRelease`
+
+Sem o arquivo, o build funciona normalmente e o release sai *unsigned*
+(comportamento de CI/máquinas novas).
+
+> ⚠️ **O keystore é permanente:** a Play Store só aceita updates assinados com a
+> mesma chave. Guarde `meigenly-release.jks` + as senhas em local seguro
+> (gerenciador de senhas / cofre). Se perder, o app na loja não pode mais ser
+> atualizado sob o mesmo pacote.
+
 ## Nota de conteúdo
 
 As frases são citações curtas, sempre com atribuição (personagem, obra e episódio
