@@ -40,8 +40,7 @@ incluindo menores de 13 anos.
 
 ## Contato
 
-Dúvidas sobre esta política: **meigenly.app+privacy@outlook.com** (troque pelo seu e-mail
-real antes de publicar).
+Dúvidas sobre esta política: **meigenlyapp@gmail.com**.
 
 ## Alterações
 

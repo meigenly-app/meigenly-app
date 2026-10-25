@@ -48,8 +48,7 @@ empresas.
 Se você é detentor de direitos e acredita que uma citação específica no Meigenly
 viole seus direitos, envie um e-mail para:
 
-**meigenly.app+privacy@outlook.com** *(placeholder — substitua pelo seu e-mail
-real antes de publicar)*
+**meigenlyapp@gmail.com**
 
 Inclua no e-mail:
 1. Identificação da obra e do detentor de direitos;
