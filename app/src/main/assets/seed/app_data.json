@@ -1,0 +1,238 @@
+{
+  "schemaVersion": 1,
+  "_note": "Authoring-only fields: 'review' (boolean) marks quotes/statement details to double-check before release. The E1 parser must ignore unknown fields.",
+  "works": [
+    {
+      "slug": "naruto",
+      "title": "Naruto",
+      "titleOriginal": "NARUTO -ナルト-",
+      "year": 2002,
+      "description": "A história do ninja rebelde Naruto Uzumaki, que sonha em se tornar Hokage.",
+      "accentColor": "#FF8A00",
+      "characters": [
+        {
+          "slug": "haku",
+          "name": "Haku",
+          "nameOriginal": "白",
+          "arc": "País da Onda",
+          "description": "Servo leal de Zabuza, vê a própria existência como uma ferramenta.",
+          "quotes": [
+            {
+              "text": "Quando uma pessoa tem algo precioso a proteger, é aí que ela se torna verdadeiramente forte.",
+              "textOriginal": "Hito wa... mamoritai mono ga dekitara, hontō ni tsuyoku nareru n da yo.",
+              "episode": "Naruto Ep. 12",
+              "context": "Conversa com Naruto sobre a força que nasce de proteger alguém",
+              "review": false
+            },
+            {
+              "text": "Eu sou apenas uma ferramenta do meu mestre. E, mesmo assim, tenho orgulho disso.",
+              "textOriginal": null,
+              "episode": "Naruto Ep. 15",
+              "context": "Haku explica a Zabuza sua visão sobre o próprio papel",
+              "review": false
+            }
+          ]
+        },
+        {
+          "slug": "obito-uchiha",
+          "name": "Obito Uchiha",
+          "nameOriginal": "うちは オビト",
+          "arc": "Kakashi Gaiden",
+          "description": "Companheiro de equipe de Kakashi, lembrado por suas palavras sobre regras e companheiros.",
+          "quotes": [
+            {
+              "text": "Aqueles que quebram as regras do mundo ninja são lixo. Mas aqueles que abandonam seus companheiros são piores que lixo.",
+              "textOriginal": null,
+              "episode": "Shippuden Ep. 120",
+              "context": "Kakashi Gaiden — origem do ensinamento que Kakashi levaria pela vida",
+              "review": false
+            },
+            {
+              "text": "Eu estarei sempre com você... mesmo que não seja fisicamente.",
+              "textOriginal": null,
+              "episode": "Shippuden Ep. 120",
+              "context": "Despedida de Obito para Kakashi",
+              "review": false
+            }
+          ]
+        },
+        {
+          "slug": "naruto-uzumaki",
+          "name": "Naruto Uzumaki",
+          "nameOriginal": "うずまき ナルト",
+          "arc": null,
+          "description": "Protagonista e futuro Hokage.",
+          "quotes": [
+            {
+              "text": "Eu nunca vou voltar atrás na minha palavra! Esse é o meu jeito ninja de ser!",
+              "textOriginal": null,
+              "episode": null,
+              "context": "Frase-assinatura de Naruto, repetida em vários arcos",
+              "review": false
+            },
+            {
+              "text": "Não desisto. Nunca.",
+              "textOriginal": null,
+              "episode": null,
+              "context": null,
+              "review": false
+            }
+          ]
+        },
+        {
+          "slug": "itachi-uchiha",
+          "name": "Itachi Uchiha",
+          "nameOriginal": "うちは イタチ",
+          "arc": null,
+          "description": "Irmão de Sasuke; viveu como espião em silêncio pela paz da vila.",
+          "quotes": [
+            {
+              "text": "As pessoas vivem suas vidas presas ao que acreditam. É assim que definem a própria realidade.",
+              "textOriginal": null,
+              "episode": "Shippuden Ep. 152",
+              "context": "Reflexão de Itachi sobre percepção e verdade",
+              "review": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "dragon-ball-z",
+      "title": "Dragon Ball Z",
+      "titleOriginal": "ドラゴンボールZ",
+      "year": 1989,
+      "description": "A saga clássica de Goku e dos guerreiros Z contra os inimigos do universo.",
+      "accentColor": "#F4B400",
+      "characters": [
+        {
+          "slug": "vegeta",
+          "name": "Vegeta",
+          "nameOriginal": "ベジータ",
+          "arc": null,
+          "description": "Príncipe dos Saiyajins, movido pelo orgulho da sua raça.",
+          "quotes": [
+            {
+              "text": "Sou Vegeta! O príncipe da raça guerreira Saiyan!",
+              "textOriginal": null,
+              "episode": null,
+              "context": "Apresentação clássica no arco Saiyajin",
+              "review": false
+            },
+            {
+              "text": "Trunks, Bulma... não vou pedir desculpas por ter me sacrificado por vocês.",
+              "textOriginal": null,
+              "episode": null,
+              "context": "Sacrifício de Majin Vegeta contra Majin Buu",
+              "review": false
+            }
+          ]
+        },
+        {
+          "slug": "goku",
+          "name": "Son Goku",
+          "nameOriginal": "孫 悟空",
+          "arc": null,
+          "description": "Protagonista; sempre em busca de adversários mais fortes.",
+          "quotes": [
+            {
+              "text": "Eu sou um Saiyajin nascido na Terra, e vou proteger quem eu amo!",
+              "textOriginal": null,
+              "episode": "Z Ep. 95",
+              "context": "Despertar do Super Saiyajin diante de Freeza",
+              "review": false
+            },
+            {
+              "text": "Enquanto houver mais uma chance, não existe derrota!",
+              "textOriginal": null,
+              "episode": null,
+              "context": "Marcante nas lutas de Goku",
+              "review": false
+            }
+          ]
+        },
+        {
+          "slug": "piccolo",
+          "name": "Piccolo",
+          "nameOriginal": "ピッコロ",
+          "arc": null,
+          "description": "De rival a mentor de Gohan; frio nas palavras e orgulhoso por natureza.",
+          "quotes": [
+            {
+              "text": "Arrisque a sua vida apenas quando valer a pena — e, com quem você ama, sempre vale!",
+              "textOriginal": null,
+              "episode": null,
+              "context": "Ensinamento de Piccolo ao treinar Gohan",
+              "review": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "one-piece",
+      "title": "One Piece",
+      "titleOriginal": "ワンピース",
+      "year": 1999,
+      "description": "A jornada de Monkey D. Luffy rumo ao título de Rei dos Piratas.",
+      "accentColor": "#D6453D",
+      "characters": [
+        {
+          "slug": "monkey-d-luffy",
+          "name": "Monkey D. Luffy",
+          "nameOriginal": "モンキー・D・ルフィ",
+          "arc": null,
+          "description": "Capitão dos Chapéus de Palha, futuro Rei dos Piratas.",
+          "quotes": [
+            {
+              "text": "Eu vou me tornar o Rei dos Piratas!",
+              "textOriginal": "Ore wa kaizoku-ō ni naru otoko da!",
+              "episode": "One Piece Ep. 1",
+              "context": "Declaração-assinatura de Luffy",
+              "review": false
+            },
+            {
+              "text": "Eu vou te salvar, com certeza! Você faz parte da minha tripulação!",
+              "textOriginal": null,
+              "episode": "One Piece Ep. 37",
+              "context": "Arco de Arlong — Luffy responde ao pedido de ajuda de Nami",
+              "review": false
+            }
+          ]
+        },
+        {
+          "slug": "roronoa-zoro",
+          "name": "Roronoa Zoro",
+          "nameOriginal": "ロロノア・ゾロ",
+          "arc": null,
+          "description": "Espadachim determinado a se tornar o melhor do mundo.",
+          "quotes": [
+            {
+              "text": "Nunca mais vou perder. Desde aquele dia, eu não perdi mais nenhuma batalha de espadas.",
+              "textOriginal": null,
+              "episode": "One Piece Ep. 24",
+              "context": "Duelo contra Dracule Mihawk",
+              "review": false
+            }
+          ]
+        },
+        {
+          "slug": "portgas-d-ace",
+          "name": "Portgas D. Ace",
+          "nameOriginal": "ポートガス・D・エース",
+          "arc": "Marineford",
+          "description": "Irmão de Luffy, membro dos Piratas do Barba Branca.",
+          "quotes": [
+            {
+              "text": "Obrigado... por amar um homem como eu... apesar de tudo que há de errado em mim.",
+              "textOriginal": null,
+              "episode": "One Piece Ep. 483",
+              "context": "Discurso de despedida de Ace, na morte em Marineford",
+              "review": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

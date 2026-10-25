@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- Shared quote images: temporary cache files handed out via FileProvider. -->
+    <cache-path
+        name="shared_images"
+        path="share/" />
+</paths>
