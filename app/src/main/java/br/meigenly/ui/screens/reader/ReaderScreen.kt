@@ -14,13 +14,17 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.outlined.Bookmark
 import androidx.compose.material.icons.outlined.Image
 import androidx.compose.material.icons.outlined.Share
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.LocalContentColor
@@ -38,6 +42,7 @@ import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -206,54 +211,79 @@ private fun QuotePage(
     quote: QuoteFull,
     modifier: Modifier = Modifier,
 ) {
-    Column(
-        modifier = modifier.fillMaxSize().padding(horizontal = 32.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center,
-    ) {
-        // Accent mark above the statement (brand touchpoint)
-        Box(
-            modifier = Modifier
-                .size(10.dp)
-                .background(
-                    color = quote.workAccentColor.toAccentColor(),
-                    shape = CircleShape,
+    val cs = MaterialTheme.colorScheme
+    Box(
+        modifier = modifier
+            .fillMaxSize()
+            .background(
+                Brush.verticalGradient(
+                    listOf(cs.surfaceContainerLow, cs.background),
                 ),
-        )
-        Spacer(Modifier.height(20.dp))
-        Text(
-            text = "\u201C${quote.quote.text}\u201D",
-            style = MaterialTheme.typography.headlineMedium,
-            textAlign = TextAlign.Center,
-        )
-        if (quote.quote.textOriginal != null) {
-            Spacer(Modifier.height(16.dp))
-            Text(
-                text = quote.quote.textOriginal!!,
-                style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                textAlign = TextAlign.Center,
-            )
-        }
-        Spacer(Modifier.height(28.dp))
-        Text(
-            text = quote.characterName,
-            style = MaterialTheme.typography.titleMedium,
-        )
-        val meta = listOfNotNull(quote.workTitle, quote.quote.episode).joinToString("  ·  ")
-        Text(
-            text = meta,
-            style = MaterialTheme.typography.bodySmall,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-        )
-        if (quote.quote.context != null) {
-            Spacer(Modifier.height(8.dp))
-            Text(
-                text = quote.quote.context!!,
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                textAlign = TextAlign.Center,
-            )
+            ),
+    ) {
+        Column(
+            modifier = Modifier.fillMaxSize().padding(20.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center,
+        ) {
+            Card(
+                modifier = Modifier.fillMaxWidth(),
+                shape = RoundedCornerShape(28.dp),
+                colors = CardDefaults.cardColors(containerColor = cs.surfaceContainer),
+                elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
+            ) {
+                Column(
+                    Modifier.fillMaxWidth().padding(horizontal = 28.dp, vertical = 32.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                ) {
+                    // Accent mark above the statement (brand touchpoint)
+                    Box(
+                        modifier = Modifier
+                            .size(10.dp)
+                            .background(
+                                color = quote.workAccentColor.toAccentColor(),
+                                shape = CircleShape,
+                            ),
+                    )
+                    Spacer(Modifier.height(20.dp))
+                    Text(
+                        text = "\u201C${quote.quote.text}\u201D",
+                        style = MaterialTheme.typography.headlineMedium,
+                        textAlign = TextAlign.Center,
+                    )
+                    if (quote.quote.textOriginal != null) {
+                        Spacer(Modifier.height(16.dp))
+                        Text(
+                            text = quote.quote.textOriginal!!,
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            textAlign = TextAlign.Center,
+                        )
+                    }
+                    Spacer(Modifier.height(24.dp))
+                    HorizontalDivider(color = cs.outlineVariant.copy(alpha = 0.6f))
+                    Spacer(Modifier.height(20.dp))
+                    Text(
+                        text = quote.characterName,
+                        style = MaterialTheme.typography.titleMedium,
+                    )
+                    val meta = listOfNotNull(quote.workTitle, quote.quote.episode).joinToString("  ·  ")
+                    Text(
+                        text = meta,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                    if (quote.quote.context != null) {
+                        Spacer(Modifier.height(8.dp))
+                        Text(
+                            text = quote.quote.context!!,
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            textAlign = TextAlign.Center,
+                        )
+                    }
+                }
+            }
         }
     }
 }

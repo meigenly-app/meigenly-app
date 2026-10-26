@@ -15,11 +15,18 @@
 #   - nameOriginal preenchido apenas para nomes ja validados no seed v1.
 
 param(
-    [string]$MdPath = "$PSScriptRoot\source\coletanea-frases.md",
+    # Por padrao, processa todos os .md em tools/source/ (ordem alfabetica).
+    # Secao duplicada entre arquivos = erro: substitua o arquivo antigo na pasta.
+    [string[]]$MdPaths = @(),
     [string]$OutPath = "$PSScriptRoot\..\app\src\main\assets\seed\app_data.json"
 )
 
 $ErrorActionPreference = 'Stop'
+
+if (($MdPaths.Count -eq 0)) {
+    $MdPaths = @(Get-ChildItem "$PSScriptRoot\source\*.md" -File | Sort-Object Name | ForEach-Object { $_.FullName })
+}
+if ($MdPaths.Count -eq 0) { throw "Nenhum .md encontrado em tools/source/" }
 
 # ---------------------------------------------------------------------------
 # Metadados autorais das obras (chave = titulo exato da secao no .md)
@@ -64,6 +71,7 @@ $WorksMeta = [ordered]@{
     'Vagabond'                                                                   = @{ slug='vagabond'; title='Vagabond'; titleOriginal='バガボンド'; year=1998; accentColor='#4E342E'; description='A vida de Miyamoto Musashi na busca da espada perfeita.' }
     'Vinland Saga'                                                               = @{ slug='vinland-saga'; title='Vinland Saga'; titleOriginal='ヴィンランド・サガ'; year=2019; accentColor='#33691E'; description='Thorfinn cresce entre vikings, entre vingança e a promessa de terra sem guerra.' }
     'Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite)'   = @{ slug='classroom-of-the-elite'; title='Classroom of the Elite'; titleOriginal='ようこそ実力至上主義の教室へ'; year=2017; accentColor='#3949AB'; description='Na escola de elite, só resultados importam — e Ayanokoji joga em outro nível.' }
+    'Sousou no Frieren'                                                          = @{ slug='sousou-no-frieren'; title='Sousou no Frieren'; titleOriginal='葬送のフリーレン'; year=2023; accentColor='#5DADE2'; description='A maga elfa Frieren viaja para entender o valor do tempo humano.' }
 }
 
 # ---------------------------------------------------------------------------
@@ -393,6 +401,12 @@ $CharDescriptions = @{
     'Kiyotaka Ayanokoji'        = 'Gênio treinado na White Room que prefere passar despercebido.'
     'Suzune Horikita'           = 'Aluna brilhante e solitária que aprende a confiar.'
     'Kikyo Kushida'             = 'Aluna simpática que esconde um lado explosivo.'
+    # Sousou no Frieren
+    'Frieren'                   = 'Maga elfa milenar que busca magia — e o sentido do tempo que perdeu.'
+    'Himmel'                    = 'O herói do grupo de Frieren, cujas escolhas ecoam por séculos.'
+    'Fern'                      = 'Aprendiz de Frieren, madura além da idade.'
+    'Eisen'                     = 'Guerreiro anão veterano da jornada do herói.'
+    'Heiter'                    = 'Sacerdote boêmio que criou Fern nos últimos anos de vida.'
 }
 
 # ---------------------------------------------------------------------------
@@ -439,6 +453,12 @@ function Normalize-Episode([string]$raw, [bool]$isPoem, [string]$vol) {
 # ---------------------------------------------------------------------------
 # Parse do .md
 # ---------------------------------------------------------------------------
+$works = New-Object System.Collections.Generic.List[object]
+$totalQuotes = 0
+$reviewCount = 0
+$seenTitles = @{}
+
+foreach ($MdPath in $MdPaths) {
 if (-not (Test-Path $MdPath)) { throw "Arquivo nao encontrado: $MdPath" }
 $md = [System.IO.File]::ReadAllText($MdPath, [System.Text.Encoding]::UTF8)
 $lines = $md -split "`r?`n"
@@ -451,10 +471,6 @@ for ($i = 0; $i -lt $lines.Count; $i++) {
     }
 }
 
-$works = New-Object System.Collections.Generic.List[object]
-$totalQuotes = 0
-$reviewCount = 0
-
 foreach ($secIdx in 0..($sections.Count - 1)) {
     $sec = $sections[$secIdx]
     $title = $sec.Title
@@ -462,6 +478,8 @@ foreach ($secIdx in 0..($sections.Count - 1)) {
         if ($title -like 'Itens a verificar*' -or $title -like 'Índice*') { continue }
         throw "Secao sem metadados: [$title]"
     }
+    if ($seenTitles.ContainsKey($title)) { throw "Secao [$title] duplicada entre os arquivos de tools/source/. Mantenha apenas uma versao de cada obra." }
+    $seenTitles[$title] = $true
     $meta = $WorksMeta[$title]
     $end = if ($secIdx -lt $sections.Count - 1) { $sections[$secIdx + 1].Start } else { $lines.Count }
 
@@ -552,6 +570,7 @@ foreach ($secIdx in 0..($sections.Count - 1)) {
         characters    = [object[]]$characters.ToArray()
     })
 }
+} # fim do loop de arquivos
 
 # ---------------------------------------------------------------------------
 # Validacoes

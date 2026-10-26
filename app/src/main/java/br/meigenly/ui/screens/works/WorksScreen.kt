@@ -38,7 +38,7 @@ import androidx.compose.material.icons.outlined.History
 import androidx.compose.material.icons.outlined.Settings
 import br.meigenly.data.db.entity.QuoteFull
 import br.meigenly.domain.model.Work
-import br.meigenly.ui.components.AccentAvatar
+import br.meigenly.ui.components.WorkCover
 
 private const val TAB_WORKS = 0
 private const val TAB_FAVORITES = 1
@@ -163,7 +163,7 @@ private fun WorkCard(work: Work, onClick: () -> Unit) {
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(14.dp),
         ) {
-            AccentAvatar(name = work.title, accent = work.accentColor)
+            WorkCover(slug = work.slug, title = work.title, accent = work.accentColor)
             Column(Modifier.weight(1f)) {
                 Text(
                     text = work.title,

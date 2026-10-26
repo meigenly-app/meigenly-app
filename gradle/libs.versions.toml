@@ -2,7 +2,7 @@
 # Note: versions are pinned at E0 and bumped together when we update the toolchain.
 
 [versions]
-agp = "8.7.3"
+agp = "8.13.2"
 kotlin = "2.1.0"
 ksp = "2.1.0-1.0.29"
 hilt = "2.56.2"

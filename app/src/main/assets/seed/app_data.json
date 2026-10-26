@@ -4381,6 +4381,131 @@
                                                         ]
                                          }
                                      ]
+                  },
+                  {
+                      "slug":  "sousou-no-frieren",
+                      "title":  "Sousou no Frieren",
+                      "titleOriginal":  "葬送のフリーレン",
+                      "year":  2023,
+                      "description":  "A maga elfa Frieren viaja para entender o valor do tempo humano.",
+                      "accentColor":  "#5DADE2",
+                      "characters":  [
+                                         {
+                                             "slug":  "frieren",
+                                             "name":  "Frieren",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "Maga elfa milenar que busca magia — e o sentido do tempo que perdeu.",
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Eu sabia que a vida dos humanos era curta... Então por que nunca tentei conhecê-lo melhor?",
+                                                                "textOriginal":  "Ningen no jomyō wa mijikai tte wakatteita no ni... nande motto shirō to omowanakattan darō...",
+                                                                "episode":  "Cap. 01 / Ep. 01",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            },
+                                                            {
+                                                                "text":  "A pessoa diante de você é uma maga que viveu por mais de mil anos.",
+                                                                "textOriginal":  "Omae no mae ni iru no wa, sennen ijō ikita mahōtsukai da.",
+                                                                "episode":  "Cap. 21 / Ep. 10",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            },
+                                                            {
+                                                                "text":  "Aura, mate a si mesma.",
+                                                                "textOriginal":  "Aura, jigai shiro.",
+                                                                "episode":  "Cap. 22 / Ep. 10",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            },
+                                                            {
+                                                                "text":  "A melhor parte da magia é quando você está procurando por ela.",
+                                                                "textOriginal":  "Mahō wa sagashimotomete iru toki ga ichiban tanoshiin da yo.",
+                                                                "episode":  "Cap. 53 / Ep. 24",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "himmel",
+                                             "name":  "Himmel",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O herói do grupo de Frieren, cujas escolhas ecoam por séculos.",
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Não tem problema eu ser um falso herói. Eu vou derrotar o Rei Demônio e trazer a paz de qualquer jeito.",
+                                                                "textOriginal":  "Ii ja nai ka, nisemono no yūsha de. Boku wa Maō o taoshite sekai no heiwa o torimodosu.",
+                                                                "episode":  "Cap. 25 / Ep. 12",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            },
+                                                            {
+                                                                "text":  "É para que você não fique sozinha no futuro.",
+                                                                "textOriginal":  "Kimi ga mirai de hitoribocchi ni naranai yō ni suru tame kana.",
+                                                                "episode":  "Cap. 13 / Ep. 07",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            },
+                                                            {
+                                                                "text":  "Viver significa ser conhecido e lembrado por alguém.",
+                                                                "textOriginal":  "Ikite iru to iu koto wa, dareka ni shittemoratte oboete itemorau koto da.",
+                                                                "episode":  "Cap. 47 / Ep. 20",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "eisen",
+                                             "name":  "Eisen",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "Guerreiro anão veterano da jornada do herói.",
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Todo aquele que se esforçou ao máximo é um guerreiro.",
+                                                                "textOriginal":  "Ganbatta mono wa mina senshi da.",
+                                                                "episode":  "Cap. 26 / Ep. 12",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "heiter",
+                                             "name":  "Heiter",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "Sacerdote boêmio que criou Fern nos últimos anos de vida.",
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "O herói Himmel teria feito exatamente isso.",
+                                                                "textOriginal":  "Yūsha Hinmeru nara sō shimashita.",
+                                                                "episode":  "Cap. 02 / Ep. 01",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "fern",
+                                             "name":  "Fern",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "Aprendiz de Frieren, madura além da idade.",
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "As coisas que você construiu com tanto esforço nunca vão trair você.",
+                                                                "textOriginal":  "Hisshi ni tsumiagetekita mono wa kesshite uragirimasen.",
+                                                                "episode":  "Cap. 11 / Ep. 06",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         }
+                                     ]
                   }
               ]
 }
