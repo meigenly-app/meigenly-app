@@ -42,4 +42,11 @@ interface FavoriteDao {
 
     @Query("SELECT COUNT(quote_id) FROM favorites")
     suspend fun countAll(): Int
+
+    /** Bulk loader used by the seed installer to preserve favorites across reseeds. */
+    @Query("SELECT * FROM favorites")
+    suspend fun captureAll(): List<FavoriteEntity>
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun addAll(favorites: List<FavoriteEntity>)
 }

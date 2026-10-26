@@ -59,8 +59,9 @@ class SearchDaoTest {
     @Test
     fun `character name search is case insensitive`() = runTest {
         val results = db.characterDao().searchByName("vegeta").first()
-        assertEquals(1, results.size)
-        assertEquals("Vegeta", results[0].name)
+        // Vegeta exists in Dragon Ball Z and Dragon Ball GT (variant "Majin Vegeta" merged into DBZ's).
+        assertEquals(2, results.size)
+        assertTrue(results.all { it.name == "Vegeta" })
     }
 
     @Test
@@ -74,8 +75,8 @@ class SearchDaoTest {
         val repo = ContentRepository(db.workDao(), db.characterDao(), db.quoteDao())
         val today = repo.todayQuote()
         assertEquals(true, today != null)
-        // The deterministic count must match the whole 16-quote catalog
-        assertEquals(16, db.quoteDao().countAll())
+        // The deterministic count must match the whole 282-quote catalog
+        assertEquals(282, db.quoteDao().countAll())
         // Two calls on the same day must pick the same quote
         assertEquals(today?.quote?.id, repo.todayQuote()?.quote?.id)
     }

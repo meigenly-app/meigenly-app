@@ -11,6 +11,15 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface QuoteDao {
 
+    /** Minimal projection used by the seed installer to reconcile user tables across reseeds. */
+    data class QuoteNormRef(
+        val id: Long,
+        val text_norm: String?,
+    )
+
+    @Query("SELECT id, text_norm FROM quotes")
+    suspend fun idTextNormPairs(): List<QuoteNormRef>
+
     @Query("SELECT * FROM quotes WHERE character_id = :characterId ORDER BY sort_order ASC")
     fun observeByCharacter(characterId: Long): Flow<List<QuoteEntity>>
 

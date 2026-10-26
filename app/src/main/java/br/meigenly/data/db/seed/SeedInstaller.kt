@@ -11,13 +11,16 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
- * Populates the database from the embedded asset on first launch only
- * (installedVersion == null).
+ * Populates the database from the embedded asset.
  *
- * Future seed content updates (E9+) must NOT wipe user tables: favorites and history
- * must be preserved via slug-based reconciliation (old quote id -> new quote id matched
- * by work.slug + character.slug + quote.text). Skipping any delete cascade is exactly
- * why this installer never deletes rows wholesale.
+ * - First launch (installedVersion == null): plain install.
+ * - Older installed version (< SEED_VERSION): re-seed. Content tables are wiped and
+ *   reloaded, while user tables are preserved: favorites and history are captured
+ *   BEFORE the wipe (their FK CASCADE would erase them) and re-mapped to the new
+ *   quote ids by normalized quote text; entries whose text no longer exists are dropped.
+ * - Same or newer installed version: no-op (also covers app downgrades).
+ *
+ * The FTS table is a contentEntity of quotes, so it follows the wipe/reload automatically.
  */
 @Singleton
 class SeedInstaller @Inject constructor(
@@ -26,7 +29,8 @@ class SeedInstaller @Inject constructor(
 ) {
 
     suspend fun installIfNeeded() {
-        if (database.seedStateDao().installedVersion() != null) return
+        val installed = database.seedStateDao().installedVersion()
+        if (installed != null && installed >= SeedAssetReader.SEED_VERSION) return
 
         val seed = assetReader.read()
         require(seed.schemaVersion <= SeedAssetReader.SEED_VERSION) {
@@ -34,56 +38,104 @@ class SeedInstaller @Inject constructor(
         }
 
         database.withTransaction {
-            seed.works.forEachIndexed { workIndex, seedWork ->
-                val workId = database.workDao().insertAll(
-                    listOf(
-                        WorkEntity(
-                            slug = seedWork.slug,
-                            title = seedWork.title,
-                            titleOriginal = seedWork.titleOriginal,
-                            year = seedWork.year,
-                            description = seedWork.description,
-                            accentColor = seedWork.accentColor,
-                            sortOrder = workIndex,
-                        ),
-                    ),
-                ).first()
+            val isReseed = installed != null
 
-                seedWork.characters.forEachIndexed { charIndex, seedCharacter ->
-                    val characterId = database.characterDao().insertAll(
-                        listOf(
-                            CharacterEntity(
-                                workId = workId,
-                                slug = seedCharacter.slug,
-                                name = seedCharacter.name,
-                                nameOriginal = seedCharacter.nameOriginal,
-                                arc = seedCharacter.arc,
-                                description = seedCharacter.description,
-                                sortOrder = charIndex,
-                            ),
-                        ),
-                    ).first()
+            // Capture user data BEFORE the wipe: CASCADE on quotes would erase them.
+            val oldNormByQuoteId = if (isReseed) {
+                database.quoteDao().idTextNormPairs()
+                    .associate { it.id to it.text_norm }
+            } else {
+                emptyMap()
+            }
+            val oldFavorites = if (isReseed) database.favoriteDao().captureAll() else emptyList()
+            val oldHistory = if (isReseed) database.historyDao().captureAll() else emptyList()
 
-                    database.quoteDao().insertAll(
-                        seedCharacter.quotes.mapIndexed { quoteIndex, quote ->
-                            QuoteEntity(
-                                characterId = characterId,
-                                text = quote.text,
-                                textNorm = TextNorm.normalize(quote.text),
-                                textOriginal = quote.textOriginal,
-                                textOriginalNorm = quote.textOriginal?.let { TextNorm.normalize(it) },
-                                episode = quote.episode,
-                                context = quote.context,
-                                sortOrder = quoteIndex,
-                            )
-                        },
-                    )
+            database.quoteDao().deleteAll()
+            database.characterDao().deleteAll()
+            database.workDao().deleteAll()
+
+            val newIdByNorm = seedContent(seed)
+
+            if (isReseed) {
+                val newIdByOldQuoteId = HashMap<Long, Long>(oldNormByQuoteId.size)
+                oldNormByQuoteId.forEach { (oldId, norm) ->
+                    if (norm != null) {
+                        newIdByNorm[norm]?.let { newIdByOldQuoteId[oldId] = it }
+                    }
                 }
+
+                val favorites = oldFavorites.mapNotNull { favorite ->
+                    newIdByOldQuoteId[favorite.quoteId]?.let {
+                        br.meigenly.data.db.entity.FavoriteEntity(quoteId = it, createdAt = favorite.createdAt)
+                    }
+                }
+                val history = oldHistory.mapNotNull { entry ->
+                    newIdByOldQuoteId[entry.quoteId]?.let {
+                        br.meigenly.data.db.entity.HistoryEntity(quoteId = it, viewedAt = entry.viewedAt)
+                    }
+                }
+                database.favoriteDao().addAll(favorites)
+                database.historyDao().addAll(history)
             }
 
             database.seedStateDao().upsert(
                 SeedStateEntity(seedVersion = SeedAssetReader.SEED_VERSION),
             )
         }
+    }
+
+    /** Inserts all seed content and returns new quote ids keyed by normalized text. */
+    private suspend fun seedContent(seed: SeedFile): Map<String, Long> {
+        val newIdByNorm = HashMap<String, Long>()
+        seed.works.forEachIndexed { workIndex, seedWork ->
+            val workId = database.workDao().insertAll(
+                listOf(
+                    WorkEntity(
+                        slug = seedWork.slug,
+                        title = seedWork.title,
+                        titleOriginal = seedWork.titleOriginal,
+                        year = seedWork.year,
+                        description = seedWork.description,
+                        accentColor = seedWork.accentColor,
+                        sortOrder = workIndex,
+                    ),
+                ),
+            ).first()
+
+            seedWork.characters.forEachIndexed { charIndex, seedCharacter ->
+                val characterId = database.characterDao().insertAll(
+                    listOf(
+                        CharacterEntity(
+                            workId = workId,
+                            slug = seedCharacter.slug,
+                            name = seedCharacter.name,
+                            nameOriginal = seedCharacter.nameOriginal,
+                            arc = seedCharacter.arc,
+                            description = seedCharacter.description,
+                            sortOrder = charIndex,
+                        ),
+                    ),
+                ).first()
+
+                val entities = seedCharacter.quotes.mapIndexed { quoteIndex, quote ->
+                    QuoteEntity(
+                        characterId = characterId,
+                        text = quote.text,
+                        textNorm = TextNorm.normalize(quote.text),
+                        textOriginal = quote.textOriginal,
+                        textOriginalNorm = quote.textOriginal?.let { TextNorm.normalize(it) },
+                        episode = quote.episode,
+                        context = quote.context,
+                        sortOrder = quoteIndex,
+                    )
+                }
+                val ids = database.quoteDao().insertAll(entities)
+                entities.zip(ids) { entity, id ->
+                    val norm = entity.textNorm
+                    if (norm != null) newIdByNorm.putIfAbsent(norm, id)
+                }
+            }
+        }
+        return newIdByNorm
     }
 }

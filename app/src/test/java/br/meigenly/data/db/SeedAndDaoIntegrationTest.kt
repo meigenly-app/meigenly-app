@@ -3,6 +3,9 @@ package br.meigenly.data.db
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import br.meigenly.data.db.entity.FavoriteEntity
+import br.meigenly.data.db.entity.HistoryEntity
+import br.meigenly.data.db.entity.SeedStateEntity
 import br.meigenly.data.db.seed.SeedAssetReader
 import br.meigenly.data.db.seed.SeedInstaller
 import kotlinx.coroutines.flow.first
@@ -43,11 +46,13 @@ class SeedAndDaoIntegrationTest {
             .installIfNeeded()
 
         val works = db.workDao().observeWorks().first()
-        assertEquals(3, works.size)
+        assertEquals(39, works.size)
         // sort_order follows the seed file order
-        assertEquals(listOf("naruto", "dragon-ball-z", "one-piece"), works.map { it.slug })
-        assertEquals(10, db.characterDao().countAll())
-        assertEquals(16, db.quoteDao().countAll())
+        assertEquals("berserk", works.first().slug)
+        assertEquals("classroom-of-the-elite", works.last().slug)
+        assertTrue(works.any { it.slug == "naruto" })
+        assertEquals(224, db.characterDao().countAll())
+        assertEquals(282, db.quoteDao().countAll())
     }
 
     @Test
@@ -56,9 +61,9 @@ class SeedAndDaoIntegrationTest {
         installer.installIfNeeded()
         installer.installIfNeeded()
 
-        assertEquals(1L, db.seedStateDao().installedVersion())
-        assertEquals(3, db.workDao().countAll())
-        assertEquals(16, db.quoteDao().countAll())
+        assertEquals(SeedAssetReader.SEED_VERSION, db.seedStateDao().installedVersion())
+        assertEquals(39, db.workDao().countAll())
+        assertEquals(282, db.quoteDao().countAll())
     }
 
     @Test
@@ -75,5 +80,32 @@ class SeedAndDaoIntegrationTest {
         assertEquals("Haku", full.characterName)
         assertEquals("Naruto", full.workTitle)
         assertEquals("naruto", full.workSlug)
+    }
+
+    @Test
+    fun `reseed reconciles favorites and history by normalized text`() = runTest {
+        val installer = SeedInstaller(db, SeedAssetReader(ApplicationProvider.getApplicationContext()))
+        installer.installIfNeeded()
+
+        // User data on a quote that also exists in the new seed (Haku's famous line).
+        val narutoWork = db.workDao().observeWorks().first().first { it.slug == "naruto" }
+        val hakuId = db.characterDao().idBySlug(narutoWork.id, "haku")!!
+        val hakuQuote = db.quoteDao().observeByCharacter(hakuId).first().first()
+        db.favoriteDao().add(FavoriteEntity(quoteId = hakuQuote.id))
+        db.historyDao().add(HistoryEntity(quoteId = hakuQuote.id))
+
+        // Simulate an older installed seed to force the re-seed path.
+        db.seedStateDao().upsert(SeedStateEntity(seedVersion = SeedAssetReader.SEED_VERSION - 1))
+        installer.installIfNeeded()
+
+        // Content reloaded, not duplicated.
+        assertEquals(39, db.workDao().countAll())
+        assertEquals(282, db.quoteDao().countAll())
+
+        // Favorite and history survive on the new quote id (matched by normalized text).
+        val favorites = db.favoriteDao().observeFavorites().first()
+        assertEquals(1, favorites.size)
+        assertEquals("Haku", favorites.first().characterName)
+        assertEquals(1, db.historyDao().countAll())
     }
 }

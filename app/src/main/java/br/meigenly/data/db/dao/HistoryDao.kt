@@ -45,6 +45,13 @@ interface HistoryDao {
     @Query("SELECT COUNT(id) FROM history")
     suspend fun countAll(): Int
 
+    /** Bulk loader used by the seed installer to preserve history across reseeds. */
+    @Query("SELECT * FROM history")
+    suspend fun captureAll(): List<HistoryEntity>
+
+    @Insert
+    suspend fun addAll(entries: List<HistoryEntity>)
+
     companion object {
         const val HISTORY_LIMIT = 200
     }
