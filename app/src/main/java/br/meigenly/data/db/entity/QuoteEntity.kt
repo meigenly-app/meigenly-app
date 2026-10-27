@@ -33,6 +33,9 @@ data class QuoteEntity(
     val textNorm: String? = null,
     @ColumnInfo(name = "text_original")
     val textOriginal: String? = null,
+    /** Japanese kanji source text (seed v4). */
+    @ColumnInfo(name = "text_japanese")
+    val textJapanese: String? = null,
     /** Diacritic/case-folded copy of [textOriginal] for FTS search (null when no original). */
     @ColumnInfo(name = "text_original_norm")
     val textOriginalNorm: String? = null,

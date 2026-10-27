@@ -137,6 +137,7 @@ private fun QuoteEntity.toModel(): Quote = Quote(
     characterId = characterId,
     text = text,
     textOriginal = textOriginal,
+    textJapanese = textJapanese,
     episode = episode,
     context = context,
 )

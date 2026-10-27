@@ -14,70 +14,126 @@ import br.meigenly.data.db.entity.QuoteFull
 
 /**
  * Renders the share-image card with Canvas + StaticLayout (deterministic, no Compose capture).
- * Brand-first design: deep navy canvas with a subtle seigaiha (Japanese wave) pattern,
- * a vertical [mei-gen] motif and a vermilion hanko seal. Light Japanese theming only —
- * no third-party imagery. The work accent survives as a thin attribution marker.
+ * Japanese theming only - no third-party imagery. The seigaiha (wave) pattern, the vertical
+ * [mei-gen] motif and the vermilion hanko seal survive any [ShareTheme]; ink colors adapt to
+ * the chosen background (preset or user-picked [custom color][createBitmap]).
  */
 object ShareImageBuilder {
 
     private const val WIDTH = 1080
     private const val HEIGHT = 1350
 
-    // Brand identity (launcher icon): navy ink + balloon blue.
-    private const val NAVY = 0xFF111822.toInt()
-    private const val NAVY_LIFT = 0xFF1A2433.toInt()
+    // Brand identity (launcher icon).
     private const val BALLOON_BLUE = 0xFF4DB9F9.toInt()
     private const val HANKO_RED = 0xFFC73E3A.toInt()
 
-    fun createBitmap(item: QuoteFull, accentHex: String?): Bitmap {
+    fun createBitmap(
+        item: QuoteFull,
+        accentHex: String?,
+        theme: ShareTheme = ShareTheme.INK,
+        customColor: Int? = null,
+    ): Bitmap {
         val accent = parseAccent(accentHex)
         val bitmap = Bitmap.createBitmap(WIDTH, HEIGHT, Bitmap.Config.ARGB_8888)
         val canvas = Canvas(bitmap)
         val w = WIDTH.toFloat()
         val h = HEIGHT.toFloat()
 
-        drawSeigaihaBackground(canvas, w, h)
-        drawVerticalMotif(canvas)
-        drawBrandMark(canvas)
+        val palette = Palette(
+            bg = customColor ?: theme.bg.toInt(),
+            ink = if (customColor != null) inkFor(customColor) else theme.onBg.toInt(),
+        )
 
-        // Quote, centered and auto-wrapped
-        val textPaint = TextPaint(Paint.ANTI_ALIAS_FLAG).apply {
-            color = 0xFFFFFFFF.toInt()
+        drawSeigaihaBackground(canvas, w, h, palette)
+        drawVerticalMotif(canvas, palette)
+        drawBrandMark(canvas, palette)
+
+        // Quote + japanese source, centered and auto-wrapped
+        val quotePaint = TextPaint(Paint.ANTI_ALIAS_FLAG).apply {
+            color = palette.primaryInk
             textSize = 62f
             typeface = Typeface.create(Typeface.SERIF, Typeface.BOLD)
         }
         val quote = "\u201C${item.quote.text}\u201D"
         val quoteLayout = StaticLayout.Builder
-            .obtain(quote, 0, quote.length, textPaint, WIDTH - 200)
+            .obtain(quote, 0, quote.length, quotePaint, WIDTH - 200)
             .setAlignment(Layout.Alignment.ALIGN_CENTER)
             .setLineSpacing(16f, 1f)
             .build()
+
+        val japanese = item.quote.textJapanese?.takeIf { it.isNotBlank() }
+        val japaneseLayout = japanese?.let { jp ->
+            StaticLayout.Builder
+                .obtain(jp, 0, jp.length, TextPaint(Paint.ANTI_ALIAS_FLAG).apply {
+                    color = palette.ink
+                    textSize = 46f
+                    typeface = Typeface.create(Typeface.SERIF, Typeface.NORMAL)
+                }, WIDTH - 260)
+                .setAlignment(Layout.Alignment.ALIGN_CENTER)
+                .setLineSpacing(10f, 1f)
+                .build()
+        }
+        val blockGap = if (japaneseLayout != null) 24 else 0
+        val blockHeight = quoteLayout.height + (japaneseLayout?.height ?: 0) + blockGap
+
         canvas.save()
-        canvas.translate(100f, (HEIGHT - quoteLayout.height) / 2f + 20f)
+        canvas.translate(100f, (HEIGHT - blockHeight) / 2f + 20f)
         quoteLayout.draw(canvas)
+        japaneseLayout?.let {
+            canvas.translate(0f, quoteLayout.height.toFloat() + blockGap)
+            it.draw(canvas)
+        }
         canvas.restore()
 
-        drawAttribution(canvas, item, accent)
+        drawAttribution(canvas, item, accent, palette)
         drawHanko(canvas)
 
         return bitmap
     }
 
+    /** Ink/paint data derived from the chosen background. */
+    private data class Palette(val bg: Int, val ink: Int) {
+        /** White quote text on dark canvases; full ink on light ones. */
+        val primaryInk: Int
+            get() = if (isDark) 0xFFFFFFFF.toInt() else ink
+        val isDark: Boolean
+            get() {
+                val r = (bg shr 16) and 0xFF
+                val g = (bg shr 8) and 0xFF
+                val b = bg and 0xFF
+                return (r * 299 + g * 587 + b * 114) / 1000 < 128
+            }
+    }
+
+    /** Luminance-driven ink for a user-picked color. */
+    private fun inkFor(argb: Int): Int {
+        val r = (argb shr 16) and 0xFF
+        val g = (argb shr 8) and 0xFF
+        val b = argb and 0xFF
+        return if ((r * 299 + g * 587 + b * 114) / 1000 < 128) {
+            0xFFF3EFE8.toInt()
+        } else {
+            0xFF241C14.toInt()
+        }
+    }
+
     /**
-     * Solid navy canvas with a subtle seigaiha pattern (staggered rows of concentric
-     * circle arcs, each filled circle covering the row above — classic fish-scale waves)
+     * Solid canvas with a subtle seigaiha pattern (staggered rows of concentric
+     * circle arcs, each filled circle covering the row above - classic fish-scale waves)
      * and a soft darkening towards the bottom for text legibility.
      */
-    private fun drawSeigaihaBackground(canvas: Canvas, w: Float, h: Float) {
-        canvas.drawRect(0f, 0f, w, h, Paint().apply { color = NAVY })
+    private fun drawSeigaihaBackground(canvas: Canvas, w: Float, h: Float, palette: Palette) {
+        canvas.drawRect(0f, 0f, w, h, Paint().apply { color = palette.bg })
 
         val radius = 120f
+        // ~8% contrast strokes: white on dark canvases, ink on light ones.
+        val strokeColor = if (palette.isDark) 0x12FFFFFF.toInt() else 0x11000000.toInt()
         val stroke = Paint(Paint.ANTI_ALIAS_FLAG).apply {
             style = Paint.Style.STROKE
             strokeWidth = 3f
-            color = 0x12FFFFFF.toInt() // ~7% white: present, never loud
+            color = strokeColor
         }
-        val fill = Paint(Paint.ANTI_ALIAS_FLAG).apply { color = NAVY }
+        val fill = Paint().apply { color = palette.bg }
 
         val rowStep = radius * 0.92f
         val colStep = radius * 2f
@@ -101,9 +157,10 @@ object ShareImageBuilder {
         }
 
         // Gentle vignette: darker towards the bottom where attribution sits.
+        val shadeAlpha = if (palette.isDark) 0x2E000000.toInt() else 0x14000000.toInt()
         val shade = LinearGradient(
             0f, 0f, 0f, h,
-            intArrayOf(0x00000000, 0x2E000000),
+            intArrayOf(0x00000000, shadeAlpha),
             floatArrayOf(0.55f, 1f),
             Shader.TileMode.CLAMP,
         )
@@ -111,9 +168,9 @@ object ShareImageBuilder {
     }
 
     /** Vertical [mei-gen] (famous saying) running down the right edge, whisper-quiet. */
-    private fun drawVerticalMotif(canvas: Canvas) {
+    private fun drawVerticalMotif(canvas: Canvas, palette: Palette) {
         val paint = TextPaint(Paint.ANTI_ALIAS_FLAG).apply {
-            color = 0x33FFFFFF.toInt()
+            color = if (palette.isDark) 0x33FFFFFF.toInt() else 0x22000000.toInt()
             textSize = 88f
             typeface = Typeface.create(Typeface.DEFAULT, Typeface.BOLD)
             textAlign = Paint.Align.CENTER
@@ -128,13 +185,13 @@ object ShareImageBuilder {
     }
 
     /** Brand touchpoint: balloon-blue bar + wordmark, top-left. */
-    private fun drawBrandMark(canvas: Canvas) {
+    private fun drawBrandMark(canvas: Canvas, palette: Palette) {
         val bar = Paint().apply { color = BALLOON_BLUE }
         canvas.drawRoundRect(RectF(72f, 84f, 84f, 156f), 6f, 6f, bar)
         canvas.drawText(
             "Meigenly", 108f, 140f,
             TextPaint(Paint.ANTI_ALIAS_FLAG).apply {
-                color = 0xFFFFFFFF.toInt()
+                color = palette.primaryInk
                 textSize = 40f
                 typeface = Typeface.create(Typeface.DEFAULT, Typeface.BOLD)
             },
@@ -142,20 +199,26 @@ object ShareImageBuilder {
     }
 
     /** Attribution pinned near the bottom, with the work accent as a thin marker. */
-    private fun drawAttribution(canvas: Canvas, item: QuoteFull, accent: Int) {
+    private fun drawAttribution(canvas: Canvas, item: QuoteFull, accent: Int, palette: Palette) {
         val attribution = buildList {
             add(item.characterName)
             add(item.workTitle)
             item.quote.episode?.takeIf { it.isNotBlank() }?.let { add(it) }
-        }.joinToString("  ·  ")
+        }.joinToString("  \u2022  ")
+        val full = "\u2014 $attribution"
 
         val textPaint = TextPaint(Paint.ANTI_ALIAS_FLAG).apply {
-            color = 0xD9FFFFFF.toInt()
+            color = palette.primaryInk
             textSize = 38f
         }
         val textX = 132f
         val baseline = HEIGHT - 108f
-        canvas.drawText("\u2014 $attribution", textX, baseline, textPaint)
+        val maxWidth = WIDTH - textX - 220f // keep clear of the hanko
+        // Single-line fit: shrink to nothing instead of clipping long titles.
+        while (textPaint.textSize > 22f && textPaint.measureText(full) > maxWidth) {
+            textPaint.textSize -= 2f
+        }
+        canvas.drawText(full, textX, baseline, textPaint)
 
         // Work accent marker, left of the attribution line.
         val marker = Paint().apply { color = accent }

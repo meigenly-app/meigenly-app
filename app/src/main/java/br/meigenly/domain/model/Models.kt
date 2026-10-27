@@ -31,6 +31,8 @@ data class Quote(
     val characterId: Long,
     val text: String,
     val textOriginal: String?,
+    /** Japanese kanji source (seed v4); null in the legacy catalog. */
+    val textJapanese: String?,
     val episode: String?,
     val context: String?,
 )

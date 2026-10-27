@@ -3,8 +3,10 @@ package br.meigenly.data.settings
 import android.content.Context
 import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
+import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
+import br.meigenly.core.share.ShareTheme
 import br.meigenly.core.theme.ThemeMode
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.Flow
@@ -51,8 +53,45 @@ class SettingsRepository @Inject constructor(
         context.settingsDataStore.edit { it[KEY_DAILY_QUOTE] = enabled }
     }
 
+    // ---- Share image style ----
+
+    fun observeShareTheme(): Flow<ShareTheme> =
+        context.settingsDataStore.data.map { prefs ->
+            runCatching { ShareTheme.valueOf(prefs[KEY_SHARE_THEME] ?: ShareTheme.INK.name) }
+                .getOrDefault(ShareTheme.INK)
+        }
+
+    suspend fun shareThemeOnce(): ShareTheme =
+        context.settingsDataStore.data.first().let { prefs ->
+            runCatching { ShareTheme.valueOf(prefs[KEY_SHARE_THEME] ?: ShareTheme.INK.name) }
+                .getOrDefault(ShareTheme.INK)
+        }
+
+    suspend fun setShareTheme(theme: ShareTheme) {
+        context.settingsDataStore.edit { it[KEY_SHARE_THEME] = theme.name }
+    }
+
+    fun observeShareColor(): Flow<Int?> =
+        context.settingsDataStore.data.map { prefs -> prefs[KEY_SHARE_COLOR] }
+
+    suspend fun shareColorOnce(): Int? =
+        context.settingsDataStore.data.first()[KEY_SHARE_COLOR]
+
+    /** Null resets to the theme's own background. */
+    suspend fun setShareColor(argb: Int?) {
+        context.settingsDataStore.edit { prefs ->
+            if (argb == null) {
+                prefs.remove(KEY_SHARE_COLOR)
+            } else {
+                prefs[KEY_SHARE_COLOR] = argb
+            }
+        }
+    }
+
     private companion object {
         val KEY_THEME_MODE = stringPreferencesKey("theme_mode")
         val KEY_DAILY_QUOTE = booleanPreferencesKey("daily_quote_notification")
+        val KEY_SHARE_THEME = stringPreferencesKey("share_theme")
+        val KEY_SHARE_COLOR = intPreferencesKey("share_custom_color")
     }
 }

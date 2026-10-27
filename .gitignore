@@ -25,6 +25,14 @@ Thumbs.db
 # ---- Local test artifacts (emulator smoke-test screenshots) ----
 .testshots/
 
+# ---- Stray smoke-test screenshots / dumps in repo root ----
+/*.png
+/ui.xml
+/Android/
+/Movies/
+/Music/
+/Pictures/
+
 # ---- Logs / crashes ----
 *.log
 hs_err_pid*

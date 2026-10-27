@@ -46,4 +46,30 @@ class ShareBuilderTest {
             text,
         )
     }
+
+    @Test
+    fun `appends japanese source when present`() {
+        val item = QuoteFull(
+            quote = QuoteEntity(
+                id = 1,
+                characterId = 2,
+                text = "Frase de teste",
+                textJapanese = "日本語の原文",
+            ),
+            characterName = "Yuzuru Otonashi",
+            characterSlug = "yuzuru-otonashi",
+            characterArc = null,
+            workTitle = "Angel Beats!",
+            workSlug = "angel-beats",
+            workAccentColor = null,
+        )
+        val text = ShareBuilder.buildShareText(item)
+        assertEquals(
+            "\u201CFrase de teste\u201D\n" +
+                "\u2014 Yuzuru Otonashi, Angel Beats!\n" +
+                "日本語の原文\n\n" +
+                "via Meigenly",
+            text,
+        )
+    }
 }

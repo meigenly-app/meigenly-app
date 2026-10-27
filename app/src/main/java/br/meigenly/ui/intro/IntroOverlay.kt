@@ -69,12 +69,13 @@ fun IntroOverlay(onFinished: () -> Unit) {
                             Gravity.CENTER,
                         )
                         setOnPreparedListener { mp ->
-                            // Fit inside the screen without stretching.
+                            // Cover-fit: fill the whole screen, cropping the overflow
+                            // (works on every resolution/aspect ratio - no letterbox).
                             val vw = mp.videoWidth.toFloat()
                             val vh = mp.videoHeight.toFloat()
                             if (vw > 0 && vh > 0) {
                                 val metrics = ctx.resources.displayMetrics
-                                val scale = minOf(
+                                val scale = maxOf(
                                     metrics.widthPixels / vw,
                                     metrics.heightPixels / vh,
                                 )

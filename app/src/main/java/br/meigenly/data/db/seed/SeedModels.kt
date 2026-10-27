@@ -38,6 +38,7 @@ data class SeedCharacter(
 data class SeedQuote(
     val text: String,
     val textOriginal: String? = null,
+    val textJapanese: String? = null,
     val episode: String? = null,
     val context: String? = null,
 )

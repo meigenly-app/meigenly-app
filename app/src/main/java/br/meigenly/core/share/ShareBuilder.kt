@@ -26,7 +26,11 @@ object ShareBuilder {
         return buildString {
             append("\u201C").append(item.quote.text).append("\u201D\n")
             append("\u2014 ").append(attribution)
-            append("\n\nvia Meigenly")
+            append("\n")
+            item.quote.textJapanese
+                ?.takeIf { it.isNotBlank() }
+                ?.let { append(it).append("\n") }
+            append("\nvia Meigenly")
         }
     }
 }

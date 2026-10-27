@@ -30,7 +30,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import br.meigenly.core.util.toAccentColor
 import br.meigenly.domain.model.Character
-import br.meigenly.ui.components.AccentAvatar
+import br.meigenly.ui.components.CharacterImage
 
 /** Level 2: characters ("captulos") of the selected work. */
 @OptIn(ExperimentalMaterial3Api::class)
@@ -78,6 +78,7 @@ fun CharactersScreen(
                 CharacterCard(
                     character = character,
                     accent = work?.accentColor,
+                    workSlug = work?.slug,
                     onClick = { onCharacterClick(character.id) },
                 )
             }
@@ -89,6 +90,7 @@ fun CharactersScreen(
 private fun CharacterCard(
     character: Character,
     accent: String?,
+    workSlug: String?,
     onClick: () -> Unit,
 ) {
     Card(
@@ -99,7 +101,12 @@ private fun CharacterCard(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(14.dp),
             ) {
-                AccentAvatar(name = character.name, accent = accent)
+                CharacterImage(
+                    workSlug = workSlug,
+                    slug = character.slug,
+                    name = character.name,
+                    accent = accent,
+                )
                 Column(Modifier.weight(1f)) {
                     Text(
                         text = character.name,

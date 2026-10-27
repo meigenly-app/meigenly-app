@@ -123,6 +123,7 @@ class SeedInstaller @Inject constructor(
                         text = quote.text,
                         textNorm = TextNorm.normalize(quote.text),
                         textOriginal = quote.textOriginal,
+                        textJapanese = quote.textJapanese,
                         textOriginalNorm = quote.textOriginal?.let { TextNorm.normalize(it) },
                         episode = quote.episode,
                         context = quote.context,

@@ -18,7 +18,7 @@ object ShareIntents {
         context.startActivity(Intent.createChooser(intent, null))
     }
 
-    fun shareImage(context: Context, bitmap: Bitmap, fileName: String) {
+    fun shareImage(context: Context, bitmap: Bitmap, fileName: String, extraText: String? = null) {
         val dir = File(context.cacheDir, "share").apply { mkdirs() }
         val file = File(dir, "$fileName.png")
         file.outputStream().use { out ->
@@ -31,6 +31,9 @@ object ShareIntents {
         )
         val intent = Intent(Intent.ACTION_SEND).apply {
             type = "image/png"
+            if (!extraText.isNullOrBlank()) {
+                putExtra(Intent.EXTRA_TEXT, extraText)
+            }
             putExtra(Intent.EXTRA_STREAM, uri)
             addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
         }

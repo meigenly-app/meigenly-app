@@ -24,6 +24,7 @@ import br.meigenly.data.db.entity.WorkEntity
  *   + seed_state for seed versioning.
  * - v2: added quotes_fts full-text index (E5), done while no public build exists.
  * - v3: quotes gained text_norm; FTS re-indexed over normalized text (accent folding).
+ * - v4: quotes gained text_japanese (kanji); destructive migration while v0 not published.
  * - exportSchema=false for the MVP; enable schema export when migration history matters (E9).
  */
 @Database(
@@ -36,7 +37,7 @@ import br.meigenly.data.db.entity.WorkEntity
         HistoryEntity::class,
         SeedStateEntity::class,
     ],
-    version = 3,
+    version = 4,
     exportSchema = true,
 )
 abstract class AppDatabase : RoomDatabase() {
