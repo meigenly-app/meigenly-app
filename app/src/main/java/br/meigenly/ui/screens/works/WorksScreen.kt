@@ -1,19 +1,25 @@
 package br.meigenly.ui.screens.works
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -27,17 +33,26 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.automirrored.outlined.LibraryBooks
+import androidx.compose.material.icons.filled.AutoAwesome
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.outlined.Bookmark
 import androidx.compose.material.icons.outlined.History
 import androidx.compose.material.icons.outlined.Settings
 import br.meigenly.data.db.entity.QuoteFull
 import br.meigenly.domain.model.Work
+import br.meigenly.ui.components.CharacterImage
 import br.meigenly.ui.components.WorkCover
 
 private const val TAB_WORKS = 0
@@ -56,8 +71,9 @@ fun WorksScreen(
     onTodayQuoteClick: (QuoteFull) -> Unit,
     viewModel: WorksViewModel = hiltViewModel(),
 ) {
-    val works by viewModel.works.collectAsStateWithLifecycle()
-    val todayQuote by viewModel.todayQuote.collectAsStateWithLifecycle()
+    val state by viewModel.state.collectAsStateWithLifecycle()
+    val works = state.works
+    val todayQuote = state.todayQuote
     val selectedTab by rememberSaveable { mutableIntStateOf(0) }
 
     Scaffold(
@@ -128,36 +144,127 @@ fun WorksScreen(
 /** Deterministic daily pick (E8): tap opens the reader directly at that quote. */
 @Composable
 private fun TodayQuoteCard(quote: QuoteFull, onClick: () -> Unit) {
+    val ink = MaterialTheme.colorScheme.onPrimary
+    val brush = Brush.linearGradient(
+        colors = listOf(
+            MaterialTheme.colorScheme.primary,
+            Color(0xFF2E9FE0),
+        ),
+    )
     Card(
         modifier = Modifier.fillMaxWidth().clickable(onClick = onClick),
+        shape = RoundedCornerShape(24.dp),
+        colors = CardDefaults.cardColors(containerColor = Color.Transparent),
+        elevation = CardDefaults.cardElevation(defaultElevation = 6.dp),
     ) {
-        Column(Modifier.padding(16.dp)) {
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .background(brush)
+                .padding(20.dp),
+        ) {
+            // Aspa decorativa grande, no canto — reforça o "cartão de citação".
             Text(
-                text = "Frase do dia",
-                style = MaterialTheme.typography.labelLarge,
-                color = MaterialTheme.colorScheme.primary,
+                text = "\u201D",
+                style = MaterialTheme.typography.displayLarge,
+                fontWeight = FontWeight.Bold,
+                color = Color.White.copy(alpha = 0.22f),
+                modifier = Modifier.align(Alignment.TopEnd),
             )
-            Text(
-                text = "“${quote.quote.text}”",
-                style = MaterialTheme.typography.bodyLarge,
-                maxLines = 3,
-                modifier = Modifier.padding(top = 8.dp),
-            )
-            if (quote.quote.textOriginal != null) {
+            Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Row(
+                        modifier = Modifier
+                            .clip(RoundedCornerShape(50))
+                            .background(ink.copy(alpha = 0.14f))
+                            .padding(horizontal = 10.dp, vertical = 5.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(6.dp),
+                    ) {
+                        Icon(
+                            imageVector = Icons.Filled.AutoAwesome,
+                            contentDescription = null,
+                            tint = ink,
+                            modifier = Modifier.size(14.dp),
+                        )
+                        Text(
+                            text = "FRASE DO DIA",
+                            style = MaterialTheme.typography.labelSmall,
+                            fontWeight = FontWeight.Bold,
+                            color = ink,
+                            letterSpacing = 1.sp,
+                        )
+                    }
+                    Spacer(Modifier.weight(1f))
+                    WorkCover(
+                        slug = quote.workSlug,
+                        title = quote.workTitle,
+                        accent = quote.workAccentColor,
+                        size = 46.dp,
+                    )
+                }
+
                 Text(
-                    text = quote.quote.textOriginal!!,
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    maxLines = 2,
-                    modifier = Modifier.padding(top = 4.dp),
+                    text = "\u201C${quote.quote.text}\u201D",
+                    style = MaterialTheme.typography.headlineSmall,
+                    fontWeight = FontWeight.SemiBold,
+                    color = ink,
+                    maxLines = 4,
+                    overflow = TextOverflow.Ellipsis,
                 )
+
+                if (!quote.quote.textOriginal.isNullOrBlank()) {
+                    Text(
+                        text = quote.quote.textOriginal!!,
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = ink.copy(alpha = 0.72f),
+                        maxLines = 2,
+                        overflow = TextOverflow.Ellipsis,
+                    )
+                }
+
+                HorizontalDivider(color = ink.copy(alpha = 0.16f))
+
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    CharacterImage(
+                        workSlug = quote.workSlug,
+                        slug = quote.characterSlug,
+                        name = quote.characterName,
+                        accent = quote.workAccentColor,
+                        size = 32.dp,
+                    )
+                    Column(Modifier.weight(1f).padding(start = 10.dp)) {
+                        Text(
+                            text = quote.characterName,
+                            style = MaterialTheme.typography.titleSmall,
+                            fontWeight = FontWeight.SemiBold,
+                            color = ink,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis,
+                        )
+                        Text(
+                            text = listOfNotNull(quote.workTitle, quote.characterArc)
+                                .joinToString(" · "),
+                            style = MaterialTheme.typography.bodySmall,
+                            color = ink.copy(alpha = 0.7f),
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis,
+                        )
+                    }
+                    Text(
+                        text = "Ler",
+                        style = MaterialTheme.typography.labelLarge,
+                        fontWeight = FontWeight.Bold,
+                        color = ink,
+                    )
+                    Icon(
+                        imageVector = Icons.AutoMirrored.Filled.ArrowForward,
+                        contentDescription = null,
+                        tint = ink,
+                        modifier = Modifier.size(18.dp),
+                    )
+                }
             }
-            Text(
-                text = listOfNotNull(quote.characterName, quote.workTitle).joinToString(" · "),
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                modifier = Modifier.padding(top = 8.dp),
-            )
         }
     }
 }

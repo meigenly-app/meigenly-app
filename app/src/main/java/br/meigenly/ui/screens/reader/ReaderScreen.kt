@@ -50,6 +50,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.graphics.Brush
@@ -373,19 +374,33 @@ private fun CharacterSheetContent(
         modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp).padding(bottom = 28.dp),
         verticalArrangement = Arrangement.spacedBy(14.dp),
     ) {
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(14.dp),
+        Column(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(12.dp),
         ) {
-            CharacterImage(
-                workSlug = workSlug,
-                slug = characterSlug ?: "",
-                name = character?.name ?: "",
-                accent = accent,
-                size = 64.dp,
-                modifier = Modifier.clickable { showPhoto = true },
-            )
-            Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
+            // Retrato recortado em círculo, centralizado, com o anel azul da marca.
+            Box(
+                modifier = Modifier
+                    .size(118.dp)
+                    .border(3.dp, MaterialTheme.colorScheme.primary, CircleShape)
+                    .padding(5.dp)
+                    .clip(CircleShape)
+                    .clickable { showPhoto = true },
+                contentAlignment = Alignment.Center,
+            ) {
+                CharacterImage(
+                    workSlug = workSlug,
+                    slug = characterSlug ?: "",
+                    name = character?.name ?: "",
+                    accent = accent,
+                    size = 108.dp,
+                )
+            }
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.spacedBy(2.dp),
+            ) {
                 Text(
                     text = character?.name ?: "",
                     style = MaterialTheme.typography.titleLarge,

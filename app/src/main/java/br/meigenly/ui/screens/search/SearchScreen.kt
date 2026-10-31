@@ -38,8 +38,8 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import br.meigenly.data.db.entity.QuoteFull
 import br.meigenly.domain.model.Character
 import br.meigenly.domain.model.Work
-import br.meigenly.ui.components.AccentAvatar
 import br.meigenly.ui.components.CharacterImage
+import br.meigenly.ui.components.WorkCover
 
 /** Global search: quote text (FTS), character names and work titles (E5). */
 @OptIn(ExperimentalMaterial3Api::class)
@@ -249,7 +249,12 @@ private fun WorkSearchRow(work: Work, onClick: (Work) -> Unit) {
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier.fillMaxWidth().clickable { onClick(work) },
     ) {
-        AccentAvatar(name = work.title, accent = work.accentColor, size = 40.dp)
+        WorkCover(
+            slug = work.slug,
+            title = work.title,
+            accent = work.accentColor,
+            size = 40.dp,
+        )
         Column(Modifier.weight(1f).padding(start = 12.dp)) {
             Text(work.title, style = MaterialTheme.typography.titleSmall)
             if (work.description != null) {
