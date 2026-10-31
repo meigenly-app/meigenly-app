@@ -85,7 +85,7 @@ class ContentRepository @Inject constructor(
 
     fun searchCharacters(query: String): Flow<List<Character>> =
         characterDao.searchByName(query.lowercase()).map { rows ->
-            rows.map { entity -> entity.toModel(quoteCount = 0) }
+            rows.map { row -> row.character.toModel(quoteCount = 0, workSlug = row.workSlug) }
         }
 
     fun searchWorks(query: String): Flow<List<Work>> =
@@ -121,7 +121,7 @@ private fun WorkEntity.toModel(): Work = Work(
     accentColor = accentColor,
 )
 
-private fun CharacterEntity.toModel(quoteCount: Int): Character = Character(
+private fun CharacterEntity.toModel(quoteCount: Int, workSlug: String? = null): Character = Character(
     id = id,
     workId = workId,
     slug = slug,
@@ -129,7 +129,11 @@ private fun CharacterEntity.toModel(quoteCount: Int): Character = Character(
     nameOriginal = nameOriginal,
     arc = arc,
     description = description,
+    firstChapter = firstChapter,
+    firstEpisode = firstEpisode,
+    firstEpisodeSeason = firstEpisodeSeason,
     quoteCount = quoteCount,
+    workSlug = workSlug,
 )
 
 private fun QuoteEntity.toModel(): Quote = Quote(

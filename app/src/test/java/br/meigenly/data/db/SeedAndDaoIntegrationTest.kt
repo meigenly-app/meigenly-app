@@ -46,13 +46,13 @@ class SeedAndDaoIntegrationTest {
             .installIfNeeded()
 
         val works = db.workDao().observeWorks().first()
-        assertEquals(77, works.size)
+        assertEquals(122, works.size)
         // sort_order follows the seed file order
         assertEquals("berserk", works.first().slug)
         assertEquals("sousou-no-frieren", works.last().slug)
         assertTrue(works.any { it.slug == "naruto" })
-        assertEquals(370, db.characterDao().countAll())
-        assertEquals(480, db.quoteDao().countAll())
+        assertEquals(541, db.characterDao().countAll())
+        assertEquals(712, db.quoteDao().countAll())
     }
 
     @Test
@@ -62,8 +62,8 @@ class SeedAndDaoIntegrationTest {
         installer.installIfNeeded()
 
         assertEquals(SeedAssetReader.SEED_VERSION, db.seedStateDao().installedVersion())
-        assertEquals(77, db.workDao().countAll())
-        assertEquals(480, db.quoteDao().countAll())
+        assertEquals(122, db.workDao().countAll())
+        assertEquals(712, db.quoteDao().countAll())
     }
 
     @Test
@@ -99,8 +99,8 @@ class SeedAndDaoIntegrationTest {
         installer.installIfNeeded()
 
         // Content reloaded, not duplicated.
-        assertEquals(77, db.workDao().countAll())
-        assertEquals(480, db.quoteDao().countAll())
+        assertEquals(122, db.workDao().countAll())
+        assertEquals(712, db.quoteDao().countAll())
 
         // Favorite and history survive on the new quote id (matched by normalized text).
         val favorites = db.favoriteDao().observeFavorites().first()

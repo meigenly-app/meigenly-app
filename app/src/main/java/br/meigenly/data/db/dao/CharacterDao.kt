@@ -5,6 +5,7 @@ import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Transaction
 import br.meigenly.data.db.entity.CharacterEntity
+import br.meigenly.data.db.entity.CharacterSearchRow
 import br.meigenly.data.db.entity.CharacterWithCount
 import br.meigenly.data.db.entity.CharacterWithQuotes
 import kotlinx.coroutines.flow.Flow
@@ -40,15 +41,17 @@ interface CharacterDao {
 
     @Query(
         """
-        SELECT * FROM characters
-        WHERE lower(name) LIKE '%' || :query || '%'
-           OR lower(name_original) LIKE '%' || :query || '%'
-            OR lower(arc) LIKE '%' || :query || '%'
-        ORDER BY sort_order ASC
+        SELECT c.*, w.slug AS work_slug
+        FROM characters c
+        JOIN works w ON w.id = c.work_id
+        WHERE lower(c.name) LIKE '%' || :query || '%'
+           OR lower(c.name_original) LIKE '%' || :query || '%'
+            OR lower(c.arc) LIKE '%' || :query || '%'
+        ORDER BY c.sort_order ASC
         LIMIT 20
         """
     )
-    fun searchByName(query: String): Flow<List<CharacterEntity>>
+    fun searchByName(query: String): Flow<List<CharacterSearchRow>>
 
     @Insert
     suspend fun insertAll(characters: List<CharacterEntity>): List<Long>

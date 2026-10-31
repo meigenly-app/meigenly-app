@@ -31,6 +31,9 @@ data class SeedCharacter(
     val nameOriginal: String? = null,
     val arc: String? = null,
     val description: String? = null,
+    val firstChapter: Int? = null,
+    val firstEpisode: Int? = null,
+    val firstEpisodeSeason: Int? = null,
     val quotes: List<SeedQuote> = emptyList(),
 )
 

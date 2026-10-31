@@ -64,6 +64,9 @@ import br.meigenly.core.share.ShareIntents
 import br.meigenly.core.share.ShareTheme
 import br.meigenly.core.util.toAccentColor
 import br.meigenly.data.db.entity.QuoteFull
+import br.meigenly.domain.model.Character
+import br.meigenly.ui.components.CharacterImage
+import br.meigenly.ui.components.CharacterPhotoDialog
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.filterNotNull
@@ -85,6 +88,7 @@ fun ReaderScreen(
     val shareTheme by viewModel.shareTheme.collectAsStateWithLifecycle()
     val shareColor by viewModel.shareColor.collectAsStateWithLifecycle()
     var showPalette by remember { mutableStateOf(false) }
+    var showCharacterSheet by remember { mutableStateOf(false) }
 
     if (quotes.isEmpty()) {
         Scaffold(
@@ -158,11 +162,17 @@ fun ReaderScreen(
                     // Share as image + text (bitmap built off the main thread)
                     IconButton(onClick = {
                         scope.launch(Dispatchers.IO) {
+                            val portrait = runCatching {
+                                context.assets
+                                    .open("characters/${quote.workSlug}/${quote.characterSlug}.jpg")
+                                    .use { android.graphics.BitmapFactory.decodeStream(it) }
+                            }.getOrNull()
                             val bitmap = ShareImageBuilder.createBitmap(
                                 item = quote,
                                 accentHex = quote.workAccentColor,
                                 theme = shareTheme,
                                 customColor = shareColor,
+                                portrait = portrait,
                             )
                             ShareIntents.shareImage(
                                 context,
@@ -209,7 +219,10 @@ fun ReaderScreen(
             beyondViewportPageCount = 1,
             modifier = Modifier.fillMaxSize().padding(padding),
         ) { page ->
-            QuotePage(quote = quotes[page])
+            QuotePage(
+                quote = quotes[page],
+                onCharacterClick = { showCharacterSheet = true },
+            )
         }
     }
 
@@ -218,8 +231,25 @@ fun ReaderScreen(
             ShareStyleSheet(
                 selectedTheme = shareTheme,
                 selectedColor = shareColor,
-                onPickTheme = viewModel::setShareTheme,
+                // A theme owns its background: picking one clears any custom paint.
+                onPickTheme = { theme ->
+                    viewModel.setShareTheme(theme)
+                    viewModel.setShareColor(null)
+                },
                 onPickColor = viewModel::setShareColor,
+            )
+        }
+    }
+
+    if (showCharacterSheet) {
+        val currentQuote = quotes.getOrNull(currentPage)
+        ModalBottomSheet(onDismissRequest = { showCharacterSheet = false }) {
+            CharacterSheetContent(
+                character = character,
+                workTitle = currentQuote?.workTitle,
+                workSlug = currentQuote?.workSlug,
+                characterSlug = currentQuote?.characterSlug,
+                accent = currentQuote?.workAccentColor,
             )
         }
     }
@@ -329,6 +359,114 @@ private fun Swatch(
     }
 }
 
+/** Bottom sheet "Sobre o personagem": resumo + primeira aparição (Cap./Ep.). */
+@Composable
+private fun CharacterSheetContent(
+    character: Character?,
+    workTitle: String?,
+    workSlug: String?,
+    characterSlug: String?,
+    accent: String?,
+) {
+    var showPhoto by remember { mutableStateOf(false) }
+    Column(
+        modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp).padding(bottom = 28.dp),
+        verticalArrangement = Arrangement.spacedBy(14.dp),
+    ) {
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(14.dp),
+        ) {
+            CharacterImage(
+                workSlug = workSlug,
+                slug = characterSlug ?: "",
+                name = character?.name ?: "",
+                accent = accent,
+                size = 64.dp,
+                modifier = Modifier.clickable { showPhoto = true },
+            )
+            Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
+                Text(
+                    text = character?.name ?: "",
+                    style = MaterialTheme.typography.titleLarge,
+                )
+                val subline = listOfNotNull(character?.nameOriginal?.takeIf { it.isNotBlank() }, workTitle)
+                    .joinToString("  ·  ")
+                if (subline.isNotBlank()) {
+                    Text(
+                        text = subline,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
+            }
+        }
+
+        val description = character?.description?.takeIf { it.isNotBlank() }
+        val firstChapter = character?.firstChapter
+        val firstEpisode = character?.firstEpisode
+        val season = character?.firstEpisodeSeason?.takeIf { it > 1 }
+
+        if (description != null) {
+            Text(
+                text = description,
+                style = MaterialTheme.typography.bodyLarge,
+                color = MaterialTheme.colorScheme.onSurface,
+            )
+        }
+
+        if (firstChapter != null || firstEpisode != null) {
+            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                if (firstChapter != null) {
+                    FirstAppearanceRow(label = "Mangá", value = "Cap. $firstChapter", accent = accent)
+                }
+                if (firstEpisode != null) {
+                    val value = if (season != null) "Ep. $firstEpisode (T$season)" else "Ep. $firstEpisode"
+                    FirstAppearanceRow(label = "Anime", value = value, accent = accent)
+                }
+            }
+        } else if (description == null) {
+            Text(
+                text = "Sem resumo registrado para este personagem.",
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+        }
+    }
+
+    if (showPhoto) {
+        CharacterPhotoDialog(
+            workSlug = workSlug,
+            slug = characterSlug,
+            name = character?.name ?: "",
+            onDismiss = { showPhoto = false },
+        )
+    }
+}
+
+@Composable
+private fun FirstAppearanceRow(
+    label: String,
+    value: String,
+    accent: String?,
+) {
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(10.dp),
+    ) {
+        Box(
+            modifier = Modifier
+                .size(8.dp)
+                .background(
+                    color = if (accent != null) accent.toAccentColor() else MaterialTheme.colorScheme.primary,
+                    shape = CircleShape,
+                ),
+        )
+        Text(text = label, style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.onSurfaceVariant)
+        Text(text = value, style = MaterialTheme.typography.bodyMedium)
+    }
+}
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun ReaderTopBar(
@@ -356,6 +494,7 @@ private fun ReaderTopBar(
 @Composable
 private fun QuotePage(
     quote: QuoteFull,
+    onCharacterClick: () -> Unit = {},
     modifier: Modifier = Modifier,
 ) {
     val cs = MaterialTheme.colorScheme
@@ -419,16 +558,35 @@ private fun QuotePage(
                     Spacer(Modifier.height(24.dp))
                     HorizontalDivider(color = cs.outlineVariant.copy(alpha = 0.6f))
                     Spacer(Modifier.height(20.dp))
-                    Text(
-                        text = quote.characterName,
-                        style = MaterialTheme.typography.titleMedium,
-                    )
-                    val meta = listOfNotNull(quote.workTitle, quote.quote.episode).joinToString("  ·  ")
-                    Text(
-                        text = meta,
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    )
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.Center,
+                        modifier = Modifier
+                            .clickable(onClick = onCharacterClick)
+                            .padding(horizontal = 8.dp, vertical = 4.dp),
+                    ) {
+                        CharacterImage(
+                            workSlug = quote.workSlug,
+                            slug = quote.characterSlug,
+                            name = quote.characterName,
+                            accent = quote.workAccentColor,
+                            size = 48.dp,
+                        )
+                        Spacer(Modifier.width(10.dp))
+                        Column {
+                            Text(
+                                text = quote.characterName,
+                                style = MaterialTheme.typography.titleMedium,
+                            )
+                            val meta = listOfNotNull(quote.workTitle, quote.quote.episode)
+                                .joinToString("  ·  ")
+                            Text(
+                                text = meta,
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            )
+                        }
+                    }
                     if (quote.quote.context != null) {
                         Spacer(Modifier.height(8.dp))
                         Text(

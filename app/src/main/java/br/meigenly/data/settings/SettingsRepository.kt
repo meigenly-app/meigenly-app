@@ -44,10 +44,10 @@ class SettingsRepository @Inject constructor(
     // ---- Daily-quote notification (E8) ----
 
     fun observeDailyQuoteEnabled(): Flow<Boolean> =
-        context.settingsDataStore.data.map { prefs -> prefs[KEY_DAILY_QUOTE] ?: false }
+        context.settingsDataStore.data.map { prefs -> prefs[KEY_DAILY_QUOTE] ?: true }
 
     suspend fun dailyQuoteEnabledOnce(): Boolean =
-        context.settingsDataStore.data.first()[KEY_DAILY_QUOTE] ?: false
+        context.settingsDataStore.data.first()[KEY_DAILY_QUOTE] ?: true
 
     suspend fun setDailyQuoteEnabled(enabled: Boolean) {
         context.settingsDataStore.edit { it[KEY_DAILY_QUOTE] = enabled }
@@ -88,10 +88,46 @@ class SettingsRepository @Inject constructor(
         }
     }
 
+    // ---- Search history (recent queries, most recent first) ----
+
+    fun observeSearchHistory(): Flow<List<String>> =
+        context.settingsDataStore.data.map { prefs -> decodeHistory(prefs[KEY_SEARCH_HISTORY]) }
+
+    /** Registers a stabilized query; blanks are ignored, dedupe keeps the newest at top. */
+    suspend fun addSearchQuery(query: String) {
+        val q = query.trim()
+        if (q.isEmpty()) return
+        context.settingsDataStore.edit { prefs ->
+            val list = decodeHistory(prefs[KEY_SEARCH_HISTORY]).toMutableList()
+            list.removeAll { it.equals(q, ignoreCase = true) }
+            list.add(0, q)
+            if (list.size > MAX_SEARCH_HISTORY) list.subList(MAX_SEARCH_HISTORY, list.size).clear()
+            prefs[KEY_SEARCH_HISTORY] = list.joinToString(SEARCH_HISTORY_SEPARATOR)
+        }
+    }
+
+    /** Removes a single history entry (the X on each row). */
+    suspend fun removeSearchQuery(query: String) {
+        context.settingsDataStore.edit { prefs ->
+            val list = decodeHistory(prefs[KEY_SEARCH_HISTORY]).filter { it != query }
+            if (list.isEmpty()) {
+                prefs.remove(KEY_SEARCH_HISTORY)
+            } else {
+                prefs[KEY_SEARCH_HISTORY] = list.joinToString(SEARCH_HISTORY_SEPARATOR)
+            }
+        }
+    }
+
+    private fun decodeHistory(raw: String?): List<String> =
+        raw?.split(SEARCH_HISTORY_SEPARATOR)?.filter { it.isNotBlank() } ?: emptyList()
+
     private companion object {
         val KEY_THEME_MODE = stringPreferencesKey("theme_mode")
         val KEY_DAILY_QUOTE = booleanPreferencesKey("daily_quote_notification")
         val KEY_SHARE_THEME = stringPreferencesKey("share_theme")
         val KEY_SHARE_COLOR = intPreferencesKey("share_custom_color")
+        val KEY_SEARCH_HISTORY = stringPreferencesKey("search_history")
+        const val SEARCH_HISTORY_SEPARATOR = "\u001F"
+        const val MAX_SEARCH_HISTORY = 10
     }
 }

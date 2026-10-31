@@ -61,7 +61,7 @@ class SearchDaoTest {
         val results = db.characterDao().searchByName("vegeta").first()
         // Vegeta exists in Dragon Ball Z and Dragon Ball GT (variant "Majin Vegeta" merged into DBZ's).
         assertEquals(2, results.size)
-        assertTrue(results.all { it.name == "Vegeta" })
+        assertTrue(results.all { it.character.name == "Vegeta" })
     }
 
     @Test
@@ -75,8 +75,8 @@ class SearchDaoTest {
         val repo = ContentRepository(db.workDao(), db.characterDao(), db.quoteDao())
         val today = repo.todayQuote()
         assertEquals(true, today != null)
-        // The deterministic count must match the whole 480-quote catalog
-        assertEquals(480, db.quoteDao().countAll())
+        // The deterministic count must match the whole 712-quote catalog
+        assertEquals(712, db.quoteDao().countAll())
         // Two calls on the same day must pick the same quote
         assertEquals(today?.quote?.id, repo.todayQuote()?.quote?.id)
     }

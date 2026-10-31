@@ -259,6 +259,7 @@
 | 3 | Toru Oikawa | O talento é algo que você faz florescer; o instinto é algo que você aprimora! | 才能は開花させるもの、センスは磨くもの！ | Sainō wa kaika saseru mono, sensu wa migaku mono! | Cap. 146 / Ep. 24 (T2) |
 | 4 | Keishin Ukai | Olhem para a frente! O voleibol é um esporte onde sempre olhamos para cima! | 下を向くんじゃねぇ！バレーは常に上を向くスポーツだ！ | Shita o mukun ja nee! Barē wa tsune ni ue o muku supōtsu da! | Cap. 188 / Ep. 08 (T3) |
 | 5 | Kotaro Bokuto | Quando chegar o momento em que você se apaixonar pelo voleibol, você será invencível! | その瞬間があるかないかだ。バレーにハマる瞬間は！ | Sono shunkan ga aru ka nai ka da. Barē ni hamaru shunkan wa! | Cap. 89 / Ep. 10 (T2) |
+| 6 | Shoyo Hinata | Meu nome é Shoyo Hinata. Sou do concreto — vou derrotar o seu time e ir para os Nacionais! | コンクリート出身日向翔陽です。あなたをブッ倒して全国へ行きます。 | Konkurito shusshin Hinata Shōyō desu. Anata o buttaoshite zenkoku e ikimasu. | Cap. 77 / Ep. 01 (T2) |
 
 ---
 

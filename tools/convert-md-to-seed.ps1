@@ -110,6 +110,53 @@ $WorksMeta = [ordered]@{
     'xxxHOLiC'                                                                   = @{ slug='xxxholic'; title='xxxHOLiC'; titleOriginal='×××HOLiC'; year=2006; accentColor='#7B1FA2'; description='Uma loja realiza qualquer desejo — cobrando o equivalente certo por ele.' }
     'xxxHOLiC Rei'                                                               = @{ slug='xxxholic-rei'; title='xxxHOLiC Rei'; titleOriginal=$null; year=2013; accentColor='#9575CD'; description='A loja reabre as portas; os desejos continuam cobrando o seu preço.' }
     'Yu Yu Hakusho'                                                              = @{ slug='yu-yu-hakusho'; title='Yu Yu Hakusho'; titleOriginal='幽遊白書'; year=1992; accentColor='#00695C'; description='Um delinquente morre salvando um menino e vira detetive do mundo espiritual.' }
+    # ---- Lote 3 (v0.9.3) -----------------------------------------------------
+    'Another'                                                                    = @{ slug='another'; title='Another'; titleOriginal='アナザー'; year=2012; accentColor='#455A64'; description='A turma 3-3 esconde uma morte que volta todo ano para cobrar o preço do silêncio.' }
+    'Astro Boy (Tetsuwan Atom)'                                                  = @{ slug='astro-boy'; title='Astro Boy'; titleOriginal='鉄腕アトム'; year=1963; accentColor='#F9A825'; description='O menino-robô de coração humano protege um futuro onde robôs e humanos convivem.' }
+    'Black Torch'                                                                = @{ slug='black-torch'; title='Black Torch'; titleOriginal='BLACK TORCH'; year=2017; accentColor='#EF6C00'; description='Um jovem que fala com animais divide o corpo com um mononoke de fogo e vira shinobi.' }
+    'Bungou Stray Dogs'                                                          = @{ slug='bungou-stray-dogs'; title='Bungou Stray Dogs'; titleOriginal='文豪ストレイドッグス'; year=2016; accentColor='#26A69A'; description='Detetives com os poderes dos grandes escritores protegem Yokohama.' }
+    'Dorohedoro'                                                                 = @{ slug='dorohedoro'; title='Dorohedoro'; titleOriginal='ドロヘドロ'; year=2020; accentColor='#78909C'; description='Um homem de cabeça de jacaré caça o feiticeiro que o transformou.' }
+    'Erased (Boku dake ga Inai Machi)'                                           = @{ slug='erased'; title='Erased'; titleOriginal='僕だけがいない街'; year=2016; accentColor='#5C6BC0'; description='Um mangaká volta ao passado para salvar uma colega da própria morte.' }
+    'Fate/stay night'                                                            = @{ slug='fate-stay-night'; title='Fate/stay night'; titleOriginal=$null; year=2014; accentColor='#1565C0'; description='Na Guerra do Santo Graal, Shirou jura manter de pé o ideal de ser um herói.' }
+    'Fruits Basket'                                                              = @{ slug='fruits-basket'; title='Fruits Basket'; titleOriginal='フルーツバスケット'; year=2019; accentColor='#F48FB1'; description='Tohru descubra a maldição do zodíaco na família Sohma — e desfaz uma por uma.' }
+    'GOSICK'                                                                     = @{ slug='gosick'; title='GOSICK'; titleOriginal='ゴシック'; year=2011; accentColor='#00838F'; description='Numa academia nos céus da Europa, a pequena detetive dourada refaz o caos em verdade.' }
+    'Hell''s Paradise (Jigokuraku)'                                              = @{ slug='hells-paradise'; title='Hell''s Paradise'; titleOriginal='地獄楽'; year=2023; accentColor='#66BB6A'; description='Um ninja condenado busca o elixir da imortalidade numa ilha paradisíaca e mortal.' }
+    'Innocent'                                                                   = @{ slug='innocent'; title='Innocent'; titleOriginal='イノセント'; year=2013; accentColor='#90A4AE'; description='A saga do carrasco de Paris que deu dignidade à guilhotina do povo.' }
+    'InuYasha'                                                                   = @{ slug='inuyasha'; title='InuYasha'; titleOriginal='犬夜叉'; year=2000; accentColor='#C62828'; description='A garota do poço e o meio-youkai caçam os cacos da Jóia de Shikon.' }
+    'Jigoku Shoujo (Hell Girl)'                                                  = @{ slug='jigoku-shoujo'; title='Hell Girl'; titleOriginal='地獄少女'; year=2005; accentColor='#7B1FA2'; description='A garota do inferno executa vinganças — e cobra a alma de quem pede.' }
+    'Kamisama Hajimemashita (Kamisama Kiss)'                                     = @{ slug='kamisama-kiss'; title='Kamisama Kiss'; titleOriginal='神様はじめました'; year=2012; accentColor='#AD1457'; description='Sem teto e sem família, Nanami vira deusa de terra — com um youkai-raposa fiel.' }
+    'Kekkai Sensen (Blood Blockade Battlefront)'                                 = @{ slug='kekkai-sensen'; title='Blood Blockade Battlefront'; titleOriginal='血界戦線'; year=2015; accentColor='#00897B'; description='Na Nova York tomada por brechas, a Libra segura o equilíbrio dos dois mundos.' }
+    'Lili-Men'                                                                   = @{ slug='lili-men'; title='Lili-Men'; titleOriginal='リリメン'; year=2022; accentColor='#8E24AA'; description='Succubi usam humanos como matrizes para se reproduzir e a humanidade jura exterminar cada uma — até nascer o rei que encerrará a guerra.' }
+    'Love Bullet'                                                                = @{ slug='love-bullet'; title='Love Bullet'; titleOriginal=$null; year=2023; accentColor='#EC407A'; description='As cupidos de hoje carregam revólver: uma bala calibrada faz o amor florescer.' }
+    'Mashle: Magic and Muscles'                                                  = @{ slug='mashle'; title='Mashle'; titleOriginal='マッシュル'; year=2023; accentColor='#455A64'; description='Sem uma gota de magia, Mash atravessa a academia de magia com músculos.' }
+    'Mato Seihei no Slave (Chained Soldier)'                                     = @{ slug='chained-soldier'; title='Chained Soldier'; titleOriginal='魔都精兵のスレイブ'; year=2024; accentColor='#7B1FA2'; description='Só mulheres enfrentam os demônios de Mato — e Yuuki se torna o escravo de Kyouka.' }
+    'Medalist'                                                                   = @{ slug='medalist'; title='Medalist'; titleOriginal='メダリスト'; year=2025; accentColor='#039BE5'; description='A menina que começou tarde e o instrutor falido patinam rumo ao pódio.' }
+    'Mermaid Saga (Ningyo Series)'                                               = @{ slug='mermaid-saga'; title='Mermaid Saga'; titleOriginal=$null; year=2003; accentColor='#00838F'; description='A carne de sereia ergue os vivos por séculos — pagando com a própria humanidade.' }
+    'Mission: Yozakura Family (Yozakura-san Chi no Daisakusen)'                  = @{ slug='mission-yozakura-family'; title='Mission: Yozakura Family'; titleOriginal='夜桜さんちの大作戦'; year=2024; accentColor='#AD1457'; description='Casado na família-espionagem Yozakura, Taiyo aprende a proteger de verdade.' }
+    'Natsume Yuujinchou (Natsume''s Book of Friends)'                            = @{ slug='natsume-yuujinchou'; title='Natsume''s Book of Friends'; titleOriginal='夏目友人帳'; year=2008; accentColor='#558B2F'; description='O único que vê youkais devolve os nomes roubados — sempre com o gato por perto.' }
+    'Nue''s Exorcist (Nue no Onmyouji)'                                          = @{ slug='nue-no-onmyouji'; title='Nue''s Exorcist'; titleOriginal='鵺の陰陽師'; year=2024; accentColor='#5C6BC0'; description='Assombrado no colégio, Gakuro alia-se ao youkai Nue para proteger os vivos.' }
+    'Orange'                                                                     = @{ slug='orange'; title='Orange'; titleOriginal='オレンジ'; year=2016; accentColor='#FB8C00'; description='Cartas do futuro pedem uma única coisa: não deixe o Kakeru morrer de novo.' }
+    'Ragna Crimson'                                                              = @{ slug='ragna-crimson'; title='Ragna Crimson'; titleOriginal='ラグナクリムゾン'; year=2023; accentColor='#C62828'; description='Armado com o poder do próprio eu futuro, Ragna declara guerra aos dragões.' }
+    'RG Veda (Seiden: RG Veda)'                                                  = @{ slug='rg-veda'; title='RG Veda'; titleOriginal='聖伝-RG VEDA-'; year=1991; accentColor='#8E24AA'; description='O senhor Yasha e a criança Ashura desafiam a profecia e o imperador usurpador.' }
+    'RuriDragon'                                                                 = @{ slug='ruridragon'; title='RuriDragon'; titleOriginal='ルリドラゴン'; year=2022; accentColor='#558B2F'; description='Chifres de dragão de uma noite para outra: Ruri segue o dia a dia em passo normal.' }
+    'Sakamoto Days'                                                              = @{ slug='sakamoto-days'; title='Sakamoto Days'; titleOriginal='SAKAMOTO DAYS'; year=2025; accentColor='#F9A825'; description='O lendário assassino virou dono de bairro — e o submundo ainda cobra o preço.' }
+    'Tasogare Otome x Amnesia (Dusk Maiden of Amnesia)'                          = @{ slug='dusk-maiden'; title='Dusk Maiden of Amnesia'; titleOriginal='黄昏乙女×アムネジア'; year=2012; accentColor='#6A1B9A'; description='O clube do paranormal acolhe a fantasma elegante — e investe contra o mistério dela.' }
+    'Tenmaku no Jaadugar'                                                        = @{ slug='tenmaku-no-jaadugar'; title='Tenmaku no Jaadugar'; titleOriginal='天幕のジャードゥガー'; year=2021; accentColor='#5D4037'; description='No império das estepes, uma sábia cativa arma a própria liberdade com tinta e livros.' }
+    'The Promised Neverland (Yakusoku no Neverland)'                             = @{ slug='the-promised-neverland'; title='The Promised Neverland'; titleOriginal='約束のネバーランド'; year=2019; accentColor='#33691E'; description='Órfãos descobrem que são gado — e planejam do zero a fuga perfeita.' }
+    'The Saga of Tanya the Evil (Youjo Senki)'                                   = @{ slug='youjo-senki'; title='The Saga of Tanya the Evil'; titleOriginal='幼女戦記'; year=2017; accentColor='#263238'; description='Uma soldada impiedosa declara guerra ao próprio deus que a renasceu.' }
+    'Ultimate Exorcist Kiyoshi (Exorcist no Kiyoshi-kun)'                        = @{ slug='ultimate-exorcist-kiyoshi'; title='Ultimate Exorcist Kiyoshi'; titleOriginal=$null; year=2024; accentColor='#00897B'; description='O exorcista forte demais tenta, inutilmente, uma vida escolar comum.' }
+    'Undead Unluck'                                                              = @{ slug='undead-unluck'; title='Undead Unluck'; titleOriginal='アンデッドアンラック'; year=2023; accentColor='#7B1FA2'; description='A garota da má-sorte e o morto-vivo atrás da melhor morte viram negadores do mundo.' }
+    'Vampire Hunter D'                                                           = @{ slug='vampire-hunter-d'; title='Vampire Hunter D'; titleOriginal='吸血鬼ハンター'; year=1985; accentColor='#6D4C41'; description='No crepúsculo da nobreza, o dhampir solitário caça os senhores da noite.' }
+    'Wind Breaker'                                                               = @{ slug='wind-breaker'; title='Wind Breaker'; titleOriginal='Wind Breaker'; year=2024; accentColor='#1565C0'; description='Os punhos da Furin não espalham violência: protegem a cidade e o próprio orgulho.' }
+    'Zatch Bell! (Konjiki no Gash Bell!)'                                        = @{ slug='zatch-bell'; title='Zatch Bell!'; titleOriginal='金色のガッシュ!!'; year=2003; accentColor='#F9A825'; description='Cem demônios disputam o trono do mundo mamodo com livro e parceiro humano.' }
+    # ---- Lote 4 (v0.9.3) -----------------------------------------------------
+    'Black Clover'                                                               = @{ slug='black-clover'; title='Black Clover'; titleOriginal='ブラッククローバー'; year=2017; accentColor='#37474F'; description='Sem uma gota de magia, Asta disputa o trono de Rei Mago pela pura obstinação.' }
+    'Digimon Adventure'                                                          = @{ slug='digimon-adventure'; title='Digimon Adventure'; titleOriginal='デジモンアドベンチャー'; year=1999; accentColor='#0288D1'; description='Crianças e parceiros digitais crescem juntos salvando dois mundos.' }
+    'Elfen Lied'                                                                 = @{ slug='elfen-lied'; title='Elfen Lied'; titleOriginal='エルフェンリート'; year=2004; accentColor='#AD1457'; description='A diclonius Lucy carrega a crueldade de um mundo que a criou como arma.' }
+    'Kengan Ashura'                                                              = @{ slug='kengan-ashura'; title='Kengan Ashura'; titleOriginal='ケンガンアシュラ'; year=2019; accentColor='#E64A19'; description='Nos duelos Kengan que decidem negócios, Ohma busca ser o Asura do ringue.' }
+    'Pokémon'                                                                    = @{ slug='pokemon'; title='Pokémon'; titleOriginal='ポケットモンスター'; year=1997; accentColor='#FBC02D'; description='Ao lado de Pikachu, Ash atravessa regiões inteiras para se tornar Mestre Pokémon.' }
+    'ReLIFE'                                                                     = @{ slug='relife'; title='ReLIFE'; titleOriginal='リライフ'; year=2016; accentColor='#26A69A'; description='Um adulto fracassado recomeça o ensino médio como experimento secreto.' }
+    'Shuumatsu no Valkyrie (Record of Ragnarok)'                                 = @{ slug='record-of-ragnarok'; title='Record of Ragnarok'; titleOriginal='終末のワルキューレ'; year=2021; accentColor='#B0BEC5'; description='Treze humanos históricos enfrentam treze deuses em duelos que decidem a espécie.' }
 }
 
 # ---------------------------------------------------------------------------
@@ -136,7 +183,7 @@ $Renames = @{
     'Ken Ryuguji (Draken)'            = 'Ken Ryuguji'
     'Duke Hyou (Biao Gong)'           = 'Duke Hyou'
     'Ei Sei (Ying Zheng)'             = 'Ei Sei'
-    'Kanki (Huan Yi)'                 = 'Kanki'
+    'Kanki (Huan Yi)'                 = 'Kan Ki'
     'Shin (Li Xin)'                   = 'Shin'
     'Wang Qi (Ou Ki)'                 = 'Wang Qi'
     'Esfera Negra (Gantz)'            = 'Gantz'
@@ -150,8 +197,28 @@ $Renames = @{
     'Loid Forger (Twilight)'          = 'Loid Forger'
     'Ken Takakura (Okarun)'           = 'Ken Takakura'
     'Kuro (Sleepy Ash)'               = 'Kuro'
-    'Direita (Tsugai)'                = 'Direita'
+    'Direita (Tsugai)'                = 'Right'
     'Ryuji Ayukawa (Yuka)'            = 'Ryuji Ayukawa'
+    # Lotes 3/4 (v0.9.3) — renames pedidos
+    'Ergo Proxy'                      = 'Proxy'
+    'Deusa do Mar'                    = 'Sea'
+    'Dera'                            = 'Ryu Tadera'
+    # Lotes 3/4 (v0.9.3) — variantes agrupadas
+    'Astro Boy (Atom)'                = 'Astro Boy'
+    'Saber (Artoria Pendragon)'       = 'Saber'
+    'Archer (EMIYA)'                  = 'Archer'
+    'Madara (Nyanko-sensei)'          = 'Nyanko-sensei'
+    'Gabimaru o Vazio'                = 'Gabimaru'
+    'Yuko Kanoe (Sombra)'             = 'Yuko Kanoe'
+    'Andy (Undead)'                   = 'Andy'
+    'Fuuko Izumo (Unluck)'            = 'Fuuko Izumo'
+    'Isabella (Mama)'                 = 'Isabella'
+    'Ash Ketchum (Satoshi)'           = 'Ash Ketchum'
+    'Meowth (Nyarth)'                 = 'Meowth'
+    'Zatch Bell (Gash Bell)'          = 'Zatch Bell'
+    'Rei Demônio (Pai)'               = 'Rei Demônio'
+    'Mão Esquerda (Left Hand)'        = 'Mão Esquerda'
+    'Juiz (Juiz da Union)'            = 'Juiz'
 }
 
 # Contexto adicional para variantes mescladas (preserva a distincao perdida)
@@ -181,6 +248,30 @@ $VariantContexts = @{
     'Kuro (Sleepy Ash)'           = 'Sleepy Ash'
     'Direita (Tsugai)'            = 'Tsugai'
     'Ryuji Ayukawa (Yuka)'        = 'Também conhecida como Yuka'
+    # Lotes 3/4 (v0.9.3)
+    'Astro Boy (Atom)'          = 'Também conhecido como Atom'
+    'Saber (Artoria Pendragon)' = 'Nome verdadeiro: Artoria Pendragon'
+    'Archer (EMIYA)'            = 'O Servo de um futuro distante (EMIYA)'
+    'Madara (Nyanko-sensei)'    = 'Apelido: Nyanko-sensei'
+    'Gabimaru o Vazio'          = 'Estado "vazio" do ninja, sem emoções'
+    'Yuko Kanoe (Sombra)'       = 'A Sombra'
+    'Andy (Undead)'             = 'Undead'
+    'Fuuko Izumo (Unluck)'      = 'Unluck'
+    'Isabella (Mama)'           = 'Conhecida como Mama'
+    'Ash Ketchum (Satoshi)'     = 'Nome japonês: Satoshi'
+    'Meowth (Nyarth)'           = 'Nome japonês: Nyarth'
+    'Zatch Bell (Gash Bell)'    = 'Nome japonês: Gash Bell'
+    'Rei Demônio (Pai)'         = 'O pai de Kiyoshi'
+    'Mão Esquerda (Left Hand)'  = 'Também conhecida como Left Hand'
+    'Juiz (Juiz da Union)'      = 'Juiz da União'
+}
+
+# Contextos pontuais por frase: obra -> kanji exato (coluna Original (JP)) -> contexto.
+# Aplica-se QUANDO a frase nao tiver contexto de variante; consumed no quote-build.
+$ExtraQuoteContexts = @{
+    'Haikyu!!' = @{
+        'コンクリート出身日向翔陽です。あなたをブッ倒して全国へ行きます。' = 'Resposta a Wakatoshi Ushijima: nascido do concreto, Hinata promete esmagar o time dele e ir aos Nacionais.'
+    }
 }
 
 # Kanji ja validados no seed v1 (null para personagens novos)
@@ -316,7 +407,7 @@ $CharDescriptions = @{
     'Re-l Mayer'                = 'Inspetora da cidade-cúpula Romdeau, caçadora de Proxies.'
     'Vincent Law'               = 'Imigrante introspectivo que carrega a identidade de Ergo Proxy.'
     'Pino'                      = 'AutoReiv infantil que desperta para a consciência.'
-    'Ergo Proxy'                = 'O Proxy criador, agente do caos e da criação.'
+    'Proxy'                     = 'O Proxy criador, agente do caos e da criação.'
     # Fullmetal Alchemist
     'Edward Elric'              = 'Alquimista de Aço que busca recuperar o corpo do irmão.'
     'Alphonse Elric'            = 'Irmão de Edward, alma presa numa armadura de aço.'
@@ -366,7 +457,7 @@ $CharDescriptions = @{
     'Ei Sei'                    = 'Rei de Qin que almeja unificar a China.'
     'Wang Qi'                   = 'General lendário, mentor de Shin no campo de batalha.'
     'Duke Hyou'                 = 'General do fogo, instinto puro de guerra.'
-    'Kanki'                     = 'General implacável, ex-bandido com táticas cruéis.'
+    'Kan Ki'                    = 'General implacável, ex-bandido com táticas cruéis.'
     # Kuroko no Basket
     'Tetsuya Kuroko'            = 'A sombra do time, passe invisível e amor pelo basquete.'
     'Taiga Kagami'              = 'Ala que retorna dos EUA, luz para a sombra de Kuroko.'
@@ -513,9 +604,9 @@ $WorkCharDescriptions = [ordered]@{
         'Taro Misaki'       = 'Meio-campo criativo que forma com Tsubasa a dupla dourada.'
     }
     'Centuria' = @{
-        'Julian'       = 'Jovem escravo que herda o poder das cem vidas e a chance de recomeçar.'
-        'Deusa do Mar' = 'Entidade dos mares que se liga à sorte de Julian.'
-        'Mira'         = 'A jovem que foge com Julian e vê nele a última esperança.'
+        'Julian'  = 'Jovem escravo que herda o poder das cem vidas e a chance de recomeçar.'
+        'Sea'     = 'Entidade dos mares que se liga à sorte de Julian.'
+        'Mira'    = 'A jovem que foge com Julian e vê nele a última esperança.'
     }
     'Chainsaw Man' = @{
         'Makima'       = 'A caçadora-chefe de sorriso calmo e controle absoluto sobre as pessoas.'
@@ -531,10 +622,10 @@ $WorkCharDescriptions = [ordered]@{
         'Sanae Furukawa' = 'Mãe da Nagisa, doce e pronta a chorar pelo pão que ninguém quis.'
     }
     'Daemons of the Shadow Realm (Yomi no Tsugai)' = @{
-        'Yuru'    = 'O gêmeo criado no lado sombrio, guardião por contrato da vila.'
-        'Asa'     = 'A gêmea da superfície, descobre tarde o lado sombrio da própria família.'
-        'Dera'    = 'Daemon pareado de Asa, teimoso e grácil nas batalhas.'
-        'Direita' = 'Daemon pareado de Yuru, força bruta com prumo no comando.'
+        'Yuru'       = 'O gêmeo criado no lado sombrio, guardião por contrato da vila.'
+        'Asa'        = 'A gêmea da superfície, descobre tarde o lado sombrio da própria família.'
+        'Ryu Tadera' = 'Daemon pareado de Asa, teimoso e grácil nas batalhas.'
+        'Right'      = 'Daemon pareado de Yuru, força bruta com prumo no comando.'
     }
     'Dandadan' = @{
         'Momo Ayase'    = 'Neta do médium Seiko, enxerga espíritos e nunca fica parada.'
@@ -683,6 +774,269 @@ $WorkCharDescriptions = [ordered]@{
         'Kurama'          = 'A raposa demoníaca renascida em humano, estrategista calculista.'
         'Younger Toguro'  = 'A força das trevas encarnada, ex-atleta que escolheu o medo.'
     }
+    # ---- Lote 3 (v0.9.3) ----------------------------------------------------
+    'Another' = @{
+        'Mei Misaki'        = 'A aluna de olho-muñeca que enxerga o inelutável e é tratada como inexistente.'
+        'Koichi Sakakibara' = 'O transferido da turma 3-3 que se recusa a fingir que ninguém existe.'
+        'Reiko Mikami'      = 'Tia e conselheira severa de Mei sobre a maldição da classe.'
+    }
+    'Astro Boy (Tetsuwan Atom)' = @{
+        'Astro Boy'    = 'O menino-robô criado no lugar de Tobio, guardião do céu azul.'
+        'Dr. Tenma'    = 'O cientista que criou Astro e o rejeitou por não crescer como humano.'
+        'Dr. Ochanomizu' = 'O cientista bondoso que resgata Astro e crê na convivência das duas espécies.'
+        'Uran'         = 'A irmãzinha robô, destemida e apegada ao irmão.'
+    }
+    'Black Torch' = @{
+        'Jiro Azuma'        = 'O jovem que entende a voz dos animais e acolhe o mononoke Rago.'
+        'Rago'              = 'Mononoke milenar de fogo, preso na forma de gatinho fogoso.'
+        'Ichika Kishimojin' = 'Capitã dos shinobi da Black Torch, caça os kaii que rompem a ordem.'
+        'Reiji Kirihara'    = 'Shinobi veterano severo, dono das regras de sangue da equipe.'
+    }
+    'Bungou Stray Dogs' = @{
+        'Osamu Dazai'          = 'Ex-executor da Port Mafia, charlatão suicida e gênio tático da Agência.'
+        'Atsushi Nakajima'     = 'O tigre branco órfão que aprende, na Agência, a querer viver.'
+        'Ryunosuke Akutagawa'  = 'A espada negra da Port Mafia, sedento pelo reconhecimento de Dazai.'
+        'Chuya Nakahara'       = 'O ex-parceiro de Dazai, dono da gravidade como arma e do orgulho como manto.'
+        'Sakunosuke Oda'       = 'O soldado de baixo escalão que deseja, antes de tudo, salvar os órfãos.'
+    }
+    'Dorohedoro' = @{
+        'Caiman'  = 'O caçador de cabeça de jacaré, vive no buraco da própria maldição.'
+        'Nikaido' = 'Dona do restaurante e da magia mais poderosa, parceira incondicional de Caiman.'
+        'En'      = 'O chefão feiticeiro dos cogumelos, que protege a própria família.'
+        'Shin'    = 'Feiticeiro da máscara-caveira, despede inimigos com o martelo.'
+        'Noi'     = 'A feiticeira gigante da cura, sempre de bom humor na pancadaria.'
+    }
+    'Erased (Boku dake ga Inai Machi)' = @{
+        'Satoru Fujinuma' = 'O mangaká que volta no tempo para salvar quem está morrendo.'
+        'Kayo Hinazuki'   = 'A menina-alvo do abdutor, primeira vida que Satoru jura salvar.'
+        'Sachiko Fujinuma' = 'A mãe jornalista que lê a verdade nas pequenas coisas.'
+        'Gaku Yashiro'    = 'O professor genial que deseja, acima de tudo, ser derrotado.'
+    }
+    'Fate/stay night' = @{
+        'Saber'         = 'O Servo Saber: a restante Artoria Pendragon, rei de Camelot.'
+        'Shirou Emiya'  = 'O sobrevivente que herda de Kiritsugu o ideal de ser herói.'
+        'Archer'        = 'O Servo de lâminas que veio de um futuro de erros ajustados.'
+        'Gilgamesh'     = 'O Rei dos Heróis de Uruk, dono de todos os tesouros.'
+        'Rin Tohsaka'   = 'A segunda geração dos Tohsaka, talentosa e exigente consigo.'
+        'Kirei Kotomine' = 'O sacerdote supervisionador que busca o próprio vazio.'
+    }
+    'Fruits Basket' = @{
+        'Tohru Honda'    = 'A órfã radiante que leva luz à casa amaldiçoada dos Sohma.'
+        'Kyo Sohma'      = 'O gato exilado do zodíaco, raiva e ternura no mesmo peito.'
+        'Yuki Sohma'     = 'O príncipe da escola que busca um lugar onde ninguém exija perfeição.'
+        'Shigure Sohma'  = 'O cão do zodíaco: escritor leviano por fora, estrategista por dentro.'
+    }
+    'GOSICK' = @{
+        'Victorique de Blois' = 'A pequena detetive dourada que refaz o caos em verdade.'
+        'Kazuya Kujo'         = 'O estudante japonês que se torna baluarte de Victorique.'
+        'Cordelia Gallo'      = 'A mãe que liberta a filha da vila cinzenta com o próprio amor.'
+    }
+    'Hell''s Paradise (Jigokuraku)' = @{
+        'Gabimaru'                = 'O ninja letal de Iwagakure que quer voltar vivo para a esposa.'
+        'Sagiri Yamada Asaemon'   = 'A executora que lê corações — e a dúvida — na própria lâmina.'
+        'Yuzuriha'                = 'A kunoichi de vida agarrada, que mostra a própria humanidade na ilha.'
+        'Chobe Aza'               = 'O brigão canibal irmão de Toma, guiado só pelo próprio punho.'
+    }
+    'Innocent' = @{
+        'Charles-Henri Sanson'  = 'O carrasco de Paris que humaniza a guilhotina como misericórdia.'
+        'Marie-Joseph Sanson'   = 'A irmã que empunha a mesma lâmina como revolta própria.'
+    }
+    'InuYasha' = @{
+        'InuYasha'          = 'O meio-youkai da Tessaiga, protetor bruto e fiel de Kagome.'
+        'Kagome Higurashi'  = 'A garota vinda do poço, portadora da Jóia de Shikon.'
+        'Sesshomaru'        = 'O youkai completo elegante, que trilha o próprio caminho.'
+        'Kikyo'             = 'A sacerdotisa ressuscitada em barro e rancor.'
+        'Naraku'            = 'O demônio tecido de malícia humana, aranha nas sombras.'
+    }
+    'Jigoku Shoujo (Hell Girl)' = @{
+        'Ai Enma'     = 'A garota do inferno: recebe o ódio e enterra os dois lados.'
+        'Ren Ichimoku' = 'O servo de olhos nas ruínas, que lê a fragilidade humana.'
+        'Hone Onna'   = 'A serva óssea de Ai, cronista dos ódios levados ao inferno.'
+    }
+    'Kamisama Hajimemashita (Kamisama Kiss)' = @{
+        'Nanami Momozono' = 'A ex-desabrigada que vira deusa de terra do templo esquecido.'
+        'Tomoe'           = 'O youkai-raposa familiar, braço e coração do templo.'
+        'Mizuki'          = 'O youkai-serpente branco, devoto eterno de Nanami.'
+        'Kurama Shinjuro' = 'O youkai-pássaro idol, o anjo caído do rock.'
+    }
+    'Kekkai Sensen (Blood Blockade Battlefront)' = @{
+        'Leonardo Watch'       = 'O novato dono dos Olhos Que Tudo Veem dos Deuses.'
+        'Klaus Von Reinherz'   = 'O gigante que lidera a Libra com punhos e fé na luz.'
+        'Zapp Renfro'          = 'O parceiro barulhento de Leonardo, mestre das técnicas de sangue.'
+        'Steven A. Starphase'  = 'O vice elegante de Klaus, que encerra a diplomacia congelando tudo.'
+    }
+    'Lili-Men' = @{
+        'Nito'     = 'O abrigado que viu os amigos serem mortos e agora caça succubi pela Seção S.'
+        'Kurogane' = 'O chefe implacável da Seção S, que mata succubi antes de nascerem.'
+        'Unno'     = 'A arqueira do sangue pegajoso, vice-comandante da unidade Mochizuki.'
+    }
+    'Love Bullet' = @{
+        'Koharu' = 'A cupido nova que carrega revólver para fazer o amor florescer.'
+        'Chiyo'  = 'A cupido veterana que calibra a paixão com a própria bala.'
+        'Ena'    = 'A cupido sniper que não admite um milímetro de falha.'
+    }
+    'Mashle: Magic and Muscles' = @{
+        'Mash Burnedead'  = 'O aluno sem magia que derrota encantamentos com músculos e disciplina.'
+        'Regro Burnedead' = 'O pai adotivo que escondeu e criou Mash com carinho.'
+        'Lance Crown'     = 'O gênio da geomancia obcecado pela própria irmã.'
+        'Dot Barrett'     = 'O autoproclamado protagonista, rival tolo e leal de Mash.'
+    }
+    'Mato Seihei no Slave (Chained Soldier)' = @{
+        'Kyouka Uzen'  = 'A capitã do 7º Esquadrão, que monta e liberta o poder de Yuuki.'
+        'Yuuki Wakura' = 'O escravo da capitã que se torna escudo dos inocentes.'
+        'Himari Azuma' = 'A vice exigente que mede o mérito pelo próprio esforço.'
+        'Tenka Izumo'  = 'A capitã carismática rival, que torce para levá-lo ao próprio time.'
+    }
+    'Medalist' = @{
+        'Inori Yuitsuka'  = 'A aluna tardia da patinação que sonha em brilhar no pódio.'
+        'Tsukasa Akeuraji' = 'O instrutor que troca a própria vida pelo sonho da aluna.'
+        'Hikaru Kamisaki' = 'O talento nato do gelo, rival pura e impiedosa.'
+    }
+    'Mermaid Saga (Ningyo Series)' = @{
+        'Yuta' = 'O imortal que procura a sereia capaz de devolver sua morte.'
+        'Mana' = 'A menina que partilha a carne de sereia e a viagem com Yuta.'
+        'Rin'  = 'A mulher que troca a velhice pela beleza eterna e apodrecida.'
+    }
+    'Mission: Yozakura Family (Yozakura-san Chi no Daisakusen)' = @{
+        'Taiyo Asano'         = 'O rapaz comum que entra na família-espionagem para proteger Mutsumi.'
+        'Mutsumi Yozakura'    = 'A cabeça gentil da família Yozakura, coração do grupo.'
+        'Kyoichiro Yozakura'  = 'O irmão devastador e devoto de Mutsumi, dono dos fios.'
+        'Shion Yozakura'      = 'A irmã hacker que intercepta dados e alvos.'
+    }
+    'Natsume Yuujinchou (Natsume''s Book of Friends)' = @{
+        'Takashi Natsume'  = 'O garoto que vê youkais e devolve os nomes roubados.'
+        'Nyanko-sensei'    = 'O youkai felino, guardião cômico e ganancioso do Livro dos Amigos.'
+        'Reiko Natsume'    = 'A avó que criou o Livro dos Amigos colecionando nomes.'
+    }
+    'Nue''s Exorcist (Nue no Onmyouji)' = @{
+        'Gakuro Yajima'   = 'O aluno que troca o armário do medo pela espada do colégio.'
+        'Nue'             = 'O youkai lendário pactuado com Gakuro por um jogo.'
+        'Shiroha Fujino'  = 'A exorcista fria da família Fujino, lâmina sem hesitação.'
+    }
+    'Orange' = @{
+        'Naho Takamiya'  = 'A aluna que recebe cartas do futuro para salvar Kakeru.'
+        'Kakeru Naruse'  = 'O transferido em luto, salvo pela coragem de todos.'
+        'Hiroto Suwa'    = 'O amigo que abre mão do próprio amor para salvar o amigo.'
+    }
+    'Ragna Crimson' = @{
+        'Ragna'     = 'O caçador silencioso que herda o poder e a dor do próprio eu futuro.'
+        'Crimson'   = 'O estrategista que mira só a cabeça do Rei dos Dragões.'
+        'Leonica'   = 'A parceira de caça de Ragna, a razão da sua força.'
+        'Ultimatia' = 'A rainha dos dragões que concede o tempo como esmola.'
+    }
+    'RG Veda (Seiden: RG Veda)' = @{
+        'Yasha-oh'      = 'O senhor Yasha que acolhe Ashura e desafia o trono.'
+        'Ashura'        = 'A estrela selada da profecia, capaz de incendiar os Seis Mundos.'
+        'Taishakuten'   = 'O imperador usurpador que derrubou Ashura-oh.'
+        'Kujaku'        = 'O andarilho misterioso que tece os fios do destino.'
+        'Kendappa-oh'   = 'O rei-músico fiel ao próprio amado.'
+    }
+    'RuriDragon' = @{
+        'Ruri Aoki'   = 'A colegial meia-dragão que leva chifres e chamas no dia a dia.'
+        'Mãe da Ruri' = 'A mãe serena que trata a herança dragão como notícia comum.'
+        'Yuka Maeda'  = 'A amiga próxima que acha os chifres até bonitos.'
+    }
+    'Sakamoto Days' = @{
+        'Taro Sakamoto' = 'O lendário assassino virado dono de mercadinho de família.'
+        'Shin Asakura'  = 'O telepata fiel que lê mentes — menos a do chefe.'
+        'Lu Xiaotang'   = 'A herdeira chinesa que briga melhor bebendo.'
+        'Nagumo'        = 'O assassino camaleão da Ordem, mestre das máscaras.'
+    }
+    'Tasogare Otome x Amnesia (Dusk Maiden of Amnesia)' = @{
+        'Yuko Kanoe'   = 'A fantasma elegante que quer desvendar a própria morte.'
+        'Teiichi Niiya' = 'O aluno que se apaixona por uma fantasma e recupera suas memórias.'
+        'Kirie Kanoe'  = 'A parente distante que teme o preço dos laços com os vivos.'
+    }
+    'Tenmaku no Jaadugar' = @{
+        'Fatima'   = 'A sábia cativa que arma a própria liberdade com tinta e livros.'
+        'Toregene' = 'A imperatriz na sombra que governa pela ambição dos homens.'
+    }
+    'The Promised Neverland (Yakusoku no Neverland)' = @{
+        'Emma'     = 'A órfã de coração imenso que jura levar todos para fora.'
+        'Norman'   = 'O gênio do orfanato que ama Emma e planeja com ela.'
+        'Ray'      = 'O estrategista seco que se recusa a ser alimentação.'
+        'Isabella' = 'A mãe do orfanato: ama os filhos e serve ao abismo.'
+    }
+    'The Saga of Tanya the Evil (Youjo Senki)' = @{
+        'Tanya von Degurechaff'            = 'A soldada prodígio que declara guerra ao próprio deus.'
+        'Viktoriya Ivanovna Serebryakov'   = 'A tenente devota de Tanya, fiel até a trincheira.'
+    }
+    'Ultimate Exorcist Kiyoshi (Exorcist no Kiyoshi-kun)' = @{
+        'Kiyoshi Harai' = 'O exorcista poderoso demais para a vida escolar comum.'
+        'Rei Demônio'   = 'O demônio pai de Kiyoshi, que cobra a herança de sangue.'
+        'Tsurugi'       = 'O companheiro franco, que admira o desequilíbrio de Kiyoshi.'
+    }
+    'Undead Unluck' = @{
+        'Andy'         = 'O morto-vivo que busca a melhor morte como se fosse presente.'
+        'Fuuko Izumo'  = 'A garota da má-sorte letal que aprende a usá-la com coragem.'
+        'Victor'       = 'O ser que atravessou eras de loops sádicos de Deus.'
+        'Juiz'         = 'A líder da União que nega as regras cruéis do mundo.'
+    }
+    'Vampire Hunter D' = @{
+        'D'            = 'O dhampir caçador da fronteira, metade humano e metade nobreza.'
+        'Mão Esquerda' = 'A mão falante de D, sarcástica e fiel à caçada.'
+        'Meier Link'   = 'O nobre vampiro que cruza eras por Charlotte.'
+    }
+    'Wind Breaker' = @{
+        'Haruka Sakura'      = 'O garoto sozinho que tenta o topo apenas com os punhos.'
+        'Hajime Umemiya'     = 'O líder da Furin que protege a cidade com o próprio corpo.'
+        'Akihiko Nirei'      = 'O arquivista sem punhos que registra a bravura dos amigos.'
+        'Kyotaro Sugishita'  = 'O gigante devoto de Umemiya, fiel as ordens dele.'
+    }
+    'Zatch Bell! (Konjiki no Gash Bell!)' = @{
+        'Zatch Bell'   = 'O demônio dourado que quer ser um rei bondoso.'
+        'Kiyo Takamine' = 'O estudante que lê o livro do Zatch e vira parceiro de batalha.'
+        'Brago'        = 'O demônio arrogante da gravidade, rival leal de Sherry.'
+        'Folgore'      = 'O ídolo italiano escandaloso que dá risada — e protege o demônio.'
+        'Sherry Belmont' = 'A mestra aristocrática de Brago, que briga pelo amigo cego.'
+    }
+    # ---- Lote 4 (v0.9.3) ----------------------------------------------------
+    'Black Clover' = @{
+        'Asta'                  = 'O camponês sem magia que disputa o trono de Rei Mago pela obstinação.'
+        'Yami Sukehiro'         = 'O capitão do Touro Negro, imigrante com espada de trevas e conselhos brutais.'
+        'Yuno Grinberryall'     = 'O prodígio do vento, rival leal e herdeiro real.'
+        'Julius Novachrono'     = 'O Rei Mago apaixonado pelo futuro e pelas magias ainda desconhecidas.'
+        'Noelle Silva'          = 'A realeza da Casa Silva que domina a água contra os próprios complexos.'
+        'Mereoleona Vermillion' = 'A leonina dos Vermillion, que queima herança com o próprio fogo.'
+    }
+    'Digimon Adventure' = @{
+        'Taichi Yagami' = 'O líder corajoso das crianças escolhidas.'
+        'Agumon'        = 'O parceiro-lagarto de Taichi, coragem em digivoluções de fogo.'
+        'Yamato Ishida' = 'O lobo solitário do grupo, que aprende a confiar.'
+        'Gabumon'       = 'O parceiro tímido de Yamato, fiel pelo mundo inteiro.'
+        'Angemon'       = 'O anjo alado que protege a esperança até encontrá-la.'
+    }
+    'Elfen Lied' = @{
+        'Lucy'  = 'A diclonius que aprendeu crueldade pelas mãos dos humanos.'
+        'Nyu'   = 'A persona infantil de Lucy, nascida de um trauma.'
+        'Kouta' = 'O sobrevivente do passado que abraça a dor de Lucy.'
+        'Nana'  = 'A diclonius gentil, devota ao próprio "papai".'
+    }
+    'Kengan Ashura' = @{
+        'Ohma Tokita'     = 'O lutador errante que vive de verdade dentro do ringue.'
+        'Kuroki Gensai'   = 'O karateca que lapida o próprio punho até a sepultura.'
+        'Kazuo Yamashita' = 'O funcionário comum que se torna gerente e voz de Ohma.'
+        'Raian Kure'      = 'O assassino dos Kure, que ri de regras e cortes.'
+    }
+    'Pokémon' = @{
+        'Ash Ketchum'           = 'O treinador eterno de Pallet atrás do título de Mestre Pokémon.'
+        'Mewtwo'                = 'O clone lendário que questiona o valor de ter sido criado.'
+        'Jessie, James & Meowth' = 'A Equipe Rocket: o trio teatral que persegue Pikachu.'
+        'Meowth'                = 'O gato que aprendeu a falar — e a ver o mesmo céu.'
+    }
+    'ReLIFE' = @{
+        'Arata Kaizaki'  = 'O adulto que recomeça o colégio como experimento pago.'
+        'Chizuru Hishiro' = 'A aluna de excelência que aprende, palavra por palavra, a sorrir.'
+        'Ryo Yoake'      = 'O observador do experimento que apoia com paciência e carinho.'
+    }
+    'Shuumatsu no Valkyrie (Record of Ragnarok)' = @{
+        'Brunhilde'         = 'A valquíria que aposta a humanidade contra os deuses.'
+        'Kojiro Sasaki'     = 'O espadachim que perdeu toda a vida e venceu o lugar mais alto.'
+        'Adam (Adão)'       = 'O primeiro pai da humanidade, que abraça qualquer golpe pela família.'
+        'Jack, o Estripador' = 'O humano mais odiado da história, que pinta o próprio horror.'
+        'Lu Bu'             = 'O invencível dos três reinos, atrás de um oponente digno.'
+        'Qin Shi Huang'     = 'O primeiro imperador que corta o próprio caminho.'
+    }
 }
 
 
@@ -703,6 +1057,36 @@ function Get-Slug([string]$name) {
     $folded = $folded -replace '(?<=\w)\.(?=\w)', ''
     $folded = $folded -replace '[^a-z0-9]+', '-'
     return $folded.Trim('-')
+}
+
+function Derive-First([object[]]$charQuotes) {
+    # primeira aparencia do personagem: menor Cap. (manga) e menor Ep. (anime)
+    # "Ep. N (Tn)" compara por temporada; poemas ("Poema do Vol. N") sao ignorados
+    $firstCap = $null
+    $best = $null
+    foreach ($q in $charQuotes) {
+        if ($null -eq $q.episode) { continue }
+        $e = [string]$q.episode
+        if ($e -like 'Poema do Vol.*') { continue }
+        if ($e -match 'Cap\.\s*(\d+)') {
+            $v = [int]$Matches[1]
+            if ($null -eq $firstCap -or $v -lt $firstCap) { $firstCap = $v }
+        }
+        $m = [regex]::Match($e, '(?i)Ep\.\s*(\d+)(?:\s*\(T(\d+)\))?')
+        if ($m.Success) {
+            $nEp = [int]$m.Groups[1].Value
+            $nSe = 1
+            if ($m.Groups[2].Success) { $nSe = [int]$m.Groups[2].Value }
+            $better = ($null -eq $best) -or ($nSe -lt $best.Season) -or (($nSe -eq $best.Season) -and ($nEp -lt $best.Episode))
+            if ($better) { $best = [PSCustomObject]@{ Season = $nSe; Episode = $nEp } }
+        }
+    }
+    $res = @{ firstChapter = $firstCap; firstEpisode = $null; firstEpisodeSeason = $null }
+    if ($null -ne $best) {
+        $res.firstEpisode = $best.Episode
+        if ($best.Season -gt 1) { $res.firstEpisodeSeason = $best.Season }
+    }
+    return $res
 }
 
 function Normalize-Episode([string]$raw, [bool]$isPoem, [string]$vol) {
@@ -770,7 +1154,8 @@ foreach ($secIdx in 0..($sections.Count - 1)) {
         if (-not $l.StartsWith('|')) { continue }
         if ($l -match 'Personagem' -or $l -match '^Vol\s') { continue }   # header
         if ($l -match '^[\|\s\-:]+$') { continue }                        # separator
-        $cells = ($l.Trim('|') -split '\|') | ForEach-Object { $_.Trim() }
+        # unescape de \~ e \# nas celulas (lote 4 usa cabeçalho '\#', romaji usa '\~')
+        $cells = (($l.Trim('|') -split '\|') | ForEach-Object { $_.Trim() }) | ForEach-Object { ($_ -replace '\\([~#])', '$1') }
 
         $isPoem = $false; $vol = $null
         if ($cells.Count -eq 6) {
@@ -800,6 +1185,8 @@ foreach ($secIdx in 0..($sections.Count - 1)) {
             }
         } elseif ($VariantContexts.ContainsKey($rawName)) {
             $context = $VariantContexts[$rawName]
+        } elseif ($ExtraQuoteContexts.ContainsKey($title) -and $ExtraQuoteContexts[$title].ContainsKey($kanji)) {
+            $context = $ExtraQuoteContexts[$title][$kanji]
         }
         if ($ep.review) { $reviewCount++ }
 
@@ -832,13 +1219,17 @@ foreach ($secIdx in 0..($sections.Count - 1)) {
             $description = $WorkCharDescriptions[$title][$name]
         } elseif ($CharDescriptions.ContainsKey($name)) { $description = $CharDescriptions[$name] }
 
+        $first = Derive-First $quotesByChar[$name].ToArray()
         $characters.Add([PSCustomObject]@{
-            slug         = $slug
-            name         = $name
-            nameOriginal = $nameOriginal
-            arc          = $null
-            description  = $description
-            quotes       = [object[]]$quotesByChar[$name].ToArray()
+            slug               = $slug
+            name               = $name
+            nameOriginal       = $nameOriginal
+            arc                = $null
+            description        = $description
+            firstChapter       = $first.firstChapter
+            firstEpisode       = $first.firstEpisode
+            firstEpisodeSeason = $first.firstEpisodeSeason
+            quotes             = [object[]]$quotesByChar[$name].ToArray()
         })
     }
 

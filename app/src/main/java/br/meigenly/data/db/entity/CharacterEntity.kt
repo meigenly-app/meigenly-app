@@ -38,6 +38,12 @@ data class CharacterEntity(
     val nameOriginal: String? = null,
     val arc: String? = null,
     val description: String? = null,
+    @ColumnInfo(name = "first_chapter")
+    val firstChapter: Int? = null,
+    @ColumnInfo(name = "first_episode")
+    val firstEpisode: Int? = null,
+    @ColumnInfo(name = "first_episode_season")
+    val firstEpisodeSeason: Int? = null,
     @ColumnInfo(name = "sort_order")
     val sortOrder: Int = 0,
 )

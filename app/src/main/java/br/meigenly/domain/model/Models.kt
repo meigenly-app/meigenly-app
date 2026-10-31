@@ -22,8 +22,15 @@ data class Character(
     val nameOriginal: String?,
     val arc: String?,
     val description: String?,
+    /** First manga chapter citing this character (character summary card). */
+    val firstChapter: Int?,
+    /** First anime episode citing this character; season > 1 means a later cour. */
+    val firstEpisode: Int?,
+    val firstEpisodeSeason: Int?,
     /** Total quotes under this character (E2 list badge). */
     val quoteCount: Int,
+    /** Owning work slug; needed to locate the bundled portrait (search rows). */
+    val workSlug: String? = null,
 )
 
 data class Quote(

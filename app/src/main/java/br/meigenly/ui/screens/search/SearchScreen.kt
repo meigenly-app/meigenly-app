@@ -3,15 +3,18 @@ package br.meigenly.ui.screens.search
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.History
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -36,6 +39,7 @@ import br.meigenly.data.db.entity.QuoteFull
 import br.meigenly.domain.model.Character
 import br.meigenly.domain.model.Work
 import br.meigenly.ui.components.AccentAvatar
+import br.meigenly.ui.components.CharacterImage
 
 /** Global search: quote text (FTS), character names and work titles (E5). */
 @OptIn(ExperimentalMaterial3Api::class)
@@ -48,6 +52,7 @@ fun SearchScreen(
     viewModel: SearchViewModel = hiltViewModel(),
 ) {
     val query by viewModel.query.collectAsStateWithLifecycle()
+    val history by viewModel.history.collectAsStateWithLifecycle()
     val resultsState = viewModel.results.collectAsStateWithLifecycle().value
 
     val focusRequester = remember { FocusRequester() }
@@ -55,8 +60,11 @@ fun SearchScreen(
 
     Scaffold(
         topBar = {
+            // Barra de busca mais abaixo do topo e com forma de pílula.
             Row(
-                modifier = Modifier.fillMaxWidth().padding(start = 4.dp, top = 6.dp),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(start = 4.dp, top = 26.dp, bottom = 6.dp),
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 IconButton(onClick = navigateBack) {
@@ -70,6 +78,7 @@ fun SearchScreen(
                     onValueChange = viewModel::onQueryChange,
                     placeholder = { Text("Buscar frase, personagem ou obra") },
                     singleLine = true,
+                    shape = RoundedCornerShape(28.dp),
                     modifier = Modifier
                         .weight(1f)
                         .padding(end = 12.dp)
@@ -88,7 +97,16 @@ fun SearchScreen(
         val results = resultsState
         when {
             query.isBlank() -> {
-                SearchHint(Modifier.fillMaxSize().padding(padding))
+                if (history.isNotEmpty()) {
+                    HistoryList(
+                        entries = history,
+                        onPick = { viewModel.onQueryChange(it) },
+                        onRemove = viewModel::removeHistoryEntry,
+                        modifier = Modifier.padding(padding),
+                    )
+                } else {
+                    SearchHint(Modifier.fillMaxSize().padding(padding))
+                }
             }
             results != null && results.isEmpty -> {
                 Column(
@@ -122,6 +140,57 @@ private fun SearchHint(modifier: Modifier) {
     ) {
         Icon(Icons.Filled.Search, contentDescription = null)
         Text("Busque por texto da frase, nome ou obra")
+    }
+}
+
+/** Last searches with a per-entry remove (X). Tapping an entry reruns it. */
+@Composable
+private fun HistoryList(
+    entries: List<String>,
+    onPick: (String) -> Unit,
+    onRemove: (String) -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    Column(modifier = modifier.fillMaxSize()) {
+        SectionTitle(
+            title = "Buscas recentes",
+            modifier = Modifier.padding(start = 16.dp, end = 16.dp, top = 12.dp, bottom = 8.dp),
+        )
+        LazyColumn(
+            contentPadding = PaddingValues(horizontal = 16.dp, vertical = 4.dp),
+            verticalArrangement = Arrangement.spacedBy(2.dp),
+        ) {
+            items(entries.size, key = { "h$it" }) { index ->
+                val entry = entries[index]
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier.fillMaxWidth(),
+                ) {
+                    Icon(
+                        imageVector = Icons.Filled.History,
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                    Text(
+                        text = entry,
+                        style = MaterialTheme.typography.bodyLarge,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                        modifier = Modifier
+                            .weight(1f)
+                            .clickable { onPick(entry) }
+                            .padding(horizontal = 12.dp, vertical = 14.dp),
+                    )
+                    IconButton(onClick = { onRemove(entry) }) {
+                        Icon(
+                            imageVector = Icons.Filled.Close,
+                            contentDescription = "Remover do histórico",
+                            tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -162,12 +231,15 @@ private fun ResultsList(
 }
 
 @Composable
-private fun SectionTitle(title: String) {
+private fun SectionTitle(
+    title: String,
+    modifier: Modifier = Modifier,
+) {
     Text(
         text = title,
         style = MaterialTheme.typography.labelLarge,
         color = MaterialTheme.colorScheme.primary,
-        modifier = Modifier.padding(top = 6.dp),
+        modifier = modifier.padding(top = 6.dp),
     )
 }
 
@@ -199,7 +271,13 @@ private fun CharacterSearchRow(character: Character, onClick: (Character) -> Uni
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier.fillMaxWidth().clickable { onClick(character) },
     ) {
-        AccentAvatar(name = character.name, accent = null, size = 40.dp)
+        CharacterImage(
+            workSlug = character.workSlug,
+            slug = character.slug,
+            name = character.name,
+            accent = null,
+            size = 40.dp,
+        )
         Column(Modifier.weight(1f).padding(start = 12.dp)) {
             Text(character.name, style = MaterialTheme.typography.titleSmall)
             if (character.arc != null) {

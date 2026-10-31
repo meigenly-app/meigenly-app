@@ -124,7 +124,7 @@ fun MeigenlyNavHost(navController: NavHostController) {
                     navController.navigate("reader/${item.quote.characterId}/${item.quote.id}")
                 },
                 onCharacterClick = { character ->
-                    navController.navigate("characters/${character.workId}")
+                    navController.navigate("quotes/${character.id}")
                 },
                 onWorkClick = { work ->
                     navController.navigate("characters/${work.id}")
