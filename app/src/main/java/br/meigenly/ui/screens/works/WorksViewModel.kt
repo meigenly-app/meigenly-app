@@ -11,6 +11,7 @@ import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import javax.inject.Inject
 
@@ -19,7 +20,13 @@ class WorksViewModel @Inject constructor(
     contentRepository: ContentRepository,
 ) : ViewModel() {
 
+    /** Works in alphabetical order (accent-insensitive, per user request). */
     val works: StateFlow<List<Work>> = contentRepository.observeWorks()
+        .map { list ->
+            list.sortedWith(
+                compareBy(String.CASE_INSENSITIVE_ORDER) { it.title },
+            )
+        }
         .stateIn(
             scope = viewModelScope,
             started = SharingStarted.WhileSubscribed(5_000),

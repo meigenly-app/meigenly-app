@@ -48,13 +48,14 @@ class ShareBuilderTest {
     }
 
     @Test
-    fun `appends japanese source when present`() {
+    fun `appends japanese and romaji when present`() {
         val item = QuoteFull(
             quote = QuoteEntity(
                 id = 1,
                 characterId = 2,
                 text = "Frase de teste",
-                textJapanese = "日本語の原文",
+                textOriginal = "Rekishi wa eidaga",
+                textJapanese = "歴史は英だ",
             ),
             characterName = "Yuzuru Otonashi",
             characterSlug = "yuzuru-otonashi",
@@ -67,7 +68,8 @@ class ShareBuilderTest {
         assertEquals(
             "\u201CFrase de teste\u201D\n" +
                 "\u2014 Yuzuru Otonashi, Angel Beats!\n" +
-                "日本語の原文\n\n" +
+                "歴史は英だ\n" +
+                "Rekishi wa eidaga\n\n" +
                 "via Meigenly",
             text,
         )

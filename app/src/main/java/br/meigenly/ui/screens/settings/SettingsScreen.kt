@@ -110,7 +110,7 @@ fun SettingsScreen(
                 modifier = Modifier.padding(start = 16.dp, top = 20.dp, bottom = 12.dp),
             )
             Text(
-                text = "Meigenly · versão 0.9.0",
+                text = "Meigenly · versão 0.9.2",
                 style = MaterialTheme.typography.bodyLarge,
                 modifier = Modifier.padding(horizontal = 16.dp),
             )

@@ -9,6 +9,9 @@ import br.meigenly.data.db.entity.QuoteFull
  *    “Frase”
  *    — Personagem, Obra (Episódio)
  *
+ *    kanji
+ *    romaji
+ *
  *    via Meigenly
  */
 object ShareBuilder {
@@ -28,6 +31,9 @@ object ShareBuilder {
             append("\u2014 ").append(attribution)
             append("\n")
             item.quote.textJapanese
+                ?.takeIf { it.isNotBlank() }
+                ?.let { append(it).append("\n") }
+            item.quote.textOriginal
                 ?.takeIf { it.isNotBlank() }
                 ?.let { append(it).append("\n") }
             append("\nvia Meigenly")

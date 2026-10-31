@@ -143,6 +143,15 @@ private fun TodayQuoteCard(quote: QuoteFull, onClick: () -> Unit) {
                 maxLines = 3,
                 modifier = Modifier.padding(top = 8.dp),
             )
+            if (quote.quote.textOriginal != null) {
+                Text(
+                    text = quote.quote.textOriginal!!,
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 2,
+                    modifier = Modifier.padding(top = 4.dp),
+                )
+            }
             Text(
                 text = listOfNotNull(quote.characterName, quote.workTitle).joinToString(" · "),
                 style = MaterialTheme.typography.bodySmall,
