@@ -157,6 +157,25 @@ $WorksMeta = [ordered]@{
     'Pokémon'                                                                    = @{ slug='pokemon'; title='Pokémon'; titleOriginal='ポケットモンスター'; year=1997; accentColor='#FBC02D'; description='Ao lado de Pikachu, Ash atravessa regiões inteiras para se tornar Mestre Pokémon.' }
     'ReLIFE'                                                                     = @{ slug='relife'; title='ReLIFE'; titleOriginal='リライフ'; year=2016; accentColor='#26A69A'; description='Um adulto fracassado recomeça o ensino médio como experimento secreto.' }
     'Shuumatsu no Valkyrie (Record of Ragnarok)'                                 = @{ slug='record-of-ragnarok'; title='Record of Ragnarok'; titleOriginal='終末のワルキューレ'; year=2021; accentColor='#B0BEC5'; description='Treze humanos históricos enfrentam treze deuses em duelos que decidem a espécie.' }
+    # ---- Lote 5 (v0.9.4) ------------------------------------------------------
+    'Ano Hi Mita Hana no Namae o Bokutachi wa Mada Shiranai. (Anohana)'          = @{ slug='anohana'; title='Anohana'; titleOriginal='あの日見た花の名前を僕達はまだ知らない。'; year=2011; accentColor='#880E4F'; description='Amigos de infância se reencontram no verão para cumprir a promessa feita à Menma, que nunca se foi.' }
+    'Ashita no Joe'                                                              = @{ slug='ashita-no-joe'; title='Ashita no Joe'; titleOriginal='あしたのジョー'; year=1968; accentColor='#5D4037'; description='Da sarjeta do Doya Doya ao ringue, Joe queima a própria vida até a última cinza branca.' }
+    'Bakemonogatari'                                                             = @{ slug='bakemonogatari'; title='Bakemonogatari'; titleOriginal='化物語'; year=2009; accentColor='#7B1FA2'; description='Um quase-vampiro salva uma garota sem peso e colhe os mistérios do próprio bairro.' }
+    'Death Note'                                                                 = @{ slug='death-note'; title='Death Note'; titleOriginal='DEATH NOTE'; year=2006; accentColor='#B71C1C'; description='Um caderno que mata transforma o estudante Light num deus e L num duelo pela justiça.' }
+    'Devilman Crybaby'                                                           = @{ slug='devilman-crybaby'; title='Devilman Crybaby'; titleOriginal='デビルマン クライベイビー'; year=2018; accentColor='#D32F2F'; description='O corpo de demônio e o coração humano de Akira abrem o caminho para o fim da era dos deuses.' }
+    'Filmes do Studio Ghibli'                                                    = @{ slug='studio-ghibli'; title='Filmes do Studio Ghibli'; titleOriginal='スタジオジブリ'; year=2001; accentColor='#2E7D32'; description='Quatro clássicos de Miyazaki (Chihiro, Mononoke, Howl e Kiki) eternos em uma linha.' }
+    'Goblin Slayer'                                                              = @{ slug='goblin-slayer'; title='Goblin Slayer'; titleOriginal='ゴブリンスレイヤー'; year=2016; accentColor='#455A64'; description='Um aventureiro prata caça goblins sem pausa — e derruba a arrogância dos heróis.' }
+    'Golden Boy'                                                                 = @{ slug='golden-boy'; title='Golden Boy'; titleOriginal='ゴールデンボーイ'; year=1995; accentColor='#FF6F00'; description='Kintaro abandona os diplomas para estudar a vida inteira pedalando pelo Japão.' }
+    'Inazuma Eleven (Super Onze)'                                                = @{ slug='inazuma-eleven'; title='Inazuma Eleven'; titleOriginal='イナズマイレブン'; year=2008; accentColor='#FB8C00'; description='O clube de futebol do Raimon se reergue da ruína com coração, técnica e goleiros impossíveis.' }
+    'Initial D'                                                                  = @{ slug='initial-d'; title='Initial D'; titleOriginal='頭文字D'; year=1998; accentColor='#263238'; description='A entrega de tofu de Akina esconde o piloto mais rápido da montanha num Eight-Six.' }
+    'Kino no Tabi: The Beautiful World'                                          = @{ slug='kino-no-tabi'; title='Kino no Tabi: The Beautiful World'; titleOriginal='キノの旅 -the Beautiful World-'; year=2003; accentColor='#607D8B'; description='A viajante Kino dá três dias a cada país e segue adiante sem julgar ninguém.' }
+    'Made in Abyss'                                                              = @{ slug='made-in-abyss'; title='Made in Abyss'; titleOriginal='メイドインアビス'; year=2017; accentColor='#00897B'; description='Órfãs e um robô descem o Abismo e pagam com o corpo o preço da profundeza.' }
+    'Mahoutsukai no Yome (The Ancient Magus'' Bride)'                            = @{ slug='ancient-magus-bride'; title='The Ancient Magus'' Bride'; titleOriginal='魔法使いの嫁'; year=2017; accentColor='#00695C'; description='Sem família e sem valor próprio, Chise vira aprendiz e noiva de um mago-monstro.' }
+    'Noragami'                                                                   = @{ slug='noragami'; title='Noragami'; titleOriginal='ノラガミ'; year=2014; accentColor='#00ACC1'; description='Um deus sem templo sobrevive de pedidos entregues por apenas cinco ienes.' }
+    'Overlord'                                                                   = @{ slug='overlord'; title='Overlord'; titleOriginal='オーバーロード'; year=2015; accentColor='#6A1B9A'; description='O último jogador de Yggdrasil vira Ainz Ooal Gown e governa o Novo Mundo pela força.' }
+    'Owarimonogatari'                                                            = @{ slug='owarimonogatari'; title='Owarimonogatari'; titleOriginal='終物語'; year=2015; accentColor='#673AB7'; description='O fim da adolescência de Araragi: espelhos, primeiro amor e o próprio passado.' }
+    'Steins;Gate'                                                                = @{ slug='steins-gate'; title='Steins;Gate'; titleOriginal='シュタインズ・ゲート'; year=2011; accentColor='#EF6C00'; description='Uma mensagem ao passado arrasta o laboratório para a guerra das linhas do tempo.' }
+    'Tensei Shitara Slime Datta Ken (That Time I Got Reincarnated as a Slime)'   = @{ slug='tensei-slime'; title='Tensei Shitara Slime Datta Ken'; titleOriginal='転生したらスライムだった件'; year=2018; accentColor='#0288D1'; description='O reencarnado em slime funda um país onde todas as raças vivam e sorriam juntas.' }
 }
 
 # ---------------------------------------------------------------------------
@@ -219,6 +238,26 @@ $Renames = @{
     'Rei Demônio (Pai)'               = 'Rei Demônio'
     'Mão Esquerda (Left Hand)'        = 'Mão Esquerda'
     'Juiz (Juiz da Union)'            = 'Juiz'
+    # Lote 5 (v0.9.4) — variantes agrupadas
+    'Meiko Honma (Menma)'             = 'Meiko Honma'
+    'Jinta Yadomi (Jintan)'           = 'Jinta Yadomi'
+    'Naruko Anjou (Anaru)'            = 'Naruko Anjou'
+    'Chiriko Tsurumi (Tsuruko)'       = 'Chiriko Tsurumi'
+    'L (L Lawliet)'                   = 'L'
+    'Near (Nate River)'               = 'Near'
+    'Ryo Asuka (Satã)'                = 'Ryo Asuka'
+    'Zeniba (*A Viagem de Chihiro*)'  = 'Zeniba'
+    'Haku (*A Viagem de Chihiro*)'    = 'Haku'
+    'Ashitaka (*Princesa Mononoke*)'  = 'Ashitaka'
+    'San (*Princesa Mononoke*)'       = 'San'
+    'Howl (*O Castelo Animado*)'      = 'Howl'
+    'Kiki (*O Serviço de Entregas da Kiki*)' = 'Kiki'
+    'Mamoru Endou (Satoru Endo)'      = 'Mamoru Endou'
+    'Shuuya Gouenji (Axel Blaze)'     = 'Shuuya Gouenji'
+    'Yuuto Kidou (Jude Sharp)'        = 'Yuuto Kidou'
+    'Shiro Fubuki (Shawn Froste)'     = 'Shiro Fubuki'
+    'Regel (Ancião)'                  = 'Regel'
+    'Onna Shinkan (Sacerdotisa)'      = 'Onna Shinkan'
 }
 
 # Contexto adicional para variantes mescladas (preserva a distincao perdida)
@@ -1036,6 +1075,111 @@ $WorkCharDescriptions = [ordered]@{
         'Jack, o Estripador' = 'O humano mais odiado da história, que pinta o próprio horror.'
         'Lu Bu'             = 'O invencível dos três reinos, atrás de um oponente digno.'
         'Qin Shi Huang'     = 'O primeiro imperador que corta o próprio caminho.'
+    }
+    # ---- Lote 5 (v0.9.4) ------------------------------------------------------
+    'Ano Hi Mita Hana no Namae o Bokutachi wa Mada Shiranai. (Anohana)' = @{
+        'Meiko Honma'      = 'A fantasma gentil do verão, trazida de volta pela promessa dos amigos.'
+        'Jinta Yadomi'     = 'O recluso que largou o time e carrega a culpa e a saudade da Menma.'
+        'Naruko Anjou'     = 'A colega que esconde a saudade e a inveja atrás da máscara da internet.'
+        'Chiriko Tsurumi'  = 'A observadora quieta que guarda os sentimentos dos seis amigos.'
+    }
+    'Ashita no Joe' = @{
+        'Joe Yabuki'    = 'O garoto de rua que queima a própria vida no ringue até a cinza branca.'
+        'Danpei Tange'  = 'O treinador decadente que aposta a vida em Joe desde a sarjeta.'
+        'Toru Rikishi'  = 'O rival que atravessa o inferno da pesagem para encarar Joe de igual.'
+        'Yoko Shiraki'  = 'A herdeira do ginásio Shiraki, que vê a chama escondida de Joe.'
+    }
+    'Bakemonogatari' = @{
+        'Koyomi Araragi'     = 'O quase-vampiro que se despedaça por qualquer estranho ao redor.'
+        'Hitagi Senjougahara'= 'A garota quase sem peso, com lâminas escondidas no vocabulário.'
+        'Meme Oshino'        = 'O especialista errante que diz que ninguém salva ninguém.'
+        'Mayoi Hachikuji'    = 'A criança perdida eterna que manda aos becos dos mortos.'
+        'Tsubasa Hanekawa'   = 'A melhor aluna cujo saber infinito esconde uma fera.'
+    }
+    'Death Note' = @{
+        'Light Yagami' = 'O estudante impecável que escolheu julgar o mundo como deus.'
+        'L'            = 'O detetive anônimo que aposta a própria vida na justiça.'
+        'Ryuk'         = 'O shinigami entediado que soltou o caderno no mundo humano.'
+        'Near'         = 'O herdeiro de L que encerra o jogo com peças, puzzle e paciência.'
+    }
+    'Devilman Crybaby' = @{
+        'Akira Fudo'    = 'O coração sensível no corpo demoníaco: o próprio Devilman.'
+        'Ryo Asuka'     = 'O amigo brilhante que descobrirá ser Satan — e chorar por amor.'
+        'Miki Makimura' = 'A atleta que corre com o bastão do amor mais rápido que o ódio.'
+    }
+    'Filmes do Studio Ghibli' = @{
+        'Zeniba'   = 'A bruxa gêmea de Yubaba, que acolhe Chihiro com chá e perdão.'
+        'Haku'     = 'O espírito do rio Kohaku, guardião e amigo fiel de Chihiro.'
+        'Ashitaka' = 'O príncipe Emishi que parte para o oeste com o olhar limpo de ódio.'
+        'San'      = 'A menina criada pelos lobos, dividida entre amar e odiar os humanos.'
+        'Howl'     = 'O mago vaidoso e covarde que esconde o coração num castelo ambulante.'
+        'Kiki'     = 'A bruxinha de treze anos que conquista uma cidade entregando encomendas.'
+    }
+    'Goblin Slayer' = @{
+        'Goblin Slayer' = 'O aventureiro prata que caça goblins e não deseja mais nada.'
+        'Onna Shinkan'  = 'A sacerdotisa novata que escolhe caminhar na escuridão com ele.'
+    }
+    'Golden Boy' = @{
+        'Kintaro Oe'       = 'O gênio que largou os diplomas para estudar a vida em cada trabalho.'
+        'Madame Presidente' = 'A executiva que desdenha o estranho e não admite que caiu por ele.'
+    }
+    'Inazuma Eleven (Super Onze)' = @{
+        'Mamoru Endou'   = 'O goleiro capitão que nunca aceita jogo encerrado antes do fim.'
+        'Shuuya Gouenji' = 'O atacante que guarda o próprio chute como promessa ao futebol.'
+        'Yuuto Kidou'    = 'O estrategista de capa que transforma o campo em tabuleiro.'
+        'Shiro Fubuki'   = 'O jogador de gelo que carrega o gêmeo no vento da montanha.'
+    }
+    'Initial D' = @{
+        'Takumi Fujiwara'   = 'O estudante que virou o piloto mais rápido de Akina sem perceber.'
+        'Ryosuke Takahashi' = 'O cérebro dos Akagi RedSuns, que prova teoria na estrada de verdade.'
+        'Bunta Fujiwara'    = 'O pai calado que ensina pilotagem com um copo de água no painel.'
+        'Keisuke Takahashi' = 'O irmão de Ryosuke que queima pneus para subir de degrau.'
+    }
+    'Kino no Tabi: The Beautiful World' = @{
+        'Kino'    = 'A viajante que passa três dias por país e não julga as leis de ninguém.'
+        'Hermes'  = 'A motocicleta tagarela que conversa com Kino por cada horizonte.'
+        'Regel'   = 'O ancião do país onde matar é permitido pelas leis do escrito.'
+        'Shizu'   = 'O viajante com o cão Riku, atrás de uma terra ideal no mapa.'
+    }
+    'Made in Abyss' = @{
+        'Riko'      = 'A aprendiz espeleóloga que desce ao Abismo em busca da própria mãe.'
+        'Reg'       = 'O robô de memória borrada que acorda para proteger a Riko.'
+        'Nanachi'   = 'O narehate de pelo fofinho que sobreviveu ao sacrifício de Mitty.'
+        'Bondrewd'  = 'O barão branco da profundeza, que chama todo experimento de bênção.'
+        'Ozen'      = 'A lendária imortal do Abismo, que testa os novatos até o osso.'
+    }
+    'Mahoutsukai no Yome (The Ancient Magus'' Bride)' = @{
+        'Chise Hatori'    = 'A garota vendida que aprende, pela magia, a se ancorar no mundo.'
+        'Elias Ainsworth' = 'O mago de crânio e névoa, frio como a floresta no inverno.'
+        'Ruth'            = 'O espírito de cemitério que vive no colar como a sombra de Chise.'
+    }
+    'Noragami' = @{
+        'Yato'         = 'O deus de entrega a domicílio, sempre ao dispor por cinco ienes.'
+        'Hiyori Iki'   = 'A estudante cuja alma escapa do corpo e pertence a dois mundos.'
+        'Yukine'       = 'O regalia adolescente que aprende a ser a lâmina, e não a dor, de Yato.'
+        'Bishamonten'  = 'A deusa da guerra que protege a própria família divina até apodrecer.'
+    }
+    'Overlord' = @{
+        'Ainz Ooal Gown' = 'O jogador que herdou a guilda e virou o Rei Feiticeiro de Nazarick.'
+        'Albedo'         = 'A guardiã suprema apaixonada pelo senhor supremo de Nazarick.'
+        'Demiurge'       = 'O demônio estrategista que traduz cada silêncio de Ainz em plano perfeito.'
+        'Gazef Stronoff' = 'O capitão dos guerreiros do reino que recusa se ajoelhar ao Rei Feiticeiro.'
+    }
+    'Owarimonogatari' = @{
+        'Koyomi Araragi'  = 'O quase-vampiro no fim da própria adolescência, atravessando o passado.'
+        'Ougi Oshino'     = 'A enigma que transforma perguntas em espelhos de verdade.'
+        'Shinobu Oshino'  = 'A vampira lendária presa num corpo de oito anos e em donuts.'
+        'Sodachi Oikura'  = 'A matemática do ódio que nunca encontrou uma casa onde caber.'
+    }
+    'Steins;Gate' = @{
+        'Rintaro Okabe'  = 'O cientista louco de fantasia que carrega lembranças impossíveis.'
+        'Kurisu Makise'  = 'A neurocientista que aceita o próprio coração entre linhas do tempo.'
+        'Mayuri Shiina'  = 'A amiga serena que traz tuturu e sorrisos ao laboratório.'
+    }
+    'Tensei Shitara Slime Datta Ken (That Time I Got Reincarnated as a Slime)' = @{
+        'Rimuru Tempest' = 'O slime reencarnado que funda um país onde todas as raças sorriem.'
+        'Veldora Tempest' = 'O dragão da tempestade selado que fez o primeiro amigo na caverna.'
+        'Shizue Izawa'   = 'A mestra que pede ao aluno a devoração do próprio corpo para descansar.'
     }
 }
 

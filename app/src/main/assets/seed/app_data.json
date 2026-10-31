@@ -13261,6 +13261,1762 @@
                                      ]
                   },
                   {
+                      "slug":  "anohana",
+                      "title":  "Anohana",
+                      "titleOriginal":  "あの日見た花の名前を僕達はまだ知らない。",
+                      "year":  2011,
+                      "description":  "Amigos de infância se reencontram no verão para cumprir a promessa feita à Menma, que nunca se foi.",
+                      "accentColor":  "#880E4F",
+                      "characters":  [
+                                         {
+                                             "slug":  "meiko-honma",
+                                             "name":  "Meiko Honma",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "A fantasma gentil do verão, trazida de volta pela promessa dos amigos.",
+                                             "firstChapter":  13,
+                                             "firstEpisode":  11,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Menma, nós te encontramos! / Você me encontrou!",
+                                                                "textOriginal":  "Mitsuka...cha...ta...",
+                                                                "textJapanese":  "見つかっ…ちゃっ…た…",
+                                                                "episode":  "Ep. 11 / Cap. 13",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            },
+                                                            {
+                                                                "text":  "Eu amo todos vocês! Amo de um jeito que dá vontade de casar com você, Jintan!",
+                                                                "textOriginal":  "Jintan daisuki. Jintan e no suki wa, oyomesan ni shitai no suki desu.",
+                                                                "textJapanese":  "じんたん大好き。じんたんへの好きは、お嫁さんにしたいの好きです。",
+                                                                "episode":  "Ep. 11 / Cap. 13",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "jinta-yadomi",
+                                             "name":  "Jinta Yadomi",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O recluso que largou o time e carrega a culpa e a saudade da Menma.",
+                                             "firstChapter":  13,
+                                             "firstEpisode":  11,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Não importa o quanto o tempo passe, a nossa promessa de verão continua viva no peito.",
+                                                                "textOriginal":  "Wasureru wake nai daro... Menma no koto!",
+                                                                "textJapanese":  "忘れるわけないだろ…めんまのこと！",
+                                                                "episode":  "Ep. 11 / Cap. 13",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "naruko-anjou",
+                                             "name":  "Naruko Anjou",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "A colega que esconde a saudade e a inveja atrás da máscara da internet.",
+                                             "firstChapter":  8,
+                                             "firstEpisode":  7,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Eu tinha inveja da Menma... porque ela sempre foi tudo o que eu nunca consegui ser.",
+                                                                "textOriginal":  "Menma ni naritakatta... Menma ga urayamashikattan da yo!",
+                                                                "textJapanese":  "めんまになりたかった…めんまが羨ましかったんだよ！",
+                                                                "episode":  "Ep. 07 / Cap. 08",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "chiriko-tsurumi",
+                                             "name":  "Chiriko Tsurumi",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "A observadora quieta que guarda os sentimentos dos seis amigos.",
+                                             "firstChapter":  12,
+                                             "firstEpisode":  10,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Mesmo que as flores murchem no outono, a lembrança do perfume delas nunca se apaga.",
+                                                                "textOriginal":  "Watashitachi, zutto tachidomatta mama datta no ne.",
+                                                                "textJapanese":  "私たち、ずっと立ち止まったままだったのね。",
+                                                                "episode":  "Ep. 10 / Cap. 12",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         }
+                                     ]
+                  },
+                  {
+                      "slug":  "ashita-no-joe",
+                      "title":  "Ashita no Joe",
+                      "titleOriginal":  "あしたのジョー",
+                      "year":  1968,
+                      "description":  "Da sarjeta do Doya Doya ao ringue, Joe queima a própria vida até a última cinza branca.",
+                      "accentColor":  "#5D4037",
+                      "characters":  [
+                                         {
+                                             "slug":  "joe-yabuki",
+                                             "name":  "Joe Yabuki",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O garoto de rua que queima a própria vida no ringue até a cinza branca.",
+                                             "firstChapter":  132,
+                                             "firstEpisode":  21,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Queimei tudo... até restar apenas cinzas brancas e puras.",
+                                                                "textOriginal":  "Moetsukita yo... masshiro ni na...",
+                                                                "textJapanese":  "燃えつきたよ…真っ白にな…",
+                                                                "episode":  "Cap. 171 / Ep. 47 (Série 2)",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            },
+                                                            {
+                                                                "text":  "Eu prefiro queimar intensamente em um clarão rubro a viver como brasa apagada.",
+                                                                "textOriginal":  "Makka ni moeagatte, masshiro na hai dake ga nokorun da.",
+                                                                "textJapanese":  "真っ赤に燃え上がって、真っ白な灰だけが残るんだ。",
+                                                                "episode":  "Cap. 132 / Ep. 21 (Série 2)",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "danpei-tange",
+                                             "name":  "Danpei Tange",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O treinador decadente que aposta a vida em Joe desde a sarjeta.",
+                                             "firstChapter":  2,
+                                             "firstEpisode":  2,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Acerte com a esquerda! Apenas a esquerda governa o mundo do boxe!",
+                                                                "textOriginal":  "Utsubeshi! Utsubeshi!",
+                                                                "textJapanese":  "打つべし！打つべし！",
+                                                                "episode":  "Cap. 02 / Ep. 02",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "toru-rikishi",
+                                             "name":  "Toru Rikishi",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O rival que atravessa o inferno da pesagem para encarar Joe de igual.",
+                                             "firstChapter":  78,
+                                             "firstEpisode":  50,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Joe... eu passei por este inferno na balança apenas para lutar de igual com você!",
+                                                                "textOriginal":  "Yabuki... ore wa omae to tatakau tame ni, ikitekitan da!",
+                                                                "textJapanese":  "矢吹…俺はお前と戦うために、生きてきたんだ！",
+                                                                "episode":  "Cap. 78 / Ep. 50 (Série 1)",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "yoko-shiraki",
+                                             "name":  "Yoko Shiraki",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "A herdeira do ginásio Shiraki, que vê a chama escondida de Joe.",
+                                             "firstChapter":  168,
+                                             "firstEpisode":  46,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Joe, não vá para o ringue! Você sabe o que vai acontecer com o seu corpo!",
+                                                                "textOriginal":  "Ikanaide, Yabuki-kun! Onegai dakara!",
+                                                                "textJapanese":  "行かないで、矢吹くん！お願いだから！",
+                                                                "episode":  "Cap. 168 / Ep. 46 (Série 2)",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         }
+                                     ]
+                  },
+                  {
+                      "slug":  "bakemonogatari",
+                      "title":  "Bakemonogatari",
+                      "titleOriginal":  "化物語",
+                      "year":  2009,
+                      "description":  "Um quase-vampiro salva uma garota sem peso e colhe os mistérios do próprio bairro.",
+                      "accentColor":  "#7B1FA2",
+                      "characters":  [
+                                         {
+                                             "slug":  "hitagi-senjougahara",
+                                             "name":  "Hitagi Senjougahara",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "A garota quase sem peso, com lâminas escondidas no vocabulário.",
+                                             "firstChapter":  null,
+                                             "firstEpisode":  12,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "O que eu tenho a lhe oferecer é apenas este céu estrelado e o meu amor sincero.",
+                                                                "textOriginal":  "Kore ga watashi no motte iru mono no subete. Kono hoshizora yo.",
+                                                                "textJapanese":  "これが私の持っているものの全て。この星空よ。",
+                                                                "episode":  "Ep. 12 / LN Vol. 1",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "meme-oshino",
+                                             "name":  "Meme Oshino",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O especialista errante que diz que ninguém salva ninguém.",
+                                             "firstChapter":  1,
+                                             "firstEpisode":  1,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Você parece bem animado. Aconteceu alguma coisa boa?",
+                                                                "textOriginal":  "Genki ga ii nā. Nani ka ii koto demo atta no kai?",
+                                                                "textJapanese":  "元気がいいなぁ。何かいいことでもあったのかい？",
+                                                                "episode":  "Ep. 01 / Cap. 01 (Mangá)",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            },
+                                                            {
+                                                                "text":  "As pessoas só podem salvar a si mesmas. Ninguém salva ninguém neste mundo.",
+                                                                "textOriginal":  "Hito ga hitori de katte ni tasukaru dake sa. Dareka ga dareka o sukuu koto nante dekinai.",
+                                                                "textJapanese":  "人が一人で勝手に助かるだけさ。誰かが誰かを救うことなんてできない。",
+                                                                "episode":  "Ep. 02 / Cap. 03 (Mangá)",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "mayoi-hachikuji",
+                                             "name":  "Mayoi Hachikuji",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "A criança perdida eterna que manda aos becos dos mortos.",
+                                             "firstChapter":  8,
+                                             "firstEpisode":  4,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Desculpe, eu mordi a língua! (Kamimashita!)",
+                                                                "textOriginal":  "Shitsurei, kamimashita.",
+                                                                "textJapanese":  "失礼、噛みました。",
+                                                                "episode":  "Ep. 04 / Cap. 08 (Mangá)",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "koyomi-araragi",
+                                             "name":  "Koyomi Araragi",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O quase-vampiro que se despedaça por qualquer estranho ao redor.",
+                                             "firstChapter":  null,
+                                             "firstEpisode":  8,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Se você morrer amanhã, não me importo que minha vida termine amanhã também.",
+                                                                "textOriginal":  "Omae ga ashita shinu nara, boku no inochi wa ashita made de ii.",
+                                                                "textJapanese":  "お前が明日死ぬなら、僕の命は明日まででいい。",
+                                                                "episode":  "Ep. 08 / LN Vol. 1",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "tsubasa-hanekawa",
+                                             "name":  "Tsubasa Hanekawa",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "A melhor aluna cujo saber infinito esconde uma fera.",
+                                             "firstChapter":  1,
+                                             "firstEpisode":  1,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Eu não sei tudo. Só sei o que eu sei.",
+                                                                "textOriginal":  "Nandemo wa shiranai wa yo. Shitteru koto dake.",
+                                                                "textJapanese":  "何でもは知らないわよ。知ってることだけ。",
+                                                                "episode":  "Ep. 01 / Cap. 01 (Mangá)",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         }
+                                     ]
+                  },
+                  {
+                      "slug":  "death-note",
+                      "title":  "Death Note",
+                      "titleOriginal":  "DEATH NOTE",
+                      "year":  2006,
+                      "description":  "Um caderno que mata transforma o estudante Light num deus e L num duelo pela justiça.",
+                      "accentColor":  "#B71C1C",
+                      "characters":  [
+                                         {
+                                             "slug":  "light-yagami",
+                                             "name":  "Light Yagami",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O estudante impecável que escolheu julgar o mundo como deus.",
+                                             "firstChapter":  1,
+                                             "firstEpisode":  1,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Eu serei o deus deste novo mundo!",
+                                                                "textOriginal":  "Boku wa shinsekai no kami to naru!",
+                                                                "textJapanese":  "僕は新世界の神となる！",
+                                                                "episode":  "Cap. 01 / Ep. 01",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            },
+                                                            {
+                                                                "text":  "Tudo correu exatamente de acordo com os meus planos. (Keikaku doori).",
+                                                                "textOriginal":  "Keikaku dōri...!",
+                                                                "textJapanese":  "計画通り…！",
+                                                                "episode":  "Cap. 53 / Ep. 24",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "l",
+                                             "name":  "L",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O detetive anônimo que aposta a própria vida na justiça.",
+                                             "firstChapter":  2,
+                                             "firstEpisode":  2,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "A justiça sempre prevalecerá. Porque eu... sou a justiça!",
+                                                                "textOriginal":  "Seigi wa kanarazu katsu to iu koto o. Watashi wa seigi da!",
+                                                                "textJapanese":  "正義は必ず勝つということを。私は正義だ！",
+                                                                "episode":  "Cap. 02 / Ep. 02",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            },
+                                                            {
+                                                                "text":  "Não importa o quão talentoso você seja, você nunca vencerá sozinho.",
+                                                                "textOriginal":  "Make o mitomenai kagiri, shōbu wa owaranai.",
+                                                                "textJapanese":  "負けを認めない限り、勝負は終わらない。",
+                                                                "episode":  "Cap. 58 / Ep. 25",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "ryuk",
+                                             "name":  "Ryuk",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O shinigami entediado que soltou o caderno no mundo humano.",
+                                             "firstChapter":  5,
+                                             "firstEpisode":  3,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Os humanos são tão... interessantes!",
+                                                                "textOriginal":  "Ningen tte... omoshiro\u0027!",
+                                                                "textJapanese":  "人間って…面白っ！",
+                                                                "episode":  "Cap. 05 / Ep. 03",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "near",
+                                             "name":  "Near",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O herdeiro de L que encerra o jogo com peças, puzzle e paciência.",
+                                             "firstChapter":  104,
+                                             "firstEpisode":  37,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Se você não pode vencer o jogo, se não pode resolver o quebra-cabeça, você é apenas um perdedor.",
+                                                                "textOriginal":  "Pazuru o tokenai nara, tada no haisha desu.",
+                                                                "textJapanese":  "パズルを解けないなら、ただの敗者です。",
+                                                                "episode":  "Cap. 104 / Ep. 37",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         }
+                                     ]
+                  },
+                  {
+                      "slug":  "devilman-crybaby",
+                      "title":  "Devilman Crybaby",
+                      "titleOriginal":  "デビルマン クライベイビー",
+                      "year":  2018,
+                      "description":  "O corpo de demônio e o coração humano de Akira abrem o caminho para o fim da era dos deuses.",
+                      "accentColor":  "#D32F2F",
+                      "characters":  [
+                                         {
+                                             "slug":  "akira-fudo",
+                                             "name":  "Akira Fudo",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O coração sensível no corpo demoníaco: o próprio Devilman.",
+                                             "firstChapter":  4,
+                                             "firstEpisode":  2,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Eu sou um demônio em corpo, mas tenho o coração de um ser humano! Eu sou Devilman!",
+                                                                "textOriginal":  "Karada wa akuma demo, hito no kokoro wa ushinawanai! Ore wa Debiruman da!",
+                                                                "textJapanese":  "体は悪魔でも、人の心は失わない！俺はデビルマンだ！",
+                                                                "episode":  "Ep. 02 / Cap. 04 (Original)",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            },
+                                                            {
+                                                                "text":  "Você chora pelos outros quando eles sofrem? Então você ainda é humano!",
+                                                                "textOriginal":  "Dareka no tame ni nagasu namida ga aru nara, omae wa mada ningen da!",
+                                                                "textJapanese":  "誰かのために流す涙があるなら、お前はまだ人間だ！",
+                                                                "episode":  "Ep. 09",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "ryo-asuka",
+                                             "name":  "Ryo Asuka",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O amigo brilhante que descobrirá ser Satan — e chorar por amor.",
+                                             "firstChapter":  null,
+                                             "firstEpisode":  1,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "O amor não existe. Não há compaixão nem empatia no universo.",
+                                                                "textOriginal":  "Ai nado sonzai shinai. Tsuyoi mono ga ikinokoru dake da.",
+                                                                "textJapanese":  "愛など存在しない。強い者が生き残るだけだ。",
+                                                                "episode":  "Ep. 01",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            },
+                                                            {
+                                                                "text":  "Por que estou chorando, Akira? O que é esse calor que aperta o meu peito...?",
+                                                                "textOriginal":  "Naze da, Akira... naze watashi wa naite irun da...?",
+                                                                "textJapanese":  "なぜだ、明…なぜ私は泣いているんだ…？",
+                                                                "episode":  "Ep. 10",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "miki-makimura",
+                                             "name":  "Miki Makimura",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "A atleta que corre com o bastão do amor mais rápido que o ódio.",
+                                             "firstChapter":  null,
+                                             "firstEpisode":  9,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Por favor, passem o bastão adiante! O amor sempre corre mais rápido que o ódio!",
+                                                                "textOriginal":  "Baton o tsunagu no! Omoi o tsunageru no yo!",
+                                                                "textJapanese":  "バトンを繋ぐの！想いを繋げるのよ！",
+                                                                "episode":  "Ep. 09",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         }
+                                     ]
+                  },
+                  {
+                      "slug":  "studio-ghibli",
+                      "title":  "Filmes do Studio Ghibli",
+                      "titleOriginal":  "スタジオジブリ",
+                      "year":  2001,
+                      "description":  "Quatro clássicos de Miyazaki (Chihiro, Mononoke, Howl e Kiki) eternos em uma linha.",
+                      "accentColor":  "#2E7D32",
+                      "characters":  [
+                                         {
+                                             "slug":  "zeniba",
+                                             "name":  "Zeniba",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "A bruxa gêmea de Yubaba, que acolhe Chihiro com chá e perdão.",
+                                             "firstChapter":  null,
+                                             "firstEpisode":  null,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Nada do que acontece é esquecido para sempre, mesmo que você não consiga se lembrar agora.",
+                                                                "textOriginal":  "Ichido atta koto wa wasurenai mono sa. Omoidasenai dake de.",
+                                                                "textJapanese":  "一度あったことは忘れないものさ。思い出せないだけで。",
+                                                                "episode":  "Filme (2001)",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "haku",
+                                             "name":  "Haku",
+                                             "nameOriginal":  "白",
+                                             "arc":  null,
+                                             "description":  "O espírito do rio Kohaku, guardião e amigo fiel de Chihiro.",
+                                             "firstChapter":  null,
+                                             "firstEpisode":  null,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Siga em frente sem olhar para trás até atravessar o túnel.",
+                                                                "textOriginal":  "Kesshite furimuicha ikenai yo. Tonneru o deru made wa ne.",
+                                                                "textJapanese":  "決して振り向いちゃいけないよ。トンネルを出るまではね。",
+                                                                "episode":  "Filme (2001)",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "ashitaka",
+                                             "name":  "Ashitaka",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O príncipe Emishi que parte para o oeste com o olhar limpo de ódio.",
+                                             "firstChapter":  null,
+                                             "firstEpisode":  null,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Ver com olhos desprovidos de ódio.",
+                                                                "textOriginal":  "Kumori no nai me de monogoto o misadameru koto.",
+                                                                "textJapanese":  "曇りのない眼で物事を見定めること。",
+                                                                "episode":  "Filme (1997)",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "san",
+                                             "name":  "San",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "A menina criada pelos lobos, dividida entre amar e odiar os humanos.",
+                                             "firstChapter":  null,
+                                             "firstEpisode":  null,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Eu amo você, Ashitaka. Mas eu não posso perdoar a humanidade.",
+                                                                "textOriginal":  "Ashitaka wa suki da. Demo, ningen o yurusu koto wa dekinai.",
+                                                                "textJapanese":  "アシタカは好きだ。でも、人間を許すことはできない。",
+                                                                "episode":  "Filme (1997)",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "howl",
+                                             "name":  "Howl",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O mago vaidoso e covarde que esconde o coração num castelo ambulante.",
+                                             "firstChapter":  null,
+                                             "firstEpisode":  null,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Um coração é um fardo muito pesado para se carregar.",
+                                                                "textOriginal":  "Kokoro tte omoi mono nan da yo.",
+                                                                "textJapanese":  "心って重いものなんだよ。",
+                                                                "episode":  "Filme (2004)",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "kiki",
+                                             "name":  "Kiki",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "A bruxinha de treze anos que conquista uma cidade entregando encomendas.",
+                                             "firstChapter":  null,
+                                             "firstEpisode":  null,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Houve dias em que chorei, mas agora estou muito feliz nesta cidade.",
+                                                                "textOriginal":  "Ochikomu koto mo aru keredo, watashi, kono machi ga suki desu.",
+                                                                "textJapanese":  "落ち込むこともあるけれど、私、この街が好きです。",
+                                                                "episode":  "Filme (1989)",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         }
+                                     ]
+                  },
+                  {
+                      "slug":  "goblin-slayer",
+                      "title":  "Goblin Slayer",
+                      "titleOriginal":  "ゴブリンスレイヤー",
+                      "year":  2016,
+                      "description":  "Um aventureiro prata caça goblins sem pausa — e derruba a arrogância dos heróis.",
+                      "accentColor":  "#455A64",
+                      "characters":  [
+                                         {
+                                             "slug":  "goblin-slayer",
+                                             "name":  "Goblin Slayer",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O aventureiro prata que caça goblins e não deseja mais nada.",
+                                             "firstChapter":  1,
+                                             "firstEpisode":  1,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "O único goblin bom é aquele que nunca sai de sua cova escura.",
+                                                                "textOriginal":  "Ii kooni dake ga, ana kara detekonai kooni da.",
+                                                                "textJapanese":  "良い小鬼だけが、穴から出てこない小鬼だ。",
+                                                                "episode":  "Cap. 01 / Ep. 01",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            },
+                                                            {
+                                                                "text":  "Eu não salvo o mundo. Eu apenas mato goblins.",
+                                                                "textOriginal":  "Ore wa sekai o sukuwanai. Goburin o korosu dake da.",
+                                                                "textJapanese":  "俺は世界を救わない。ゴブリンを殺すだけだ。",
+                                                                "episode":  "Cap. 01 / Ep. 01",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            },
+                                                            {
+                                                                "text":  "Os deuses lançam dados sobre a mesa, mas não me importo com suas apostas.",
+                                                                "textOriginal":  "Kamigami no saikoro nado, shitta koto dewa nai.",
+                                                                "textJapanese":  "神々のサイコロなど、知ったことではない。",
+                                                                "episode":  "Cap. 15 / Ep. 04",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            },
+                                                            {
+                                                                "text":  "A imaginação é uma arma que eles não possuem; use a astúcia para esmagá-los.",
+                                                                "textOriginal":  "Sōzōryoku wa buki da. Yudan suruna.",
+                                                                "textJapanese":  "想像力は武器だ。油断するな。",
+                                                                "episode":  "Cap. 10 / Ep. 03",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "onna-shinkan",
+                                             "name":  "Onna Shinkan",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "A sacerdotisa novata que escolhe caminhar na escuridão com ele.",
+                                             "firstChapter":  2,
+                                             "firstEpisode":  2,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Por favor, deixe-me caminhar com você até o fim desta caverna!",
+                                                                "textOriginal":  "Watashi mo issho ni ikimasu. Anata no tasuke ni naritain desu!",
+                                                                "textJapanese":  "私も一緒に行きます。あなたの助けになりたいんです！",
+                                                                "episode":  "Cap. 02 / Ep. 02",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         }
+                                     ]
+                  },
+                  {
+                      "slug":  "golden-boy",
+                      "title":  "Golden Boy",
+                      "titleOriginal":  "ゴールデンボーイ",
+                      "year":  1995,
+                      "description":  "Kintaro abandona os diplomas para estudar a vida inteira pedalando pelo Japão.",
+                      "accentColor":  "#FF6F00",
+                      "characters":  [
+                                         {
+                                             "slug":  "kintaro-oe",
+                                             "name":  "Kintaro Oe",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O gênio que largou os diplomas para estudar a vida em cada trabalho.",
+                                             "firstChapter":  1,
+                                             "firstEpisode":  null,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Estudo, estudo, estudo! A vida inteira é um grande caderno de aprendizado!",
+                                                                "textOriginal":  "Benkyō, benkyō, benkyō! Jinsei wa hibi no benkyō da!",
+                                                                "textJapanese":  "勉強、勉強、勉強！人生は日々の勉強だ！",
+                                                                "episode":  "Cap. 01 / OVA 01",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            },
+                                                            {
+                                                                "text":  "Que educativo! (Benkyou ni naru na!)",
+                                                                "textOriginal":  "Benkyō ni naru nā~!",
+                                                                "textJapanese":  "勉強になるなぁ〜！",
+                                                                "episode":  "Cap. 02 / OVA 01",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            },
+                                                            {
+                                                                "text":  "Com a minha bicicleta Mikazuki, não há ladeira que eu não possa subir!",
+                                                                "textOriginal":  "Mikazuki-gō ga areba, doko e datte hashitte ikeru!",
+                                                                "textJapanese":  "三日月号があれば、どこへだって走っていける！",
+                                                                "episode":  "Cap. 05 / OVA 02",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            },
+                                                            {
+                                                                "text":  "O valor de um homem é medido pela sua sede incansável de aprender com os erros.",
+                                                                "textOriginal":  "Shippai shitatte ii. Soko kara nani o manabu ka ga daiji nan da!",
+                                                                "textJapanese":  "失敗したっていい。そこから何を学ぶかが大事なんだ！",
+                                                                "episode":  "OVA 06",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "madame-presidente",
+                                             "name":  "Madame Presidente",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "A executiva que desdenha o estranho e não admite que caiu por ele.",
+                                             "firstChapter":  4,
+                                             "firstEpisode":  null,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Esse homem... ele aprendeu tudo sobre nossa empresa em apenas três noites?!",
+                                                                "textOriginal":  "Ano otoko... wazuka sūjitsu de puroguramu o kanpeki ni rikai shita to iu no?!",
+                                                                "textJapanese":  "あの男…わずか数日でプログラムを完璧に理解したというの？！",
+                                                                "episode":  "Cap. 04 / OVA 01",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         }
+                                     ]
+                  },
+                  {
+                      "slug":  "inazuma-eleven",
+                      "title":  "Inazuma Eleven",
+                      "titleOriginal":  "イナズマイレブン",
+                      "year":  2008,
+                      "description":  "O clube de futebol do Raimon se reergue da ruína com coração, técnica e goleiros impossíveis.",
+                      "accentColor":  "#FB8C00",
+                      "characters":  [
+                                         {
+                                             "slug":  "mamoru-endou",
+                                             "name":  "Mamoru Endou",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O goleiro capitão que nunca aceita jogo encerrado antes do fim.",
+                                             "firstChapter":  1,
+                                             "firstEpisode":  1,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Vamos jogar futebol! (Sakkā yarou ze!)",
+                                                                "textOriginal":  "Sakkā yarō ze!",
+                                                                "textJapanese":  "サッカーやろうぜ！",
+                                                                "episode":  "Cap. 01 / Ep. 01",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            },
+                                                            {
+                                                                "text":  "Enquanto não desistirmos, o jogo nunca estará encerrado! Mão Fantasma!",
+                                                                "textOriginal":  "Saigo made akiramenakereba, zettai ni michi wa hirakeru! Goddo Hando!",
+                                                                "textJapanese":  "最後まで諦めなければ、絶対に道は開ける！ゴッドハンド！",
+                                                                "episode":  "Cap. 02 / Ep. 02",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "shuuya-gouenji",
+                                             "name":  "Shuuya Gouenji",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O atacante que guarda o próprio chute como promessa ao futebol.",
+                                             "firstChapter":  3,
+                                             "firstEpisode":  2,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Aqueça a sua determinação! Furacão de Fogo!",
+                                                                "textOriginal":  "Moeagare, atsuki honō! Faia Torunēdo!",
+                                                                "textJapanese":  "燃え上がれ、熱き炎！ファイアトルネード！",
+                                                                "episode":  "Cap. 03 / Ep. 02",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "yuuto-kidou",
+                                             "name":  "Yuuto Kidou",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O estrategista de capa que transforma o campo em tabuleiro.",
+                                             "firstChapter":  10,
+                                             "firstEpisode":  13,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "O campo de futebol é um tabuleiro tático onde nossa união dita a jogada!",
+                                                                "textOriginal":  "Picchi zentai o miwatase! Shōri e no rūto wa kanarazu aru!",
+                                                                "textJapanese":  "ピッチ全体を見渡せ！勝利へのルートは必ずある！",
+                                                                "episode":  "Cap. 10 / Ep. 13",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "shiro-fubuki",
+                                             "name":  "Shiro Fubuki",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O jogador de gelo que carrega o gêmeo no vento da montanha.",
+                                             "firstChapter":  35,
+                                             "firstEpisode":  32,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "O vento gélido da montanha me ensinou a defender e atacar em perfeita harmonia!",
+                                                                "textOriginal":  "Kaze ni nare! Etānaru Burizādo!",
+                                                                "textJapanese":  "風になれ！エターナルブリザード！",
+                                                                "episode":  "Cap. 35 / Ep. 32",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         }
+                                     ]
+                  },
+                  {
+                      "slug":  "initial-d",
+                      "title":  "Initial D",
+                      "titleOriginal":  "頭文字D",
+                      "year":  1998,
+                      "description":  "A entrega de tofu de Akina esconde o piloto mais rápido da montanha num Eight-Six.",
+                      "accentColor":  "#263238",
+                      "characters":  [
+                                         {
+                                             "slug":  "takumi-fujiwara",
+                                             "name":  "Takumi Fujiwara",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O estudante que virou o piloto mais rápido de Akina sem perceber.",
+                                             "firstChapter":  1,
+                                             "firstEpisode":  1,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Eu não sei nada sobre técnicas; eu só dirijo pela montanha todo dia para entregar tofu.",
+                                                                "textOriginal":  "Hashiriya ja nai yo. Tada tōfu o haitatsu shiteru dake da.",
+                                                                "textJapanese":  "走り屋じゃないよ。ただ豆腐を配達してるだけだ。",
+                                                                "episode":  "Cap. 01 / Ep. 01",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            },
+                                                            {
+                                                                "text":  "Na descida de Akina, o meu Eight-Six não vai perder para ninguém!",
+                                                                "textOriginal":  "Kudari nara... Hachiroku wa dare ni mo makenai!",
+                                                                "textJapanese":  "下りなら…ハチロクは誰にも負けない！",
+                                                                "episode":  "Cap. 18 / Ep. 06",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "ryosuke-takahashi",
+                                             "name":  "Ryosuke Takahashi",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O cérebro dos Akagi RedSuns, que prova teoria na estrada de verdade.",
+                                             "firstChapter":  15,
+                                             "firstEpisode":  5,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "A curva de Akina pertence àquele que conseguir desafiar as leis da inércia com pureza.",
+                                                                "textOriginal":  "Saisoku no riron wa, kōdō de koso shōmei sareru.",
+                                                                "textJapanese":  "最速の理論は、公道でこそ証明される。",
+                                                                "episode":  "Cap. 15 / Ep. 05",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "bunta-fujiwara",
+                                             "name":  "Bunta Fujiwara",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O pai calado que ensina pilotagem com um copo de água no painel.",
+                                             "firstChapter":  2,
+                                             "firstEpisode":  1,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Não deixe a água do copo transbordar no painel. O resto é com o seu pé no acelerador.",
+                                                                "textOriginal":  "Koppu no mizu o kobosazu ni hashire. Sore dake da.",
+                                                                "textJapanese":  "コップの水をこぼさずに走れ。それだけだ。",
+                                                                "episode":  "Cap. 02 / Ep. 01",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "keisuke-takahashi",
+                                             "name":  "Keisuke Takahashi",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O irmão de Ryosuke que queima pneus para subir de degrau.",
+                                             "firstChapter":  5,
+                                             "firstEpisode":  2,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Não há máquina que supere a obsessão voraz de quem queima pneus na colina!",
+                                                                "textOriginal":  "Rōtarī enjin no sokojikara, namerun ja nee!",
+                                                                "textJapanese":  "ロータリーエンジンの底力、舐めるんじゃねえ！",
+                                                                "episode":  "Cap. 05 / Ep. 02",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         }
+                                     ]
+                  },
+                  {
+                      "slug":  "kino-no-tabi",
+                      "title":  "Kino no Tabi: The Beautiful World",
+                      "titleOriginal":  "キノの旅 -the Beautiful World-",
+                      "year":  2003,
+                      "description":  "A viajante Kino dá três dias a cada país e segue adiante sem julgar ninguém.",
+                      "accentColor":  "#607D8B",
+                      "characters":  [
+                                         {
+                                             "slug":  "kino",
+                                             "name":  "Kino",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "A viajante que passa três dias por país e não julga as leis de ninguém.",
+                                             "firstChapter":  null,
+                                             "firstEpisode":  1,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "O mundo não é belo; e é justamente por isso que ele é tão maravilhoso.",
+                                                                "textOriginal":  "Sekai wa utsukushiku nanka nai. Soshite sore yue ni, utsukushii.",
+                                                                "textJapanese":  "世界は美しくなんかない。そしてそれ故に、美しい。",
+                                                                "episode":  "LN Vol. 1 / Ep. 01",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            },
+                                                            {
+                                                                "text":  "Três dias são suficientes para conhecer uma cidade antes que você queira criar raízes.",
+                                                                "textOriginal":  "Hitotsu no kuni ni taizai suru no wa, mikka-kan dake. Sore ga watashi no rūru.",
+                                                                "textJapanese":  "一つの国に滞在するのは、三日間だけ。それが私のルール。",
+                                                                "episode":  "Ep. 02",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            },
+                                                            {
+                                                                "text":  "Eu não julgo os costumes dos países; sou apenas uma viajante que observa e segue em frente.",
+                                                                "textOriginal":  "Watashi wa tabibito. Sabaku mono demo, sukuu mono demo nai.",
+                                                                "textJapanese":  "私は旅人。裁く者でも、救う者でもない。",
+                                                                "episode":  "Ep. 05 (2003)",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "hermes",
+                                             "name":  "Hermes",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "A motocicleta tagarela que conversa com Kino por cada horizonte.",
+                                             "firstChapter":  null,
+                                             "firstEpisode":  1,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Por que você viaja, Kino? / Para não esquecer que o horizonte continua em movimento.",
+                                                                "textOriginal":  "Dōshite tabi o tsudzukeru no? / Tachidomaru riyū ga nai kara da yo.",
+                                                                "textJapanese":  "どうして旅を続けるの？ / 立ち止まる理由がないからだよ。",
+                                                                "episode":  "Ep. 01",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "regel",
+                                             "name":  "Regel",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O ancião do país onde matar é permitido pelas leis do escrito.",
+                                             "firstChapter":  null,
+                                             "firstEpisode":  1,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "O fato de algo não ser proibido não quer dizer que seja permitido.",
+                                                                "textOriginal":  "\"Kinshi sarete inai\" to iu koto wa, \"yurusarete iru\" to iu koto dewa nain da yo.",
+                                                                "textJapanese":  "“禁止されていない”ということは、“許されている”ということではないんだよ。",
+                                                                "episode":  "LN Vol. 5 / Ep. 01 (Série 2017)",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "shizu",
+                                             "name":  "Shizu",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O viajante com o cão Riku, atrás de uma terra ideal no mapa.",
+                                             "firstChapter":  null,
+                                             "firstEpisode":  7,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Eu procurava um reino ideal, mas descobri que a perfeição é a morte da humanidade.",
+                                                                "textOriginal":  "Risōkyō nado, saisho kara doko ni mo sonzai shinai no kamo shirenai.",
+                                                                "textJapanese":  "理想郷など、最初からどこにも存在しないのかもしれない。",
+                                                                "episode":  "Ep. 07 (2003)",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         }
+                                     ]
+                  },
+                  {
+                      "slug":  "made-in-abyss",
+                      "title":  "Made in Abyss",
+                      "titleOriginal":  "メイドインアビス",
+                      "year":  2017,
+                      "description":  "Órfãs e um robô descem o Abismo e pagam com o corpo o preço da profundeza.",
+                      "accentColor":  "#00897B",
+                      "characters":  [
+                                         {
+                                             "slug":  "bondrewd",
+                                             "name":  "Bondrewd",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O barão branco da profundeza, que chama todo experimento de bênção.",
+                                             "firstChapter":  33,
+                                             "firstEpisode":  null,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Que bênção maravilhosa! O amor de vocês transborda como uma luz radiante!",
+                                                                "textOriginal":  "Oyaoya, subarashii... ai desu yo, ai.",
+                                                                "textJapanese":  "おやおや、素晴らしい…愛ですよ、愛。",
+                                                                "episode":  "Cap. 33 / Filme Fukaki Tamashii",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "riko",
+                                             "name":  "Riko",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "A aprendiz espeleóloga que desce ao Abismo em busca da própria mãe.",
+                                             "firstChapter":  3,
+                                             "firstEpisode":  1,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "O fundo do Abismo me chama! Mesmo sem poder voltar, minha alma anseia pela escuridão!",
+                                                                "textOriginal":  "Abisu no soko de, okāsan ga matte irun da!",
+                                                                "textJapanese":  "アビスの底で、お母さんが待っているんだ！",
+                                                                "episode":  "Cap. 03 / Ep. 01",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "reg",
+                                             "name":  "Reg",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O robô de memória borrada que acorda para proteger a Riko.",
+                                             "firstChapter":  5,
+                                             "firstEpisode":  3,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Mesmo feito de metal e sem memórias, meus braços foram feitos para proteger a Riko!",
+                                                                "textOriginal":  "Boku wa robotto kamo shirenai ga... kimi o mamoru to kimetan da.",
+                                                                "textJapanese":  "僕はロボットかもしれないが…君を守ると決めたんだ。",
+                                                                "episode":  "Cap. 05 / Ep. 03",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "nanachi",
+                                             "name":  "Nanachi",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O narehate de pelo fofinho que sobreviveu ao sacrifício de Mitty.",
+                                             "firstChapter":  23,
+                                             "firstEpisode":  13,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "O cheiro do sol... Minha querida Mitty, por favor, descanse em paz agora.",
+                                                                "textOriginal":  "Mīti... yatto, owattan da na...",
+                                                                "textJapanese":  "ミーティ…やっと、終わったんだな…",
+                                                                "episode":  "Cap. 23 / Ep. 13",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "ozen",
+                                             "name":  "Ozen",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "A lendária imortal do Abismo, que testa os novatos até o osso.",
+                                             "firstChapter":  14,
+                                             "firstEpisode":  8,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "O Abismo não liga para o seu choro. Aqueles que desafiam a profundeza pagam com o corpo.",
+                                                                "textOriginal":  "Naraku no soko o namerun ja nai yo, ochibi-san.",
+                                                                "textJapanese":  "奈落の底を舐めるんじゃないよ、おチビさん。",
+                                                                "episode":  "Cap. 14 / Ep. 08",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         }
+                                     ]
+                  },
+                  {
+                      "slug":  "ancient-magus-bride",
+                      "title":  "The Ancient Magus\u0027 Bride",
+                      "titleOriginal":  "魔法使いの嫁",
+                      "year":  2017,
+                      "description":  "Sem família e sem valor próprio, Chise vira aprendiz e noiva de um mago-monstro.",
+                      "accentColor":  "#00695C",
+                      "characters":  [
+                                         {
+                                             "slug":  "elias-ainsworth",
+                                             "name":  "Elias Ainsworth",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O mago de crânio e névoa, frio como a floresta no inverno.",
+                                             "firstChapter":  1,
+                                             "firstEpisode":  1,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Chise, você será a minha aprendiz e, no futuro, a minha noiva.",
+                                                                "textOriginal":  "Chise, kimi wa boku no deshi de ari, izure hanayome ni narun da.",
+                                                                "textJapanese":  "チセ、君は僕の弟子であり、いずれ花嫁になるんだ。",
+                                                                "episode":  "Cap. 01 / Ep. 01",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            },
+                                                            {
+                                                                "text":  "Eu não entendo os sentimentos dos humanos; o meu peito é frio como a floresta no inverno.",
+                                                                "textOriginal":  "Boku ni wa hito no kokoro ga wakaranai. Kimi ga oshiete kureru kai?",
+                                                                "textJapanese":  "僕には人の心がわからない。君が教えてくれるかい？",
+                                                                "episode":  "Cap. 12 / Ep. 07",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "chise-hatori",
+                                             "name":  "Chise Hatori",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "A garota vendida que aprende, pela magia, a se ancorar no mundo.",
+                                             "firstChapter":  4,
+                                             "firstEpisode":  3,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Eu sempre achei que não tinha valor... mas você me deu um lugar para onde voltar.",
+                                                                "textOriginal":  "Watashi wa, ikite itemo iin datte... anata ga oshiete kureta.",
+                                                                "textJapanese":  "私は、生きていてもいいんだって…あなたが教えてくれた。",
+                                                                "episode":  "Cap. 04 / Ep. 03",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            },
+                                                            {
+                                                                "text":  "A magia não é um milagre gratuito; ela nasce da troca afetuosa com os vizinhos ocultos.",
+                                                                "textOriginal":  "Mahō wa kiseki ja nai. Sekai to kokoro o kayowaseru koto.",
+                                                                "textJapanese":  "魔法は奇跡じゃない。世界と心を通わせること。",
+                                                                "episode":  "Cap. 18 / Ep. 11",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "ruth",
+                                             "name":  "Ruth",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O espírito de cemitério que vive no colar como a sombra de Chise.",
+                                             "firstChapter":  9,
+                                             "firstEpisode":  6,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Eu jurei pelo meu sangue: enquanto o sol brilhar, serei a sombra protetora da minha irmã.",
+                                                                "textOriginal":  "Boku wa kimi no inu da. Zutto soba ni ite mamoritsudzukeru.",
+                                                                "textJapanese":  "僕は君の犬だ。ずっとそばにいて守り続ける。",
+                                                                "episode":  "Cap. 09 / Ep. 06",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         }
+                                     ]
+                  },
+                  {
+                      "slug":  "noragami",
+                      "title":  "Noragami",
+                      "titleOriginal":  "ノラガミ",
+                      "year":  2014,
+                      "description":  "Um deus sem templo sobrevive de pedidos entregues por apenas cinco ienes.",
+                      "accentColor":  "#00ACC1",
+                      "characters":  [
+                                         {
+                                             "slug":  "yato",
+                                             "name":  "Yato",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O deus de entrega a domicílio, sempre ao dispor por cinco ienes.",
+                                             "firstChapter":  1,
+                                             "firstEpisode":  1,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Que os seus desejos se realizem! Eu sou o deus Yato, ao seu dispor por apenas 5 ienes!",
+                                                                "textOriginal":  "Anata ni goen ga aran koto o! Deribarī Goddo Yato desu!",
+                                                                "textJapanese":  "あなたにご縁があらんことを！デリバリーゴッド夜トです！",
+                                                                "episode":  "Cap. 01 / Ep. 01",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            },
+                                                            {
+                                                                "text":  "Cortarei qualquer calamidade deste mundo! Regalia Sekki, fenda o mal!",
+                                                                "textOriginal":  "Toyoashihara no Nakatsukuni, araburu arayuru yōma-domo yo... Hikisaite danmetsu sen!",
+                                                                "textJapanese":  "豊葦原中国、荒び荒ぶる妖魔どもよ…引き裂いて断滅せん！",
+                                                                "episode":  "Cap. 02 / Ep. 01",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "hiyori-iki",
+                                             "name":  "Hiyori Iki",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "A estudante cuja alma escapa do corpo e pertence a dois mundos.",
+                                             "firstChapter":  11,
+                                             "firstEpisode":  6,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Eu não vou esquecer de você, Yato! Não me importo se você for um deus desconhecido!",
+                                                                "textOriginal":  "Wasuretari nanka shinai yo! Zettai ni wasurenai!",
+                                                                "textJapanese":  "忘れたりなんかしないよ！絶対に忘れない！",
+                                                                "episode":  "Cap. 11 / Ep. 06",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "yukine",
+                                             "name":  "Yukine",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O regalia adolescente que aprende a ser a lâmina, e não a dor, de Yato.",
+                                             "firstChapter":  10,
+                                             "firstEpisode":  9,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Eu sentia tanta inveja dos vivos... mas agora aceito ser a lâmina sagrada que guia seus passos.",
+                                                                "textOriginal":  "Ore wa mō, Yato o kizutsukeru yō na koto wa shinai.",
+                                                                "textJapanese":  "俺はもう、夜トを傷つけるようなことはしない。",
+                                                                "episode":  "Cap. 10 / Ep. 09",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "bishamonten",
+                                             "name":  "Bishamonten",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "A deusa da guerra que protege a própria família divina até apodrecer.",
+                                             "firstChapter":  20,
+                                             "firstEpisode":  4,
+                                             "firstEpisodeSeason":  2,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Minhas Regalias são a minha família; mesmo que meu corpo apodreça pela impureza, não as abandonarei!",
+                                                                "textOriginal":  "Waga shinki ni te o dasu mono wa, nanbito taritomo yurusanu!",
+                                                                "textJapanese":  "我が神器に手を出す者は、何人たりとも許さぬ！",
+                                                                "episode":  "Cap. 20 / Ep. 04 (T2)",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         }
+                                     ]
+                  },
+                  {
+                      "slug":  "overlord",
+                      "title":  "Overlord",
+                      "titleOriginal":  "オーバーロード",
+                      "year":  2015,
+                      "description":  "O último jogador de Yggdrasil vira Ainz Ooal Gown e governa o Novo Mundo pela força.",
+                      "accentColor":  "#6A1B9A",
+                      "characters":  [
+                                         {
+                                             "slug":  "ainz-ooal-gown",
+                                             "name":  "Ainz Ooal Gown",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O jogador que herdou a guilda e virou o Rei Feiticeiro de Nazarick.",
+                                             "firstChapter":  1,
+                                             "firstEpisode":  1,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Reverenciem o nome supremo de Nazarick! Glória a Ainz Ooal Gown!",
+                                                                "textOriginal":  "Waga na wa Ainzu Ūru Goun! Shikō no yonjūichi-nin o tabaneshi mono!",
+                                                                "textJapanese":  "我が名はアインズ・ウール・ゴウン！至高の四十一人を束ねし者！",
+                                                                "episode":  "Cap. 01 / Ep. 01",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            },
+                                                            {
+                                                                "text":  "Conheçam o terror da verdadeira magia de décimo nível: Caia, Sociedade!",
+                                                                "textOriginal":  "Mahō no shinzui o misete yarō. Heifukuseyo!",
+                                                                "textJapanese":  "魔法の真髄を見せてやろう。平伏せよ！",
+                                                                "episode":  "Cap. 09 / Ep. 04",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "albedo",
+                                             "name":  "Albedo",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "A guardiã suprema apaixonada pelo senhor supremo de Nazarick.",
+                                             "firstChapter":  1,
+                                             "firstEpisode":  1,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Ainz-sama é a personificação da beleza e da autoridade absoluta em todo o universo!",
+                                                                "textOriginal":  "Ainzu-sama koso ga, shikō ni shite yuiitsumuni no okata desu!",
+                                                                "textJapanese":  "アインズ様こそが、至高にして唯一無二のお方です！",
+                                                                "episode":  "Cap. 01 / Ep. 01",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "demiurge",
+                                             "name":  "Demiurge",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O demônio estrategista que traduz cada silêncio de Ainz em plano perfeito.",
+                                             "firstChapter":  14,
+                                             "firstEpisode":  9,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Tudo o que ocorre neste reino já foi milimetricamente previsto pela mente divina de Ainz-sama.",
+                                                                "textOriginal":  "Sasuga Ainzu-sama, subete wa okangae dōri to iu wake desu ne.",
+                                                                "textJapanese":  "さすがアインズ様、全てはお考え通りというわけですね。",
+                                                                "episode":  "Cap. 14 / Ep. 09",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "gazef-stronoff",
+                                             "name":  "Gazef Stronoff",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O capitão dos guerreiros do reino que recusa se ajoelhar ao Rei Feiticeiro.",
+                                             "firstChapter":  45,
+                                             "firstEpisode":  12,
+                                             "firstEpisodeSeason":  3,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Eu sou o capitão dos guerreiros do reino; não posso me render perante o Rei Feiticeiro!",
+                                                                "textOriginal":  "Waga ken, inochi hateru made kono kuni no tame ni!",
+                                                                "textJapanese":  "我が剣、命果てるまでこの国のために！",
+                                                                "episode":  "Cap. 45 / Ep. 12 (T3)",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         }
+                                     ]
+                  },
+                  {
+                      "slug":  "owarimonogatari",
+                      "title":  "Owarimonogatari",
+                      "titleOriginal":  "終物語",
+                      "year":  2015,
+                      "description":  "O fim da adolescência de Araragi: espelhos, primeiro amor e o próprio passado.",
+                      "accentColor":  "#673AB7",
+                      "characters":  [
+                                         {
+                                             "slug":  "ougi-oshino",
+                                             "name":  "Ougi Oshino",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "A enigma que transforma perguntas em espelhos de verdade.",
+                                             "firstChapter":  null,
+                                             "firstEpisode":  1,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Eu não sei de nada. É você quem sabe, Araragi-senpai.",
+                                                                "textOriginal":  "Watashi wa nani mo shirimasen yo. Shitte iru no wa anata desu, Araragi-senpai.",
+                                                                "textJapanese":  "私は何も知りませんよ。知っているのはあなたです、阿良々木先輩。",
+                                                                "episode":  "Ep. 01 / LN Vol. 1",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            },
+                                                            {
+                                                                "text":  "Toda mentira que você sussurra cria um espelho que mais cedo ou mais tarde exigirá o seu rosto.",
+                                                                "textOriginal":  "Tadashisa o shōmei shitai nara, jibun no kage to tatakau koto desu ne.",
+                                                                "textJapanese":  "正しさを証明したいなら、自分の影と戦うことですね。",
+                                                                "episode":  "Ep. 13 / LN Vol. 3",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "koyomi-araragi",
+                                             "name":  "Koyomi Araragi",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O quase-vampiro no fim da própria adolescência, atravessando o passado.",
+                                             "firstChapter":  null,
+                                             "firstEpisode":  7,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "O final da história não é uma recompensa bonita; é aceitar as escolhas que você fez no escuro.",
+                                                                "textOriginal":  "Seishun no owari tte yatsu o, mitodokeru hitsuyō ga arun da.",
+                                                                "textJapanese":  "青春の終わりってやつを、見届ける必要があるんだ。",
+                                                                "episode":  "Ep. 07 / LN Vol. 2",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "shinobu-oshino",
+                                             "name":  "Shinobu Oshino",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "A vampira lendária presa num corpo de oito anos e em donuts.",
+                                             "firstChapter":  null,
+                                             "firstEpisode":  4,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Se o meu servo continuar de pé, não há escuridão nesta terra que eu não possa devorar.",
+                                                                "textOriginal":  "Waga shujū no kizuna, kesshite tachikireru mono dewa nai wa.",
+                                                                "textJapanese":  "我が主従の絆、決して断ち切れるものではないわ。",
+                                                                "episode":  "Ep. 04 / LN Vol. 1",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "sodachi-oikura",
+                                             "name":  "Sodachi Oikura",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "A matemática do ódio que nunca encontrou uma casa onde caber.",
+                                             "firstChapter":  null,
+                                             "firstEpisode":  3,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Eu odeio você, Araragi! Porque você era feliz enquanto a minha casa desmoronava em gritos!",
+                                                                "textOriginal":  "Watashi wa anta ga kirai na no yo! Nani mo shiranai kuse ni!",
+                                                                "textJapanese":  "私はあんたが嫌いなのよ！何も知らないくせに！",
+                                                                "episode":  "Ep. 03 / LN Vol. 1",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         }
+                                     ]
+                  },
+                  {
+                      "slug":  "steins-gate",
+                      "title":  "Steins;Gate",
+                      "titleOriginal":  "シュタインズ・ゲート",
+                      "year":  2011,
+                      "description":  "Uma mensagem ao passado arrasta o laboratório para a guerra das linhas do tempo.",
+                      "accentColor":  "#EF6C00",
+                      "characters":  [
+                                         {
+                                             "slug":  "rintaro-okabe",
+                                             "name":  "Rintaro Okabe",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O cientista louco de fantasia que carrega lembranças impossíveis.",
+                                             "firstChapter":  1,
+                                             "firstEpisode":  1,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Eu sou o cientista louco, Hououin Kyouma! O caos governa as engrenagens do tempo!",
+                                                                "textOriginal":  "Waga na wa kyōki no maddo saientisuto, Hōōin Kyōma!",
+                                                                "textJapanese":  "我が名は狂気のマッドサイエンティスト、鳳凰院凶真！",
+                                                                "episode":  "Cap. 01 / Ep. 01",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            },
+                                                            {
+                                                                "text":  "El Psy Kongroo.",
+                                                                "textOriginal":  "Eru Pusai Kongurū.",
+                                                                "textJapanese":  "エル・プサイ・コングルゥ。",
+                                                                "episode":  "Cap. 01 / Ep. 01",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            },
+                                                            {
+                                                                "text":  "Engane o seu eu do passado. Engane o mundo. E encontre a linha de Steins Gate!",
+                                                                "textOriginal":  "Kako no jibun o damase. Sekai o damase. Sore ga Shutainzu Gēto no sentaku da!",
+                                                                "textJapanese":  "過去の自分を騙せ。世界を騙せ。それがシュタインズゲートの選択だ！",
+                                                                "episode":  "Cap. 38 / Ep. 23",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "kurisu-makise",
+                                             "name":  "Kurisu Makise",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "A neurocientista que aceita o próprio coração entre linhas do tempo.",
+                                             "firstChapter":  14,
+                                             "firstEpisode":  12,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "O tempo passa de forma tão rápida ou tão lenta dependendo de quem está ao seu lado.",
+                                                                "textOriginal":  "Jikan no susumikata wa, dare to sugosu ka ni yotte kawaru no yo.",
+                                                                "textJapanese":  "時間の進み方は、誰と過ごすかによって変わるのよ。",
+                                                                "episode":  "Cap. 14 / Ep. 12",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            },
+                                                            {
+                                                                "text":  "Mesmo que as linhas do tempo mudem mil vezes, você nunca estará sozinho na minha memória.",
+                                                                "textOriginal":  "Dono sekaisen ni itemo, watashi wa anta o mitsukeru kara.",
+                                                                "textJapanese":  "どの世界線にいても、私はあんたを見つけるから。",
+                                                                "episode":  "Cap. 35 / Ep. 22",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "mayuri-shiina",
+                                             "name":  "Mayuri Shiina",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "A amiga serena que traz tuturu e sorrisos ao laboratório.",
+                                             "firstChapter":  1,
+                                             "firstEpisode":  1,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Tutturu~! Mayushii aqui trazendo sorrisos para o laboratório!",
+                                                                "textOriginal":  "Tutturū♪ Mayushī☆ da yo!",
+                                                                "textJapanese":  "トゥットゥルー♪ まゆしぃ☆だよ！",
+                                                                "episode":  "Cap. 01 / Ep. 01",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         }
+                                     ]
+                  },
+                  {
+                      "slug":  "tensei-slime",
+                      "title":  "Tensei Shitara Slime Datta Ken",
+                      "titleOriginal":  "転生したらスライムだった件",
+                      "year":  2018,
+                      "description":  "O reencarnado em slime funda um país onde todas as raças vivam e sorriam juntas.",
+                      "accentColor":  "#0288D1",
+                      "characters":  [
+                                         {
+                                             "slug":  "rimuru-tempest",
+                                             "name":  "Rimuru Tempest",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O slime reencarnado que funda um país onde todas as raças sorriem.",
+                                             "firstChapter":  2,
+                                             "firstEpisode":  2,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Eu não sou um slime mau! (Warui slime ja nai yo!)",
+                                                                "textOriginal":  "Warui suraimu ja nai yo!",
+                                                                "textJapanese":  "悪いスライムじゃないよ！",
+                                                                "episode":  "Cap. 02 / Ep. 02",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            },
+                                                            {
+                                                                "text":  "Eu quero construir um país onde todas as raças possam viver e sorrir juntas em paz.",
+                                                                "textOriginal":  "Ningen mo mamono mo, nakayoku waratte kuraseru kuni o tsukuritain da.",
+                                                                "textJapanese":  "人間も魔物も、仲良く笑って暮らせる国を作りたいんだ。",
+                                                                "episode":  "Cap. 18 / Ep. 08",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            },
+                                                            {
+                                                                "text":  "Se vocês machucarem os cidadãos deste país, eu me tornarei o Lorde Demônio que destruirá vocês!",
+                                                                "textOriginal":  "Nakama o kizutsukeru yatsu wa, Maō ni natte demo zen\u0027in horobosu.",
+                                                                "textJapanese":  "仲間を傷つける奴は、魔王になってでも全員滅ぼす。",
+                                                                "episode":  "Cap. 64 / Ep. 34",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "veldora-tempest",
+                                             "name":  "Veldora Tempest",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "O dragão da tempestade selado que fez o primeiro amigo na caverna.",
+                                             "firstChapter":  1,
+                                             "firstEpisode":  1,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Kuahahaha! Eu sou o lendário Dragão da Tempestade, Veldora! Seja meu primeiro amigo!",
+                                                                "textOriginal":  "Kuahahaha! Ware koso wa Bōfūryū Verudora de aru!",
+                                                                "textJapanese":  "クアハハハ！我こそは暴風竜ヴェルドラである！",
+                                                                "episode":  "Cap. 01 / Ep. 01",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "slug":  "shizue-izawa",
+                                             "name":  "Shizue Izawa",
+                                             "nameOriginal":  null,
+                                             "arc":  null,
+                                             "description":  "A mestra que pede ao aluno a devoração do próprio corpo para descansar.",
+                                             "firstChapter":  11,
+                                             "firstEpisode":  8,
+                                             "firstEpisodeSeason":  null,
+                                             "quotes":  [
+                                                            {
+                                                                "text":  "Por favor, Rimuru-san... devore o meu corpo e me liberte desta chama de dor.",
+                                                                "textOriginal":  "Watashi o... kimi no naka ni kaeshite...",
+                                                                "textJapanese":  "私を…君の中に還して…",
+                                                                "episode":  "Cap. 11 / Ep. 08",
+                                                                "context":  null,
+                                                                "review":  false
+                                                            }
+                                                        ]
+                                         }
+                                     ]
+                  },
+                  {
                       "slug":  "sousou-no-frieren",
                       "title":  "Sousou no Frieren",
                       "titleOriginal":  "葬送のフリーレン",

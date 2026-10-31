@@ -213,7 +213,27 @@ $workQueries = @(
     @{ slug='vampire-hunter-d';         search='Vampire Hunter D';             type='ANIME'; must='Vampire' },
     @{ slug='wind-breaker';             search='Wind Breaker';                 type='ANIME'; must='Wind Breaker' },
     @{ slug='youjo-senki';              search='The Saga of Tanya the Evil';   type='ANIME'; must='Tanya' },
-    @{ slug='zatch-bell';               search='Zatch Bell';                   type='ANIME'; must='Gash' }
+    @{ slug='zatch-bell';               search='Zatch Bell';                   type='ANIME'; must='Gash' },
+    # --- covers do lote 5 (v0.9.4) ---
+    @{ slug='anohana';                  search='Anohana';                      type='ANIME'; must='Hana' },
+    @{ slug='ashita-no-joe';            search='Ashita no Joe';                type='ANIME'; must='Joe' },
+    @{ slug='bakemonogatari';           search='Bakemonogatari';               type='ANIME'; must='Bakemonogatari' },
+    @{ slug='death-note';               search='Death Note';                   type='ANIME'; must='Death Note' },
+    @{ slug='devilman-crybaby';         search='Devilman Crybaby';             type='ANIME'; must='Crybaby' },
+    @{ slug='goblin-slayer';            search='Goblin Slayer';                type='ANIME'; must='Goblin Slayer' },
+    @{ slug='golden-boy';               search='Golden Boy';                   type='ANIME'; must='Golden' },
+    @{ slug='inazuma-eleven';           search='Inazuma Eleven';               type='ANIME'; must='Inazuma' },
+    @{ slug='initial-d';                search='Initial D';                    type='ANIME'; must='1st Stage' },
+    @{ slug='kino-no-tabi';             search='Kino no Tabi The Beautiful World'; type='ANIME'; must='Kino' },
+    @{ slug='made-in-abyss';            search='Made in Abyss';                type='ANIME'; must='Abyss' },
+    @{ slug='ancient-magus-bride';      search='The Ancient Magus Bride';      type='ANIME'; must='Magus' },
+    @{ slug='noragami';                 search='Noragami';                     type='ANIME'; must='Noragami' },
+    @{ slug='overlord';                 search='Overlord';                     type='ANIME'; must='Overlord' },
+    @{ slug='owarimonogatari';          search='Owarimonogatari';              type='ANIME'; must='Owarimonogatari' },
+    @{ slug='steins-gate';              search='Steins Gate';                  type='ANIME'; must='Steins' },
+    @{ slug='tensei-slime';             search='Tensei Shitara Slime Datta Ken'; type='ANIME'; must='Slime' },
+    # coletanea Ghibli: media de referencia (Spirited Away) para elenco parcial
+    @{ slug='studio-ghibli';            search='Spirited Away';                type='ANIME'; must='Chihiro' }
 )
 
 # ---------------------------------------------------------------------------

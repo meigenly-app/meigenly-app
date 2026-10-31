@@ -75,8 +75,8 @@ class SearchDaoTest {
         val repo = ContentRepository(db.workDao(), db.characterDao(), db.quoteDao())
         val today = repo.todayQuote()
         assertEquals(true, today != null)
-        // The deterministic count must match the whole 712-quote catalog
-        assertEquals(712, db.quoteDao().countAll())
+        // The deterministic count must match the whole 807-quote catalog
+        assertEquals(807, db.quoteDao().countAll())
         // Two calls on the same day must pick the same quote
         assertEquals(today?.quote?.id, repo.todayQuote()?.quote?.id)
     }

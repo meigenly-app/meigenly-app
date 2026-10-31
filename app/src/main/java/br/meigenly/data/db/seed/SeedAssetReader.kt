@@ -25,6 +25,6 @@ class SeedAssetReader @Inject constructor(
 
     companion object {
         const val SEED_ASSET_PATH = "seed/app_data.json"
-        const val SEED_VERSION = 5L
+        const val SEED_VERSION = 6L
     }
 }
